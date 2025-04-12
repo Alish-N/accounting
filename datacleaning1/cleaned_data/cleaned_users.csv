@@ -1,0 +1,1001 @@
+user_id,name,email,department,role,joining_date,employee_id,access_level,status,last_login,created_transactions,approval_limit,experience_years,role_risk_score
+USR000001,Arjun Joshi,arjun.joshi@company.com,R&D,Executive,2025-01-26,EMP565247,4,Active,2025-02-18 23:17:33.281000+00:00,702,298759,0.09,2.0
+USR000002,Suresh Kumar,suresh.kumar@company.com,Procurement,Executive,2018-04-23,EMP938485,1,Active,2025-02-10 04:56:02.910000+00:00,368,194805,6.86,2.0
+USR000003,Sunita Reddy,sunita.reddy@company.com,Production,Executive,2017-10-06,EMP013705,2,Active,2025-02-10 02:54:39.642000+00:00,336,282499,7.4,2.0
+USR000004,Sunita Reddy,sunita.reddy@company.com,It,Executive,2021-04-06,EMP130770,1,Active,2025-02-16 12:52:03.981000+00:00,99,284658,3.9,2.0
+USR000005,Advait Malhotra,advait.malhotra@company.com,Admin,Executive,2022-10-12,EMP799545,4,Active,2025-02-18 12:00:55.218000+00:00,478,355091,2.39,2.0
+USR000006,Aarav Verma,aarav.verma@company.com,Production,Executive,2022-03-21,EMP405430,1,Active,2025-02-15 08:32:28.139000+00:00,262,86174,2.95,2.0
+USR000007,Anita Sharma,anita.sharma@company.com,It,Executive,2025-02-09,EMP393598,2,Active,2025-02-19 14:34:32.962000+00:00,786,39749,0.06,2.0
+USR000008,Vihaan Kapoor,vihaan.kapoor@company.com,Procurement,Executive,2019-05-28,EMP652099,1,Active,2025-02-10 04:51:09.729000+00:00,540,829101,5.76,2.0
+USR000009,Anita Bansal,anita.bansal@company.com,R&D,Executive,2015-08-22,EMP780385,2,Active,2025-02-19 05:02:38.881000+00:00,37,292951,9.53,2.0
+USR000010,Arjun Singh,arjun.singh@company.com,Production,Executive,2017-09-02,EMP892987,2,Active,2025-02-11 23:37:09.120000+00:00,225,824555,7.5,2.0
+USR000011,Deepika Shah,deepika.shah@company.com,R&D,Executive,2024-01-14,EMP275322,3,Active,2025-02-16 21:57:11.105000+00:00,510,97122,1.13,2.0
+USR000012,Arjun Verma,arjun.verma@company.com,Admin,Executive,2024-11-20,EMP588280,1,Active,2025-02-18 11:32:08.664000+00:00,991,882631,0.28,2.0
+USR000013,Diya Reddy,diya.reddy@company.com,Hr,Hr Executive,2023-02-25,EMP294033,3,Active,2025-02-10 11:37:30.236000+00:00,981,988827,2.01,1.0
+USR000014,Anita Kapoor,anita.kapoor@company.com,Hr,Hr Executive,2019-12-08,EMP968183,2,Active,2025-02-17 08:47:56.486000+00:00,152,284343,5.23,1.0
+USR000015,Advait Patel,advait.patel@company.com,Marketing,Executive,2021-01-31,EMP027276,4,Active,2025-02-19 00:51:55.421000+00:00,592,804716,4.08,2.0
+USR000016,Sunita Chopra,sunita.chopra@company.com,Procurement,Executive,2025-01-01,EMP928130,4,Inactive,2025-02-15 04:40:16.587000+00:00,261,810099,0.16,2.0
+USR000017,Vihaan Chopra,vihaan.chopra@company.com,Operations,Executive,2017-02-03,EMP412335,2,Active,2025-02-18 13:46:12.610000+00:00,281,845897,8.07,2.0
+USR000018,Advait Mehta,advait.mehta@company.com,Admin,Executive,2024-03-12,EMP532439,1,Active,2025-02-16 18:40:16.765000+00:00,805,861715,0.97,2.0
+USR000019,Reyansh Shah,reyansh.shah@company.com,R&D,Executive,2018-03-26,EMP263231,2,Active,2025-02-15 17:13:02.259000+00:00,521,417554,6.93,2.0
+USR000020,Aanya Kumar,aanya.kumar@company.com,It,Executive,2022-07-16,EMP874507,3,Active,2025-02-12 23:31:57.989000+00:00,239,252757,2.63,2.0
+USR000021,Dinesh Chopra,dinesh.chopra@company.com,Sales,Business Developer,2023-12-05,EMP504279,2,Active,2025-02-13 11:11:52.913000+00:00,443,735070,1.24,1.0
+USR000022,Deepika Sharma,deepika.sharma@company.com,Sales,Business Developer,2022-01-15,EMP540080,3,Active,2025-02-17 20:27:24.430000+00:00,521,675693,3.13,1.0
+USR000023,Diya Shah,diya.shah@company.com,Procurement,Executive,2019-07-20,EMP062364,1,Active,2025-02-19 13:12:30.954000+00:00,515,158361,5.62,2.0
+USR000024,Suresh Shah,suresh.shah@company.com,Marketing,Executive,2021-09-02,EMP562258,2,Active,2025-02-18 12:14:50.837000+00:00,945,438585,3.5,2.0
+USR000025,Rajesh Kapoor,rajesh.kapoor@company.com,Hr,Recruiter,2022-04-10,EMP105347,2,Active,2025-02-19 00:36:39.925000+00:00,315,727780,2.89,1.0
+USR000026,Anita Bansal,anita.bansal@company.com,Finance,Financial Analyst,2023-05-02,EMP142550,3,Active,2025-02-13 04:07:42.767000+00:00,853,503372,1.83,1.0
+USR000027,Anita Shah,anita.shah@company.com,Sales,Business Developer,2017-02-06,EMP895987,1,Active,2025-02-14 09:03:26.135000+00:00,648,58684,8.06,1.0
+USR000028,Advait Kapoor,advait.kapoor@company.com,Marketing,Executive,2016-12-08,EMP075928,4,Active,2025-02-09 23:09:14.900000+00:00,114,228401,8.23,2.0
+USR000029,Deepika Malhotra,deepika.malhotra@company.com,Hr,Hr Executive,2021-04-05,EMP924943,3,Active,2025-02-11 00:58:25.252000+00:00,539,772628,3.91,1.0
+USR000030,Priyanka Shah,priyanka.shah@company.com,Procurement,Executive,2019-11-02,EMP157991,1,Active,2025-02-12 19:37:39.610000+00:00,963,636063,5.33,2.0
+USR000031,Deepika Singh,deepika.singh@company.com,R&D,Executive,2018-10-10,EMP687716,2,Active,2025-02-12 11:17:09.921000+00:00,379,926515,6.39,2.0
+USR000032,Mukesh Gupta,mukesh.gupta@company.com,It,Executive,2021-02-04,EMP292164,2,Active,2025-02-10 15:04:45.572000+00:00,169,284014,4.07,2.0
+USR000033,Vihaan Patel,vihaan.patel@company.com,Finance,Controller,2017-12-28,EMP078309,2,Active,2025-02-15 12:31:58.346000+00:00,575,213841,7.17,1.0
+USR000034,Sunita Mehta,sunita.mehta@company.com,Procurement,Executive,2020-11-16,EMP089312,1,Active,2025-02-16 19:43:06.777000+00:00,46,645223,4.29,2.0
+USR000035,Dinesh Joshi,dinesh.joshi@company.com,Production,Executive,2020-10-12,EMP379588,1,Inactive,2025-02-13 18:56:39.298000+00:00,758,36966,4.39,2.0
+USR000036,Vihaan Patel,vihaan.patel@company.com,Finance,Controller,2020-02-23,EMP678319,4,Active,2025-02-17 14:43:08.756000+00:00,727,573271,5.02,1.0
+USR000037,Sunita Patel,sunita.patel@company.com,Sales,Business Developer,2016-04-07,EMP063521,4,Active,2025-02-10 02:46:16.184000+00:00,326,829721,8.9,1.0
+USR000038,Riya Kapoor,riya.kapoor@company.com,Production,Executive,2024-08-26,EMP351130,2,Active,2025-02-11 14:44:42.766000+00:00,199,634798,0.51,2.0
+USR000039,Sunita Sharma,sunita.sharma@company.com,Marketing,Executive,2023-05-20,EMP676013,1,Active,2025-02-10 21:57:53.385000+00:00,187,90196,1.78,2.0
+USR000040,Aarav Shah,aarav.shah@company.com,Finance,Accountant,2020-11-02,EMP855564,4,Active,2025-02-11 23:57:01.645000+00:00,290,277896,4.33,1.0
+USR000041,Reyansh Patel,reyansh.patel@company.com,Hr,Hr Executive,2018-02-12,EMP936921,3,Active,2025-02-18 12:28:30.424000+00:00,252,785605,7.05,1.0
+USR000042,Ramesh Gupta,ramesh.gupta@company.com,Operations,Executive,2021-10-14,EMP259859,3,Active,2025-02-11 15:34:03.126000+00:00,380,517621,3.38,2.0
+USR000043,Deepika Kumar,deepika.kumar@company.com,It,Executive,2023-05-29,EMP084935,4,Active,2025-02-11 01:18:17.577000+00:00,983,575338,1.76,2.0
+USR000044,Diya Singh,diya.singh@company.com,Sales,Sales Manager,2023-03-17,EMP501944,2,Active,2025-02-17 18:21:30.870000+00:00,235,79532,1.96,1.0
+USR000045,Aanya Reddy,aanya.reddy@company.com,Procurement,Executive,2024-01-23,EMP429696,3,Active,2025-02-16 02:21:05.864000+00:00,629,739083,1.11,2.0
+USR000046,Sunita Sharma,sunita.sharma@company.com,Marketing,Executive,2024-08-25,EMP871584,2,Active,2025-02-11 04:30:40.778000+00:00,275,642444,0.52,2.0
+USR000047,Aanya Singh,aanya.singh@company.com,Production,Executive,2024-11-12,EMP791804,3,Active,2025-02-14 12:57:38.802000+00:00,751,706228,0.3,2.0
+USR000048,Riya Sharma,riya.sharma@company.com,Sales,Sales Manager,2020-10-24,EMP788174,2,Active,2025-02-17 08:19:29.146000+00:00,661,967584,4.35,1.0
+USR000049,Dinesh Chopra,dinesh.chopra@company.com,Finance,Financial Analyst,2020-06-17,EMP054973,4,Active,2025-02-18 22:14:06.156000+00:00,812,412842,4.71,1.0
+USR000050,Deepika Kumar,deepika.kumar@company.com,Production,Executive,2015-05-25,EMP083086,4,Active,2025-02-11 10:08:25.192000+00:00,98,207762,9.77,2.0
+USR000051,Arjun Sharma,arjun.sharma@company.com,Procurement,Executive,2018-02-23,EMP761735,2,Active,2025-02-19 06:56:25.437000+00:00,598,569337,7.02,2.0
+USR000052,Priya Reddy,priya.reddy@company.com,Hr,Recruiter,2016-07-04,EMP865494,2,Active,2025-02-12 17:35:41.306000+00:00,870,600325,8.66,1.0
+USR000053,Rajesh Verma,rajesh.verma@company.com,Production,Executive,2023-11-04,EMP152708,1,Active,2025-02-16 11:23:51.215000+00:00,720,314336,1.32,2.0
+USR000054,Reyansh Kapoor,reyansh.kapoor@company.com,Sales,Business Developer,2018-09-05,EMP326297,3,Inactive,2025-02-11 15:53:33.630000+00:00,205,496464,6.49,1.0
+USR000055,Advait Bansal,advait.bansal@company.com,Procurement,Executive,2024-03-28,EMP474635,3,Active,2025-02-13 05:14:09.361000+00:00,363,101410,0.93,2.0
+USR000056,Aanya Patel,aanya.patel@company.com,Production,Executive,2015-10-07,EMP942128,4,Active,2025-02-14 12:33:56.471000+00:00,918,455965,9.4,2.0
+USR000057,Reyansh Joshi,reyansh.joshi@company.com,Admin,Executive,2024-03-23,EMP756695,2,Active,2025-02-19 01:04:12.605000+00:00,119,608295,0.94,2.0
+USR000058,Arjun Chopra,arjun.chopra@company.com,Sales,Sales Executive,2017-04-24,EMP298596,4,Active,2025-02-11 21:34:36.373000+00:00,679,933730,7.85,1.0
+USR000059,Dinesh Shah,dinesh.shah@company.com,Procurement,Executive,2017-12-02,EMP034985,4,Active,2025-02-16 11:41:02.510000+00:00,521,724562,7.25,2.0
+USR000060,Suresh Sharma,suresh.sharma@company.com,It,Executive,2017-11-29,EMP376393,2,Active,2025-02-12 18:58:54.977000+00:00,846,322998,7.25,2.0
+USR000061,Dinesh Chopra,dinesh.chopra@company.com,R&D,Executive,2018-01-23,EMP608313,2,Active,2025-02-12 14:02:17.899000+00:00,276,620694,7.1,2.0
+USR000062,Ishita Singh,ishita.singh@company.com,It,Executive,2015-11-02,EMP705264,2,Inactive,2025-02-13 19:10:18.510000+00:00,450,5409,9.33,2.0
+USR000063,Dinesh Sharma,dinesh.sharma@company.com,Sales,Sales Manager,2017-01-29,EMP011573,4,Inactive,2025-02-16 09:28:14.027000+00:00,55,868791,8.09,1.0
+USR000064,Arjun Bansal,arjun.bansal@company.com,Admin,Executive,2018-04-14,EMP098011,3,Active,2025-02-11 09:25:17.411000+00:00,260,243912,6.88,2.0
+USR000065,Anita Joshi,anita.joshi@company.com,Production,Executive,2017-03-24,EMP076623,3,Inactive,2025-02-19 04:38:33.772000+00:00,774,146761,7.94,2.0
+USR000066,Aanya Malhotra,aanya.malhotra@company.com,R&D,Executive,2020-10-06,EMP179443,4,Active,2025-02-11 05:59:43.133000+00:00,845,502609,4.4,2.0
+USR000067,Sunita Kapoor,sunita.kapoor@company.com,Operations,Executive,2019-02-02,EMP788857,2,Active,2025-02-18 08:01:50.273000+00:00,668,572212,6.08,2.0
+USR000068,Sunita Sharma,sunita.sharma@company.com,Sales,Sales Executive,2022-05-16,EMP554598,1,Active,2025-02-19 09:35:46.396000+00:00,231,89352,2.79,1.0
+USR000069,Ishita Shah,ishita.shah@company.com,R&D,Executive,2015-12-01,EMP008489,4,Active,2025-02-12 18:22:46.276000+00:00,672,43096,9.25,2.0
+USR000070,Mukesh Kapoor,mukesh.kapoor@company.com,Finance,Accountant,2016-04-25,EMP346562,3,Inactive,2025-02-19 11:47:45.869000+00:00,785,325344,8.85,1.0
+USR000071,Anita Mehta,anita.mehta@company.com,Hr,Hr Executive,2018-03-17,EMP112051,1,Active,2025-02-13 13:26:01.567000+00:00,989,864745,6.96,1.0
+USR000072,Diya Chopra,diya.chopra@company.com,It,Executive,2022-02-23,EMP359134,3,Active,2025-02-10 16:59:03.912000+00:00,244,502670,3.02,2.0
+USR000073,Aarav Bansal,aarav.bansal@company.com,Operations,Executive,2022-12-17,EMP701254,3,Active,2025-02-17 08:12:55.064000+00:00,690,89103,2.21,2.0
+USR000074,Ramesh Chopra,ramesh.chopra@company.com,R&D,Executive,2020-08-27,EMP456174,4,Active,2025-02-12 06:11:44.096000+00:00,945,86624,4.51,2.0
+USR000075,Ramesh Joshi,ramesh.joshi@company.com,Admin,Executive,2020-05-23,EMP659306,1,Active,2025-02-13 19:26:06.155000+00:00,248,814849,4.77,2.0
+USR000076,Arjun Agarwal,arjun.agarwal@company.com,R&D,Executive,2022-03-27,EMP616537,2,Active,2025-02-18 21:03:15.138000+00:00,414,526896,2.93,2.0
+USR000077,Riya Verma,riya.verma@company.com,Marketing,Executive,2018-08-24,EMP561339,2,Inactive,2025-02-17 12:11:28.446000+00:00,683,482318,6.52,2.0
+USR000078,Kavita Verma,kavita.verma@company.com,It,Executive,2015-08-03,EMP363085,3,Active,2025-02-10 05:17:21.984000+00:00,969,48403,9.58,2.0
+USR000079,Vihaan Patel,vihaan.patel@company.com,Marketing,Executive,2023-04-08,EMP258202,1,Active,2025-02-16 04:17:20.039000+00:00,515,847772,1.9,2.0
+USR000080,Ishita Kumar,ishita.kumar@company.com,R&D,Executive,2016-03-13,EMP740886,2,Active,2025-02-18 02:07:11.080000+00:00,887,782528,8.97,2.0
+USR000081,Kavita Gupta,kavita.gupta@company.com,Sales,Business Developer,2015-11-20,EMP180060,3,Active,2025-02-10 18:30:01.650000+00:00,351,699493,9.28,1.0
+USR000082,Vihaan Gupta,vihaan.gupta@company.com,R&D,Executive,2016-07-01,EMP982415,2,Active,2025-02-10 12:39:24.392000+00:00,337,707703,8.67,2.0
+USR000083,Priya Sharma,priya.sharma@company.com,Operations,Executive,2024-11-20,EMP458305,4,Inactive,2025-02-17 00:13:10.434000+00:00,975,644253,0.28,2.0
+USR000084,Aarav Singh,aarav.singh@company.com,Operations,Executive,2015-12-12,EMP122665,2,Active,2025-02-14 21:13:35.797000+00:00,874,436154,9.22,2.0
+USR000085,Suresh Agarwal,suresh.agarwal@company.com,Hr,Hr Executive,2024-10-25,EMP395261,1,Active,2025-02-12 15:43:52.300000+00:00,414,232684,0.35,1.0
+USR000086,Dinesh Chopra,dinesh.chopra@company.com,Procurement,Executive,2016-02-09,EMP408006,2,Active,2025-02-12 04:03:04.129000+00:00,224,974262,9.06,2.0
+USR000087,Ramesh Verma,ramesh.verma@company.com,Production,Executive,2016-01-26,EMP783302,3,Active,2025-02-19 11:33:30.696000+00:00,22,122087,9.1,2.0
+USR000088,Riya Kumar,riya.kumar@company.com,Finance,Controller,2016-08-24,EMP097933,4,Active,2025-02-10 17:27:01.666000+00:00,853,500007,8.52,1.0
+USR000089,Sunita Verma,sunita.verma@company.com,It,Executive,2022-10-02,EMP189855,1,Active,2025-02-14 17:39:36.500000+00:00,101,992323,2.41,2.0
+USR000090,Priyanka Kumar,priyanka.kumar@company.com,It,Executive,2015-07-06,EMP409028,3,Active,2025-02-12 20:12:43.760000+00:00,787,120987,9.66,2.0
+USR000091,Ramesh Joshi,ramesh.joshi@company.com,Procurement,Executive,2017-03-12,EMP766699,1,Active,2025-02-13 08:20:25.992000+00:00,63,916645,7.97,2.0
+USR000092,Ishita Reddy,ishita.reddy@company.com,Admin,Executive,2017-06-23,EMP940527,4,Active,2025-02-16 16:46:05.051000+00:00,973,765297,7.69,2.0
+USR000093,Priyanka Agarwal,priyanka.agarwal@company.com,Finance,Controller,2015-05-10,EMP866385,1,Active,2025-02-11 17:47:57.299000+00:00,653,911696,9.81,1.0
+USR000094,Ramesh Mehta,ramesh.mehta@company.com,Marketing,Executive,2015-03-17,EMP921187,1,Active,2025-02-14 20:54:16.014000+00:00,767,443541,9.96,2.0
+USR000095,Suresh Chopra,suresh.chopra@company.com,Finance,Financial Analyst,2022-11-04,EMP918421,1,Active,2025-02-19 01:08:35.716000+00:00,560,231623,2.32,1.0
+USR000096,Priya Verma,priya.verma@company.com,Finance,Financial Analyst,2019-12-27,EMP192321,4,Active,2025-02-11 21:38:12.692000+00:00,245,426297,5.18,1.0
+USR000097,Anita Kapoor,anita.kapoor@company.com,Marketing,Executive,2020-07-30,EMP469865,4,Active,2025-02-11 14:46:05.434000+00:00,421,350960,4.59,2.0
+USR000098,Ishita Patel,ishita.patel@company.com,R&D,Executive,2023-02-06,EMP512395,2,Active,2025-02-14 12:01:57.362000+00:00,329,487788,2.07,2.0
+USR000099,Rajesh Patel,rajesh.patel@company.com,Procurement,Executive,2017-07-17,EMP088271,2,Active,2025-02-13 12:24:40.321000+00:00,701,273457,7.62,2.0
+USR000100,Dinesh Bansal,dinesh.bansal@company.com,Sales,Business Developer,2023-06-28,EMP495219,3,Active,2025-02-19 07:59:48.277000+00:00,64,890820,1.68,1.0
+USR000101,Kavita Reddy,kavita.reddy@company.com,Finance,Controller,2020-07-21,EMP554104,4,Inactive,2025-02-10 16:42:43.363000+00:00,143,688220,4.61,1.0
+USR000102,Dinesh Mehta,dinesh.mehta@company.com,Sales,Sales Manager,2020-06-09,EMP785624,3,Active,2025-02-19 14:26:04.091000+00:00,53,215283,4.73,1.0
+USR000103,Rajesh Singh,rajesh.singh@company.com,Finance,Controller,2019-02-02,EMP030193,3,Active,2025-02-19 03:47:20.935000+00:00,905,302330,6.08,1.0
+USR000104,Mukesh Singh,mukesh.singh@company.com,Operations,Executive,2016-05-10,EMP798761,4,Active,2025-02-12 01:37:51.440000+00:00,659,426336,8.81,2.0
+USR000105,Arjun Shah,arjun.shah@company.com,Marketing,Executive,2017-01-03,EMP459520,2,Active,2025-02-14 23:34:27.927000+00:00,444,912212,8.16,2.0
+USR000106,Kavita Verma,kavita.verma@company.com,Admin,Executive,2020-10-22,EMP018338,3,Inactive,2025-02-11 15:41:20.813000+00:00,544,311373,4.36,2.0
+USR000107,Vihaan Gupta,vihaan.gupta@company.com,Sales,Business Developer,2016-03-02,EMP903704,4,Active,2025-02-18 22:20:46.870000+00:00,446,16217,9.0,1.0
+USR000108,Aarav Chopra,aarav.chopra@company.com,Admin,Executive,2023-04-05,EMP831616,1,Active,2025-02-10 21:23:27.821000+00:00,930,273059,1.91,2.0
+USR000109,Reyansh Joshi,reyansh.joshi@company.com,Hr,Hr Executive,2017-12-22,EMP177429,4,Active,2025-02-17 04:18:54.820000+00:00,373,119444,7.19,1.0
+USR000110,Diya Patel,diya.patel@company.com,Admin,Executive,2021-07-27,EMP570670,2,Active,2025-02-19 03:37:02.008000+00:00,542,661726,3.6,2.0
+USR000111,Arjun Mehta,arjun.mehta@company.com,It,Executive,2016-10-06,EMP319463,1,Active,2025-02-18 19:43:12.733000+00:00,412,260248,8.4,2.0
+USR000112,Priya Malhotra,priya.malhotra@company.com,Admin,Executive,2021-04-24,EMP697332,3,Active,2025-02-09 22:25:58.326000+00:00,189,381253,3.85,2.0
+USR000113,Suresh Agarwal,suresh.agarwal@company.com,Production,Executive,2020-01-09,EMP107285,1,Active,2025-02-15 23:58:14.146000+00:00,334,430191,5.14,2.0
+USR000114,Anita Malhotra,anita.malhotra@company.com,Operations,Executive,2020-10-25,EMP825877,1,Active,2025-02-16 19:17:15.804000+00:00,969,662876,4.35,2.0
+USR000115,Dinesh Kapoor,dinesh.kapoor@company.com,Marketing,Executive,2019-12-04,EMP146524,4,Active,2025-02-16 13:13:01.537000+00:00,480,442173,5.24,2.0
+USR000116,Anita Verma,anita.verma@company.com,It,Executive,2020-12-07,EMP344357,2,Active,2025-02-12 20:19:04.750000+00:00,181,69266,4.23,2.0
+USR000117,Dinesh Singh,dinesh.singh@company.com,Marketing,Executive,2020-02-08,EMP481496,3,Active,2025-02-13 21:46:42.595000+00:00,261,831792,5.06,2.0
+USR000118,Advait Malhotra,advait.malhotra@company.com,Finance,Financial Analyst,2017-04-25,EMP164357,2,Active,2025-02-19 14:09:24.082000+00:00,439,771468,7.85,1.0
+USR000119,Dinesh Gupta,dinesh.gupta@company.com,Operations,Executive,2022-06-15,EMP515154,1,Active,2025-02-10 23:32:37.051000+00:00,920,985396,2.71,2.0
+USR000120,Sunita Singh,sunita.singh@company.com,Operations,Executive,2022-05-13,EMP298535,3,Active,2025-02-11 23:29:58.486000+00:00,26,368427,2.8,2.0
+USR000121,Sunita Joshi,sunita.joshi@company.com,Operations,Executive,2023-01-20,EMP849455,4,Active,2025-02-13 15:26:43.284000+00:00,466,604933,2.11,2.0
+USR000122,Riya Verma,riya.verma@company.com,Production,Executive,2024-03-30,EMP141221,3,Active,2025-02-16 23:26:07.929000+00:00,954,161886,0.92,2.0
+USR000123,Sunita Reddy,sunita.reddy@company.com,Operations,Executive,2016-05-07,EMP958573,3,Active,2025-02-16 19:47:53.601000+00:00,29,727903,8.82,2.0
+USR000124,Kavita Shah,kavita.shah@company.com,Sales,Sales Executive,2015-02-19,EMP411240,1,Active,2025-02-18 00:30:36.544000+00:00,905,491568,10.03,1.0
+USR000125,Dinesh Patel,dinesh.patel@company.com,Operations,Executive,2018-12-06,EMP942512,3,Active,2025-02-12 14:46:39.846000+00:00,909,554789,6.24,2.0
+USR000126,Vihaan Kapoor,vihaan.kapoor@company.com,Procurement,Executive,2019-06-05,EMP778561,1,Active,2025-02-10 23:11:25.603000+00:00,51,927930,5.74,2.0
+USR000127,Anita Reddy,anita.reddy@company.com,Hr,Recruiter,2017-02-05,EMP533421,3,Active,2025-02-13 23:52:14.802000+00:00,52,382760,8.07,1.0
+USR000128,Priyanka Joshi,priyanka.joshi@company.com,Admin,Executive,2024-07-25,EMP385387,2,Active,2025-02-17 11:17:30.389000+00:00,778,574960,0.6,2.0
+USR000129,Kavita Patel,kavita.patel@company.com,Marketing,Executive,2022-11-18,EMP066518,2,Inactive,2025-02-12 14:45:24.428000+00:00,234,541539,2.29,2.0
+USR000130,Kavita Agarwal,kavita.agarwal@company.com,R&D,Executive,2018-10-12,EMP919955,2,Active,2025-02-13 10:43:04.141000+00:00,169,967817,6.39,2.0
+USR000131,Arjun Kapoor,arjun.kapoor@company.com,Procurement,Executive,2024-06-29,EMP366150,4,Active,2025-02-15 20:47:47.377000+00:00,686,639961,0.67,2.0
+USR000132,Anita Patel,anita.patel@company.com,Finance,Controller,2015-03-26,EMP883759,1,Active,2025-02-15 11:27:06.070000+00:00,599,678935,9.93,1.0
+USR000133,Mukesh Singh,mukesh.singh@company.com,Hr,Hr Executive,2016-12-14,EMP158612,1,Inactive,2025-02-14 17:50:36.735000+00:00,439,300492,8.21,1.0
+USR000134,Diya Verma,diya.verma@company.com,Operations,Executive,2018-08-06,EMP079852,1,Active,2025-02-11 02:01:04.476000+00:00,641,797464,6.57,2.0
+USR000135,Sunita Chopra,sunita.chopra@company.com,Operations,Executive,2022-06-06,EMP050089,2,Active,2025-02-18 13:04:43.543000+00:00,810,548013,2.74,2.0
+USR000136,Advait Kumar,advait.kumar@company.com,Sales,Business Developer,2016-07-30,EMP001470,4,Active,2025-02-13 13:46:36.642000+00:00,642,391179,8.59,1.0
+USR000137,Diya Chopra,diya.chopra@company.com,Admin,Executive,2020-02-14,EMP297250,3,Inactive,2025-02-16 00:50:16.745000+00:00,396,848341,5.04,2.0
+USR000138,Priya Reddy,priya.reddy@company.com,Hr,Hr Executive,2019-03-04,EMP539437,4,Active,2025-02-18 02:20:14.922000+00:00,420,463,5.99,1.0
+USR000139,Aanya Gupta,aanya.gupta@company.com,Marketing,Executive,2023-12-20,EMP740983,1,Active,2025-02-18 17:12:29.255000+00:00,226,591417,1.2,2.0
+USR000140,Diya Shah,diya.shah@company.com,Procurement,Executive,2017-11-25,EMP231529,1,Active,2025-02-17 04:45:27.596000+00:00,241,759898,7.27,2.0
+USR000141,Advait Chopra,advait.chopra@company.com,Operations,Executive,2022-06-29,EMP835120,4,Active,2025-02-18 07:52:04.725000+00:00,152,364101,2.67,2.0
+USR000142,Ishita Reddy,ishita.reddy@company.com,Finance,Financial Analyst,2021-01-04,EMP085523,3,Active,2025-02-11 23:10:24.787000+00:00,721,848112,4.16,1.0
+USR000143,Aarav Bansal,aarav.bansal@company.com,Production,Executive,2016-01-09,EMP509410,4,Active,2025-02-16 20:49:45.377000+00:00,855,677605,9.14,2.0
+USR000144,Mukesh Shah,mukesh.shah@company.com,Admin,Executive,2017-05-04,EMP294529,3,Active,2025-02-17 14:33:31.368000+00:00,302,620820,7.83,2.0
+USR000145,Ramesh Joshi,ramesh.joshi@company.com,Admin,Executive,2020-01-11,EMP748353,3,Active,2025-02-16 23:03:10.656000+00:00,147,811498,5.14,2.0
+USR000146,Aanya Kumar,aanya.kumar@company.com,It,Executive,2018-10-31,EMP854256,4,Inactive,2025-02-12 20:09:15.146000+00:00,688,927111,6.33,2.0
+USR000147,Diya Patel,diya.patel@company.com,Admin,Executive,2025-02-15,EMP548730,4,Active,2025-02-10 22:42:03.340000+00:00,809,33751,0.04,2.0
+USR000148,Vihaan Singh,vihaan.singh@company.com,Sales,Sales Executive,2023-08-14,EMP116657,2,Active,2025-02-13 20:43:00.988000+00:00,749,853652,1.55,1.0
+USR000149,Rajesh Malhotra,rajesh.malhotra@company.com,Production,Executive,2016-04-04,EMP432565,2,Active,2025-02-17 22:11:08.302000+00:00,373,698153,8.91,2.0
+USR000150,Diya Singh,diya.singh@company.com,Admin,Executive,2024-03-01,EMP556183,3,Active,2025-02-15 19:32:02.855000+00:00,665,628057,1.0,2.0
+USR000151,Anita Joshi,anita.joshi@company.com,Production,Executive,2022-07-16,EMP852292,2,Active,2025-02-17 04:20:24.837000+00:00,743,975979,2.63,2.0
+USR000152,Anita Verma,anita.verma@company.com,Marketing,Executive,2015-09-17,EMP012509,1,Active,2025-02-13 11:02:30.365000+00:00,773,378880,9.46,2.0
+USR000153,Vihaan Gupta,vihaan.gupta@company.com,Hr,Recruiter,2024-05-14,EMP058008,3,Active,2025-02-12 04:57:57.840000+00:00,971,97898,0.8,1.0
+USR000154,Diya Joshi,diya.joshi@company.com,Procurement,Executive,2015-11-03,EMP970856,3,Active,2025-02-12 11:06:07.971000+00:00,670,810071,9.33,2.0
+USR000155,Reyansh Agarwal,reyansh.agarwal@company.com,Finance,Controller,2021-07-12,EMP614056,1,Active,2025-02-16 22:04:42.738000+00:00,650,898078,3.64,1.0
+USR000156,Priya Sharma,priya.sharma@company.com,R&D,Executive,2021-02-26,EMP820284,1,Active,2025-02-12 00:10:03.108000+00:00,940,89157,4.01,2.0
+USR000157,Priya Gupta,priya.gupta@company.com,Hr,Hr Manager,2017-01-12,EMP770771,4,Active,2025-02-13 07:53:05.141000+00:00,375,408393,8.13,1.0
+USR000158,Anita Shah,anita.shah@company.com,Hr,Recruiter,2023-11-06,EMP620735,1,Active,2025-02-13 07:40:04.428000+00:00,587,415952,1.32,1.0
+USR000159,Anita Kapoor,anita.kapoor@company.com,Operations,Executive,2020-10-15,EMP069989,2,Active,2025-02-09 22:21:00.021000+00:00,69,350498,4.38,2.0
+USR000160,Deepika Verma,deepika.verma@company.com,Finance,Controller,2018-05-08,EMP983045,1,Active,2025-02-11 03:19:05.561000+00:00,335,182162,6.82,1.0
+USR000161,Ramesh Shah,ramesh.shah@company.com,It,Executive,2018-03-17,EMP055629,1,Active,2025-02-11 11:07:24.216000+00:00,415,827384,6.96,2.0
+USR000162,Anita Malhotra,anita.malhotra@company.com,Operations,Executive,2015-10-13,EMP594620,2,Active,2025-02-18 15:29:56.188000+00:00,535,950504,9.38,2.0
+USR000163,Vihaan Kumar,vihaan.kumar@company.com,Production,Executive,2017-01-16,EMP486225,2,Inactive,2025-02-11 00:27:51.448000+00:00,879,609513,8.12,2.0
+USR000164,Sunita Patel,sunita.patel@company.com,Procurement,Executive,2017-05-26,EMP253764,4,Active,2025-02-14 08:40:36.010000+00:00,673,820656,7.77,2.0
+USR000165,Advait Bansal,advait.bansal@company.com,Marketing,Executive,2022-12-25,EMP339906,1,Active,2025-02-14 11:17:11.421000+00:00,808,460711,2.18,2.0
+USR000166,Diya Bansal,diya.bansal@company.com,Operations,Executive,2025-01-24,EMP985924,3,Inactive,2025-02-18 02:43:31.733000+00:00,813,385853,0.1,2.0
+USR000167,Anita Joshi,anita.joshi@company.com,Production,Executive,2019-05-18,EMP602654,3,Active,2025-02-14 15:40:08.907000+00:00,65,137091,5.79,2.0
+USR000168,Rajesh Agarwal,rajesh.agarwal@company.com,Operations,Executive,2018-10-10,EMP462105,2,Active,2025-02-10 01:59:19.459000+00:00,871,450563,6.39,2.0
+USR000169,Mukesh Agarwal,mukesh.agarwal@company.com,Production,Executive,2017-11-09,EMP577549,2,Active,2025-02-16 08:05:27.656000+00:00,448,744373,7.31,2.0
+USR000170,Suresh Kumar,suresh.kumar@company.com,R&D,Executive,2017-10-18,EMP349520,3,Active,2025-02-14 19:05:30.247000+00:00,999,9031,7.37,2.0
+USR000171,Aanya Bansal,aanya.bansal@company.com,It,Executive,2018-11-14,EMP708143,4,Active,2025-02-18 21:29:04.408000+00:00,85,677087,6.3,2.0
+USR000172,Ramesh Agarwal,ramesh.agarwal@company.com,Sales,Sales Executive,2021-01-24,EMP965020,1,Inactive,2025-02-18 07:12:53.214000+00:00,113,113926,4.1,1.0
+USR000173,Reyansh Reddy,reyansh.reddy@company.com,Sales,Sales Executive,2016-07-16,EMP001580,4,Active,2025-02-12 21:44:17.807000+00:00,456,726862,8.63,1.0
+USR000174,Aanya Singh,aanya.singh@company.com,Sales,Sales Executive,2021-04-26,EMP277558,3,Inactive,2025-02-11 10:46:40.782000+00:00,117,569905,3.85,1.0
+USR000175,Ishita Verma,ishita.verma@company.com,R&D,Executive,2020-12-15,EMP715077,4,Active,2025-02-16 01:09:05.069000+00:00,999,844237,4.21,2.0
+USR000176,Aarav Kapoor,aarav.kapoor@company.com,Hr,Recruiter,2023-01-30,EMP938610,2,Active,2025-02-14 17:13:15.934000+00:00,324,618240,2.09,1.0
+USR000177,Rajesh Reddy,rajesh.reddy@company.com,Hr,Hr Manager,2016-07-03,EMP271165,3,Active,2025-02-12 19:43:46.920000+00:00,946,397856,8.66,1.0
+USR000178,Rajesh Bansal,rajesh.bansal@company.com,Operations,Executive,2015-08-31,EMP092591,1,Active,2025-02-13 08:57:09.035000+00:00,502,213714,9.5,2.0
+USR000179,Aanya Sharma,aanya.sharma@company.com,Operations,Executive,2015-11-09,EMP394651,2,Active,2025-02-15 19:46:15.647000+00:00,420,117664,9.31,2.0
+USR000180,Aarav Agarwal,aarav.agarwal@company.com,Finance,Financial Analyst,2016-10-10,EMP837361,2,Active,2025-02-19 12:25:06.607000+00:00,456,616292,8.39,1.0
+USR000181,Ramesh Kapoor,ramesh.kapoor@company.com,Operations,Executive,2022-07-05,EMP041056,4,Active,2025-02-10 02:22:39.206000+00:00,776,249659,2.66,2.0
+USR000182,Aarav Shah,aarav.shah@company.com,Production,Executive,2015-04-24,EMP550794,4,Active,2025-02-10 13:34:40.633000+00:00,235,104696,9.86,2.0
+USR000183,Advait Joshi,advait.joshi@company.com,Hr,Hr Manager,2015-04-15,EMP575724,3,Inactive,2025-02-14 14:51:00.522000+00:00,798,495816,9.88,1.0
+USR000184,Diya Agarwal,diya.agarwal@company.com,It,Executive,2015-08-16,EMP013430,4,Active,2025-02-18 03:01:21.419000+00:00,506,270894,9.54,2.0
+USR000185,Vihaan Reddy,vihaan.reddy@company.com,Admin,Executive,2015-06-02,EMP007211,3,Active,2025-02-14 19:01:11.797000+00:00,401,75327,9.75,2.0
+USR000186,Dinesh Shah,dinesh.shah@company.com,Hr,Hr Executive,2017-08-21,EMP351810,2,Active,2025-02-09 15:50:26.087000+00:00,58,790044,7.53,1.0
+USR000187,Aarav Malhotra,aarav.malhotra@company.com,Sales,Business Developer,2017-04-14,EMP796000,1,Active,2025-02-13 20:59:29.084000+00:00,791,912813,7.88,1.0
+USR000188,Deepika Sharma,deepika.sharma@company.com,Marketing,Executive,2022-08-23,EMP995539,3,Active,2025-02-15 16:27:40.593000+00:00,148,861107,2.52,2.0
+USR000189,Diya Sharma,diya.sharma@company.com,Procurement,Executive,2023-02-14,EMP616992,3,Active,2025-02-15 19:55:39.725000+00:00,730,962995,2.04,2.0
+USR000190,Suresh Bansal,suresh.bansal@company.com,Marketing,Executive,2019-03-30,EMP520059,4,Active,2025-02-17 02:59:49.336000+00:00,662,167373,5.92,2.0
+USR000191,Deepika Reddy,deepika.reddy@company.com,Procurement,Executive,2020-04-26,EMP266034,2,Active,2025-02-13 00:52:19.244000+00:00,618,172268,4.85,2.0
+USR000192,Sunita Singh,sunita.singh@company.com,Hr,Hr Executive,2017-11-10,EMP138769,4,Active,2025-02-18 20:32:10.043000+00:00,239,669057,7.31,1.0
+USR000193,Priya Mehta,priya.mehta@company.com,Operations,Executive,2018-09-28,EMP047087,4,Active,2025-02-10 01:22:27.737000+00:00,65,978805,6.42,2.0
+USR000194,Reyansh Patel,reyansh.patel@company.com,R&D,Executive,2024-04-29,EMP955260,4,Active,2025-02-10 03:50:13.211000+00:00,69,193476,0.84,2.0
+USR000195,Diya Joshi,diya.joshi@company.com,Finance,Financial Analyst,2021-03-27,EMP859350,2,Active,2025-02-14 03:45:12.456000+00:00,326,656746,3.93,1.0
+USR000196,Vihaan Verma,vihaan.verma@company.com,Sales,Business Developer,2023-04-27,EMP451549,3,Active,2025-02-16 11:32:50.880000+00:00,75,505179,1.85,1.0
+USR000197,Ishita Agarwal,ishita.agarwal@company.com,Operations,Executive,2024-09-07,EMP793562,1,Active,2025-02-10 03:12:34.551000+00:00,328,683475,0.48,2.0
+USR000198,Priyanka Kumar,priyanka.kumar@company.com,It,Executive,2016-08-01,EMP725010,2,Active,2025-02-16 14:47:16.456000+00:00,703,778361,8.58,2.0
+USR000199,Anita Joshi,anita.joshi@company.com,Marketing,Executive,2017-12-27,EMP173947,2,Active,2025-02-19 01:12:42.099000+00:00,539,461984,7.18,2.0
+USR000200,Kavita Chopra,kavita.chopra@company.com,R&D,Executive,2019-01-21,EMP329081,1,Active,2025-02-15 19:36:15.583000+00:00,466,739282,6.11,2.0
+USR000201,Mukesh Gupta,mukesh.gupta@company.com,Operations,Executive,2021-01-22,EMP542616,1,Active,2025-02-13 07:49:01.898000+00:00,661,662099,4.11,2.0
+USR000202,Vihaan Chopra,vihaan.chopra@company.com,Sales,Business Developer,2020-12-31,EMP411936,2,Active,2025-02-15 06:26:23.338000+00:00,635,893328,4.17,1.0
+USR000203,Dinesh Malhotra,dinesh.malhotra@company.com,Hr,Hr Executive,2016-08-06,EMP247494,4,Active,2025-02-19 04:21:32.588000+00:00,163,872696,8.57,1.0
+USR000204,Ishita Kapoor,ishita.kapoor@company.com,R&D,Executive,2016-12-07,EMP067151,1,Active,2025-02-15 21:28:54.024000+00:00,954,465611,8.23,2.0
+USR000205,Mukesh Singh,mukesh.singh@company.com,Sales,Business Developer,2021-02-24,EMP979573,1,Active,2025-02-18 18:24:27.510000+00:00,219,476530,4.02,1.0
+USR000206,Aarav Patel,aarav.patel@company.com,Sales,Sales Manager,2021-07-26,EMP023876,4,Active,2025-02-15 23:26:50.625000+00:00,456,598031,3.6,1.0
+USR000207,Deepika Agarwal,deepika.agarwal@company.com,Hr,Hr Executive,2018-08-16,EMP807225,1,Active,2025-02-15 02:41:08.365000+00:00,347,669391,6.54,1.0
+USR000208,Anita Patel,anita.patel@company.com,Production,Executive,2024-05-19,EMP543628,4,Active,2025-02-19 04:20:04.496000+00:00,831,518874,0.78,2.0
+USR000209,Advait Verma,advait.verma@company.com,Sales,Sales Executive,2015-12-05,EMP435961,4,Active,2025-02-11 03:05:02.992000+00:00,711,504506,9.24,1.0
+USR000210,Advait Chopra,advait.chopra@company.com,Marketing,Executive,2017-11-07,EMP782428,4,Active,2025-02-15 09:32:35.396000+00:00,863,111460,7.31,2.0
+USR000211,Advait Agarwal,advait.agarwal@company.com,Admin,Executive,2023-05-30,EMP454015,4,Active,2025-02-11 17:20:26.988000+00:00,41,377874,1.76,2.0
+USR000212,Priyanka Kapoor,priyanka.kapoor@company.com,Finance,Accountant,2018-05-07,EMP722915,2,Inactive,2025-02-14 19:58:02.534000+00:00,355,819480,6.82,1.0
+USR000213,Sunita Chopra,sunita.chopra@company.com,Hr,Hr Executive,2018-11-20,EMP728339,2,Active,2025-02-13 06:36:55.069000+00:00,176,69223,6.28,1.0
+USR000214,Arjun Verma,arjun.verma@company.com,R&D,Executive,2024-05-19,EMP561961,2,Active,2025-02-10 04:31:49.674000+00:00,524,26427,0.78,2.0
+USR000215,Ishita Mehta,ishita.mehta@company.com,R&D,Executive,2022-08-11,EMP990651,4,Active,2025-02-13 07:44:40.819000+00:00,217,8637,2.56,2.0
+USR000216,Anita Shah,anita.shah@company.com,Marketing,Executive,2021-05-19,EMP280293,3,Active,2025-02-15 10:18:41.475000+00:00,869,681546,3.79,2.0
+USR000217,Riya Reddy,riya.reddy@company.com,Procurement,Executive,2020-03-20,EMP479178,1,Inactive,2025-02-14 16:22:39.594000+00:00,197,466687,4.95,2.0
+USR000218,Dinesh Verma,dinesh.verma@company.com,R&D,Executive,2022-04-22,EMP800884,4,Active,2025-02-11 23:05:23.778000+00:00,797,359900,2.86,2.0
+USR000219,Riya Agarwal,riya.agarwal@company.com,Admin,Executive,2018-11-05,EMP579316,3,Active,2025-02-10 22:27:34.894000+00:00,611,67420,6.32,2.0
+USR000220,Riya Mehta,riya.mehta@company.com,Marketing,Executive,2019-10-25,EMP763172,1,Active,2025-02-18 22:34:23.286000+00:00,910,763667,5.35,2.0
+USR000221,Sunita Reddy,sunita.reddy@company.com,R&D,Executive,2016-02-03,EMP096968,3,Active,2025-02-15 18:37:28.168000+00:00,407,630746,9.08,2.0
+USR000222,Aanya Sharma,aanya.sharma@company.com,Procurement,Executive,2017-10-12,EMP725697,2,Active,2025-02-18 02:05:44.577000+00:00,163,2928,7.39,2.0
+USR000223,Priyanka Mehta,priyanka.mehta@company.com,Procurement,Executive,2020-05-31,EMP471143,3,Active,2025-02-14 05:03:22.096000+00:00,909,423024,4.75,2.0
+USR000224,Kavita Reddy,kavita.reddy@company.com,Admin,Executive,2023-10-02,EMP384945,3,Inactive,2025-02-18 11:59:03.975000+00:00,991,79179,1.41,2.0
+USR000225,Suresh Malhotra,suresh.malhotra@company.com,Marketing,Executive,2023-08-28,EMP779167,1,Active,2025-02-18 13:19:45.507000+00:00,0,311397,1.51,2.0
+USR000226,Priyanka Kumar,priyanka.kumar@company.com,Admin,Executive,2017-12-22,EMP998508,3,Active,2025-02-14 13:59:10.760000+00:00,395,465046,7.19,2.0
+USR000227,Ishita Malhotra,ishita.malhotra@company.com,Production,Executive,2019-02-21,EMP079094,2,Inactive,2025-02-19 08:21:32.059000+00:00,694,330722,6.03,2.0
+USR000228,Ishita Joshi,ishita.joshi@company.com,Hr,Hr Manager,2021-05-17,EMP682108,1,Active,2025-02-10 05:08:09.387000+00:00,118,540088,3.79,1.0
+USR000229,Aanya Reddy,aanya.reddy@company.com,Admin,Executive,2023-02-19,EMP330215,4,Active,2025-02-13 21:03:49.690000+00:00,11,547683,2.03,2.0
+USR000230,Ishita Kapoor,ishita.kapoor@company.com,Finance,Accountant,2024-04-07,EMP109619,2,Active,2025-02-19 01:22:12.653000+00:00,994,409571,0.9,1.0
+USR000231,Ramesh Sharma,ramesh.sharma@company.com,It,Executive,2023-12-26,EMP661312,4,Active,2025-02-10 13:27:36.395000+00:00,586,939005,1.18,2.0
+USR000232,Vihaan Patel,vihaan.patel@company.com,Production,Executive,2019-08-17,EMP891326,1,Active,2025-02-16 14:23:01.952000+00:00,105,781324,5.54,2.0
+USR000233,Sunita Gupta,sunita.gupta@company.com,Marketing,Executive,2017-12-19,EMP369535,1,Active,2025-02-18 13:53:06.032000+00:00,750,740751,7.2,2.0
+USR000234,Dinesh Patel,dinesh.patel@company.com,Finance,Financial Analyst,2023-11-25,EMP333847,1,Active,2025-02-16 07:35:00.030000+00:00,402,773163,1.27,1.0
+USR000235,Ramesh Malhotra,ramesh.malhotra@company.com,Hr,Hr Executive,2020-04-04,EMP776616,2,Active,2025-02-15 22:18:37.230000+00:00,940,862278,4.91,1.0
+USR000236,Advait Kumar,advait.kumar@company.com,Admin,Executive,2015-10-05,EMP681018,1,Active,2025-02-10 21:56:45.152000+00:00,622,917304,9.41,2.0
+USR000237,Advait Patel,advait.patel@company.com,It,Executive,2016-08-15,EMP104505,3,Active,2025-02-12 08:22:16.862000+00:00,775,282151,8.54,2.0
+USR000238,Priyanka Agarwal,priyanka.agarwal@company.com,Admin,Executive,2021-06-28,EMP149425,2,Active,2025-02-11 12:47:26.370000+00:00,593,778410,3.68,2.0
+USR000239,Dinesh Reddy,dinesh.reddy@company.com,Marketing,Executive,2022-03-11,EMP484631,2,Active,2025-02-17 23:27:16.496000+00:00,992,837358,2.98,2.0
+USR000240,Sunita Gupta,sunita.gupta@company.com,Marketing,Executive,2017-02-14,EMP851929,3,Active,2025-02-14 21:31:04.251000+00:00,687,527464,8.04,2.0
+USR000241,Aanya Chopra,aanya.chopra@company.com,Hr,Recruiter,2015-05-11,EMP925761,1,Inactive,2025-02-15 13:19:12.032000+00:00,587,808682,9.81,1.0
+USR000242,Diya Chopra,diya.chopra@company.com,It,Executive,2019-10-26,EMP373481,4,Active,2025-02-12 03:01:42.739000+00:00,704,494757,5.35,2.0
+USR000243,Priya Kapoor,priya.kapoor@company.com,Admin,Executive,2024-07-15,EMP032285,2,Active,2025-02-10 09:42:00.790000+00:00,498,549139,0.63,2.0
+USR000244,Anita Mehta,anita.mehta@company.com,It,Executive,2025-02-02,EMP151072,4,Active,2025-02-10 09:32:25.898000+00:00,520,801487,0.08,2.0
+USR000245,Mukesh Joshi,mukesh.joshi@company.com,Production,Executive,2022-09-30,EMP391848,3,Active,2025-02-12 11:12:52.349000+00:00,817,491533,2.42,2.0
+USR000246,Priyanka Malhotra,priyanka.malhotra@company.com,Sales,Sales Executive,2016-02-03,EMP311097,2,Active,2025-02-10 07:49:56.731000+00:00,861,225642,9.08,1.0
+USR000247,Rajesh Agarwal,rajesh.agarwal@company.com,Sales,Business Developer,2018-12-14,EMP561022,2,Active,2025-02-14 09:55:29.495000+00:00,702,552697,6.21,1.0
+USR000248,Aarav Singh,aarav.singh@company.com,Marketing,Executive,2019-01-18,EMP754829,1,Active,2025-02-11 06:06:51.924000+00:00,701,811985,6.12,2.0
+USR000249,Reyansh Singh,reyansh.singh@company.com,Finance,Accountant,2024-03-29,EMP151938,4,Active,2025-02-16 13:32:46.475000+00:00,578,995587,0.92,1.0
+USR000250,Priya Chopra,priya.chopra@company.com,Admin,Executive,2022-07-18,EMP675258,3,Active,2025-02-13 21:31:39.657000+00:00,166,130516,2.62,2.0
+USR000251,Rajesh Verma,rajesh.verma@company.com,Marketing,Executive,2022-10-30,EMP700083,3,Active,2025-02-18 02:22:26.387000+00:00,612,353674,2.34,2.0
+USR000252,Kavita Verma,kavita.verma@company.com,Hr,Hr Executive,2024-08-24,EMP107481,3,Active,2025-02-14 13:18:47.671000+00:00,964,786861,0.52,1.0
+USR000253,Ishita Mehta,ishita.mehta@company.com,Hr,Hr Executive,2016-02-28,EMP547251,3,Active,2025-02-10 18:02:29.681000+00:00,627,419698,9.01,1.0
+USR000254,Priyanka Sharma,priyanka.sharma@company.com,Hr,Recruiter,2020-11-19,EMP380239,3,Active,2025-02-17 20:36:27.843000+00:00,697,647704,4.28,1.0
+USR000255,Ramesh Mehta,ramesh.mehta@company.com,Sales,Business Developer,2015-07-29,EMP656713,1,Active,2025-02-17 17:16:02.064000+00:00,81,734035,9.59,1.0
+USR000256,Dinesh Gupta,dinesh.gupta@company.com,Marketing,Executive,2025-01-12,EMP061035,3,Active,2025-02-10 19:25:48.922000+00:00,950,192762,0.13,2.0
+USR000257,Priya Patel,priya.patel@company.com,Finance,Accountant,2020-03-18,EMP141767,1,Active,2025-02-13 07:01:19.197000+00:00,463,603114,4.95,1.0
+USR000258,Rajesh Agarwal,rajesh.agarwal@company.com,Sales,Sales Executive,2021-04-16,EMP113503,2,Active,2025-02-15 23:51:40.440000+00:00,790,177654,3.88,1.0
+USR000259,Priyanka Malhotra,priyanka.malhotra@company.com,It,Executive,2020-08-09,EMP450184,4,Inactive,2025-02-17 12:16:38+00:00,659,168348,4.56,2.0
+USR000260,Reyansh Kumar,reyansh.kumar@company.com,Marketing,Executive,2019-05-05,EMP302541,3,Active,2025-02-14 16:46:02.962000+00:00,296,761209,5.83,2.0
+USR000261,Advait Malhotra,advait.malhotra@company.com,Operations,Executive,2024-01-02,EMP707540,2,Active,2025-02-13 00:55:33.031000+00:00,465,36739,1.16,2.0
+USR000262,Priyanka Kumar,priyanka.kumar@company.com,It,Executive,2020-11-13,EMP927027,1,Active,2025-02-12 05:21:22.265000+00:00,577,360211,4.3,2.0
+USR000263,Deepika Kapoor,deepika.kapoor@company.com,Admin,Executive,2021-06-14,EMP555856,4,Active,2025-02-18 19:06:42.962000+00:00,495,638322,3.71,2.0
+USR000264,Kavita Sharma,kavita.sharma@company.com,Sales,Business Developer,2015-11-11,EMP218219,4,Active,2025-02-11 12:20:00.065000+00:00,561,11652,9.31,1.0
+USR000265,Advait Malhotra,advait.malhotra@company.com,Procurement,Executive,2022-08-24,EMP202775,2,Active,2025-02-19 12:16:29.802000+00:00,901,477862,2.52,2.0
+USR000266,Vihaan Verma,vihaan.verma@company.com,Hr,Hr Executive,2018-08-28,EMP705148,4,Active,2025-02-09 22:19:48.619000+00:00,291,761217,6.51,1.0
+USR000267,Suresh Sharma,suresh.sharma@company.com,Production,Executive,2019-09-10,EMP294347,4,Active,2025-02-17 23:36:53.652000+00:00,144,292655,5.47,2.0
+USR000268,Ramesh Agarwal,ramesh.agarwal@company.com,Production,Executive,2021-07-10,EMP265741,2,Active,2025-02-13 19:06:44.125000+00:00,915,299917,3.64,2.0
+USR000269,Priya Reddy,priya.reddy@company.com,Marketing,Executive,2023-05-13,EMP985327,2,Active,2025-02-18 01:23:26.834000+00:00,400,799569,1.8,2.0
+USR000270,Reyansh Kumar,reyansh.kumar@company.com,R&D,Executive,2021-07-22,EMP945325,1,Active,2025-02-19 05:46:29.082000+00:00,280,217036,3.61,2.0
+USR000271,Riya Singh,riya.singh@company.com,It,Executive,2015-01-19,EMP530256,4,Inactive,2025-02-14 08:58:27.424000+00:00,798,205540,10.12,2.0
+USR000272,Rajesh Sharma,rajesh.sharma@company.com,Hr,Hr Manager,2023-07-26,EMP137490,3,Active,2025-02-15 22:05:36.439000+00:00,8,995735,1.6,1.0
+USR000273,Sunita Malhotra,sunita.malhotra@company.com,R&D,Executive,2019-12-11,EMP031860,2,Active,2025-02-09 18:36:08.031000+00:00,138,678210,5.22,2.0
+USR000274,Rajesh Singh,rajesh.singh@company.com,Operations,Executive,2016-07-05,EMP716394,4,Active,2025-02-14 07:25:21.432000+00:00,631,258363,8.66,2.0
+USR000275,Aarav Reddy,aarav.reddy@company.com,Operations,Executive,2020-10-13,EMP711572,4,Active,2025-02-12 09:13:54.418000+00:00,393,500455,4.38,2.0
+USR000276,Dinesh Agarwal,dinesh.agarwal@company.com,Operations,Executive,2015-05-05,EMP718032,1,Active,2025-02-10 03:36:35.201000+00:00,368,601692,9.83,2.0
+USR000277,Advait Joshi,advait.joshi@company.com,Marketing,Executive,2016-12-01,EMP854110,3,Active,2025-02-17 13:27:02.911000+00:00,352,565005,8.25,2.0
+USR000278,Advait Agarwal,advait.agarwal@company.com,Sales,Business Developer,2021-05-20,EMP677901,3,Active,2025-02-18 05:20:02.907000+00:00,12,9658,3.78,1.0
+USR000279,Priyanka Mehta,priyanka.mehta@company.com,Finance,Financial Analyst,2018-04-15,EMP981439,3,Active,2025-02-15 00:19:58.274000+00:00,458,615561,6.88,1.0
+USR000280,Aarav Joshi,aarav.joshi@company.com,Procurement,Executive,2019-04-02,EMP488543,4,Active,2025-02-17 14:39:20.024000+00:00,265,777332,5.92,2.0
+USR000281,Kavita Agarwal,kavita.agarwal@company.com,Marketing,Executive,2023-10-14,EMP912740,2,Active,2025-02-18 00:56:42.201000+00:00,32,821938,1.38,2.0
+USR000282,Anita Mehta,anita.mehta@company.com,Hr,Hr Manager,2019-01-03,EMP687830,2,Active,2025-02-17 23:19:37.161000+00:00,565,7272,6.16,1.0
+USR000283,Aarav Joshi,aarav.joshi@company.com,Sales,Sales Manager,2020-11-11,EMP875560,4,Active,2025-02-16 08:41:11.597000+00:00,721,744239,4.3,1.0
+USR000284,Aanya Shah,aanya.shah@company.com,Finance,Accountant,2016-07-16,EMP851720,4,Active,2025-02-10 10:42:24.464000+00:00,452,390671,8.63,1.0
+USR000285,Priya Bansal,priya.bansal@company.com,Finance,Financial Analyst,2019-05-20,EMP746652,4,Active,2025-02-13 23:46:11.023000+00:00,609,898578,5.78,1.0
+USR000286,Sunita Reddy,sunita.reddy@company.com,Marketing,Executive,2018-10-25,EMP345964,1,Active,2025-02-16 23:12:20.927000+00:00,964,973023,6.35,2.0
+USR000287,Vihaan Malhotra,vihaan.malhotra@company.com,Procurement,Executive,2016-05-13,EMP904758,3,Active,2025-02-17 00:45:33.749000+00:00,394,576807,8.8,2.0
+USR000288,Priyanka Gupta,priyanka.gupta@company.com,Sales,Sales Executive,2020-11-19,EMP721089,3,Active,2025-02-18 08:55:26.318000+00:00,993,4781,4.28,1.0
+USR000289,Advait Bansal,advait.bansal@company.com,Operations,Executive,2021-12-10,EMP594457,3,Inactive,2025-02-10 22:21:54.586000+00:00,855,87808,3.22,2.0
+USR000290,Arjun Joshi,arjun.joshi@company.com,R&D,Executive,2017-07-07,EMP278843,2,Inactive,2025-02-10 23:01:08.052000+00:00,22,760998,7.65,2.0
+USR000291,Ishita Gupta,ishita.gupta@company.com,Hr,Recruiter,2015-08-05,EMP759746,4,Active,2025-02-13 10:20:42.051000+00:00,563,120865,9.57,1.0
+USR000292,Sunita Reddy,sunita.reddy@company.com,Production,Executive,2022-04-22,EMP470293,4,Active,2025-02-17 22:28:46.413000+00:00,712,131924,2.86,2.0
+USR000293,Anita Bansal,anita.bansal@company.com,Procurement,Executive,2025-01-13,EMP320861,2,Inactive,2025-02-12 11:41:42.724000+00:00,713,729679,0.13,2.0
+USR000294,Priya Agarwal,priya.agarwal@company.com,It,Executive,2016-04-30,EMP894412,3,Inactive,2025-02-10 15:40:14.142000+00:00,521,917852,8.84,2.0
+USR000295,Diya Kumar,diya.kumar@company.com,Sales,Sales Executive,2021-11-19,EMP164760,3,Active,2025-02-18 21:29:37.025000+00:00,793,733627,3.28,1.0
+USR000296,Ramesh Chopra,ramesh.chopra@company.com,Sales,Sales Executive,2017-10-02,EMP544387,3,Active,2025-02-11 06:01:17.946000+00:00,405,970782,7.41,1.0
+USR000297,Reyansh Sharma,reyansh.sharma@company.com,It,Executive,2016-03-26,EMP282301,3,Active,2025-02-11 20:34:54.995000+00:00,513,807088,8.93,2.0
+USR000298,Priyanka Patel,priyanka.patel@company.com,Admin,Executive,2019-12-04,EMP854864,4,Active,2025-02-13 21:03:06.407000+00:00,835,577866,5.24,2.0
+USR000299,Priya Joshi,priya.joshi@company.com,R&D,Executive,2020-07-19,EMP338457,2,Active,2025-02-14 00:56:27.838000+00:00,277,599641,4.62,2.0
+USR000300,Dinesh Gupta,dinesh.gupta@company.com,Sales,Business Developer,2021-08-08,EMP120493,1,Active,2025-02-09 22:00:22.378000+00:00,265,212691,3.56,1.0
+USR000301,Ramesh Joshi,ramesh.joshi@company.com,Hr,Hr Manager,2017-04-11,EMP281130,1,Active,2025-02-16 00:33:45.921000+00:00,504,448003,7.89,1.0
+USR000302,Arjun Singh,arjun.singh@company.com,Marketing,Executive,2018-01-20,EMP380249,3,Active,2025-02-13 06:10:22.875000+00:00,26,235653,7.11,2.0
+USR000303,Priya Reddy,priya.reddy@company.com,Admin,Executive,2017-12-20,EMP941730,2,Active,2025-02-19 01:01:00.949000+00:00,636,770735,7.2,2.0
+USR000304,Dinesh Chopra,dinesh.chopra@company.com,Admin,Executive,2021-01-19,EMP291842,4,Active,2025-02-17 22:17:43.216000+00:00,23,516607,4.11,2.0
+USR000305,Arjun Reddy,arjun.reddy@company.com,Operations,Executive,2018-06-13,EMP782676,3,Active,2025-02-10 20:01:43.860000+00:00,816,723618,6.72,2.0
+USR000306,Riya Shah,riya.shah@company.com,R&D,Executive,2019-03-29,EMP881264,3,Active,2025-02-17 05:40:42.900000+00:00,464,414816,5.93,2.0
+USR000307,Ishita Singh,ishita.singh@company.com,Finance,Controller,2022-06-16,EMP038958,4,Active,2025-02-15 04:58:03.760000+00:00,527,678150,2.71,1.0
+USR000308,Vihaan Patel,vihaan.patel@company.com,Finance,Controller,2016-05-31,EMP776038,4,Active,2025-02-15 09:42:14.721000+00:00,559,669725,8.75,1.0
+USR000309,Priyanka Kumar,priyanka.kumar@company.com,Sales,Sales Executive,2022-01-11,EMP799776,3,Active,2025-02-19 03:24:38.756000+00:00,956,821450,3.14,1.0
+USR000310,Mukesh Shah,mukesh.shah@company.com,It,Executive,2015-06-13,EMP126243,1,Active,2025-02-19 09:04:33.211000+00:00,868,714318,9.72,2.0
+USR000311,Aanya Mehta,aanya.mehta@company.com,Marketing,Executive,2017-08-11,EMP270935,2,Active,2025-02-09 19:41:24.509000+00:00,681,885059,7.56,2.0
+USR000312,Riya Shah,riya.shah@company.com,Production,Executive,2020-11-01,EMP766829,2,Active,2025-02-14 20:28:36.978000+00:00,758,616229,4.33,2.0
+USR000313,Diya Malhotra,diya.malhotra@company.com,Sales,Business Developer,2015-11-02,EMP513568,3,Active,2025-02-09 16:41:27.999000+00:00,21,784021,9.33,1.0
+USR000314,Suresh Bansal,suresh.bansal@company.com,Procurement,Executive,2024-11-26,EMP920324,2,Active,2025-02-15 00:04:31.470000+00:00,897,124668,0.26,2.0
+USR000315,Reyansh Patel,reyansh.patel@company.com,Procurement,Executive,2016-12-27,EMP543218,4,Active,2025-02-11 19:21:37.058000+00:00,595,394849,8.18,2.0
+USR000316,Rajesh Singh,rajesh.singh@company.com,Finance,Financial Analyst,2021-11-25,EMP367977,2,Active,2025-02-10 13:19:06.031000+00:00,96,411526,3.27,1.0
+USR000317,Sunita Reddy,sunita.reddy@company.com,Admin,Executive,2020-07-30,EMP137361,1,Active,2025-02-16 23:13:36.085000+00:00,197,694344,4.59,2.0
+USR000318,Priya Malhotra,priya.malhotra@company.com,R&D,Executive,2018-10-31,EMP769611,4,Active,2025-02-12 02:09:11.182000+00:00,9,417115,6.33,2.0
+USR000319,Vihaan Bansal,vihaan.bansal@company.com,It,Executive,2021-09-05,EMP096750,4,Active,2025-02-13 21:26:11.154000+00:00,351,431424,3.49,2.0
+USR000320,Aanya Mehta,aanya.mehta@company.com,Operations,Executive,2016-12-14,EMP403446,4,Active,2025-02-16 21:33:34.772000+00:00,771,141841,8.21,2.0
+USR000321,Mukesh Malhotra,mukesh.malhotra@company.com,Marketing,Executive,2020-04-16,EMP571877,4,Active,2025-02-15 10:21:07.899000+00:00,975,407900,4.88,2.0
+USR000322,Deepika Agarwal,deepika.agarwal@company.com,Operations,Executive,2019-08-18,EMP470339,4,Inactive,2025-02-12 08:54:45.305000+00:00,958,872282,5.54,2.0
+USR000323,Aarav Patel,aarav.patel@company.com,It,Executive,2021-04-08,EMP265704,3,Active,2025-02-18 11:40:54.515000+00:00,996,692765,3.9,2.0
+USR000324,Ishita Reddy,ishita.reddy@company.com,Marketing,Executive,2020-07-23,EMP199022,1,Active,2025-02-18 20:08:46.881000+00:00,124,88124,4.61,2.0
+USR000325,Priyanka Joshi,priyanka.joshi@company.com,Operations,Executive,2021-05-20,EMP804845,3,Active,2025-02-11 13:27:40.988000+00:00,644,469769,3.78,2.0
+USR000326,Ishita Gupta,ishita.gupta@company.com,Hr,Recruiter,2022-02-17,EMP112295,3,Active,2025-02-17 03:18:53.613000+00:00,546,314431,3.04,1.0
+USR000327,Vihaan Sharma,vihaan.sharma@company.com,It,Executive,2017-09-25,EMP679295,3,Inactive,2025-02-19 03:16:58.853000+00:00,568,393820,7.43,2.0
+USR000328,Ishita Gupta,ishita.gupta@company.com,Production,Executive,2017-07-24,EMP147685,2,Active,2025-02-16 19:47:07.386000+00:00,356,317512,7.6,2.0
+USR000329,Aarav Singh,aarav.singh@company.com,Production,Executive,2022-07-07,EMP023661,4,Active,2025-02-17 07:38:02.355000+00:00,721,929278,2.65,2.0
+USR000330,Anita Gupta,anita.gupta@company.com,Marketing,Executive,2015-08-25,EMP661918,4,Active,2025-02-15 01:44:13.681000+00:00,977,211615,9.52,2.0
+USR000331,Deepika Patel,deepika.patel@company.com,Hr,Hr Manager,2017-12-02,EMP878825,4,Active,2025-02-15 03:41:05.984000+00:00,429,714328,7.25,1.0
+USR000332,Priya Shah,priya.shah@company.com,It,Executive,2015-02-01,EMP933182,4,Active,2025-02-10 21:19:02.699000+00:00,982,855257,10.08,2.0
+USR000333,Aarav Joshi,aarav.joshi@company.com,Admin,Executive,2023-10-05,EMP624243,1,Active,2025-02-18 18:11:31.730000+00:00,419,123338,1.41,2.0
+USR000334,Sunita Mehta,sunita.mehta@company.com,Production,Executive,2016-12-12,EMP893310,4,Active,2025-02-12 13:07:02.433000+00:00,22,27665,8.22,2.0
+USR000335,Mukesh Shah,mukesh.shah@company.com,Admin,Executive,2021-06-29,EMP021033,2,Active,2025-02-13 11:12:01.577000+00:00,124,47974,3.67,2.0
+USR000336,Deepika Kumar,deepika.kumar@company.com,Sales,Sales Manager,2022-02-23,EMP294447,4,Active,2025-02-13 20:13:03.664000+00:00,835,110919,3.02,1.0
+USR000337,Kavita Joshi,kavita.joshi@company.com,R&D,Executive,2024-04-08,EMP699953,2,Active,2025-02-15 07:43:36.514000+00:00,119,349024,0.9,2.0
+USR000338,Riya Sharma,riya.sharma@company.com,Procurement,Executive,2019-12-12,EMP312460,4,Active,2025-02-15 06:25:18.208000+00:00,785,663347,5.22,2.0
+USR000339,Reyansh Kumar,reyansh.kumar@company.com,Hr,Hr Manager,2018-02-21,EMP960545,2,Active,2025-02-16 13:42:52.431000+00:00,105,592454,7.02,1.0
+USR000340,Sunita Chopra,sunita.chopra@company.com,It,Executive,2016-09-05,EMP573355,2,Active,2025-02-15 10:06:37.905000+00:00,920,69888,8.49,2.0
+USR000341,Aanya Sharma,aanya.sharma@company.com,Marketing,Executive,2021-04-28,EMP674861,4,Active,2025-02-17 16:59:28.096000+00:00,248,395507,3.84,2.0
+USR000342,Suresh Sharma,suresh.sharma@company.com,It,Executive,2019-06-25,EMP113266,4,Active,2025-02-18 03:18:01.120000+00:00,558,444539,5.69,2.0
+USR000343,Arjun Kapoor,arjun.kapoor@company.com,Procurement,Executive,2017-02-01,EMP342621,3,Active,2025-02-18 23:04:57.956000+00:00,515,6144,8.08,2.0
+USR000344,Arjun Mehta,arjun.mehta@company.com,Hr,Recruiter,2017-07-23,EMP768244,4,Active,2025-02-16 05:31:38.297000+00:00,819,955171,7.61,1.0
+USR000345,Vihaan Gupta,vihaan.gupta@company.com,Marketing,Executive,2015-05-20,EMP187573,3,Active,2025-02-15 12:22:10.760000+00:00,100,955651,9.78,2.0
+USR000346,Riya Joshi,riya.joshi@company.com,Admin,Executive,2021-08-24,EMP495958,3,Inactive,2025-02-17 07:43:37.718000+00:00,461,693573,3.52,2.0
+USR000347,Kavita Patel,kavita.patel@company.com,It,Executive,2019-12-13,EMP379504,2,Active,2025-02-11 00:13:33.132000+00:00,403,130166,5.22,2.0
+USR000348,Priya Chopra,priya.chopra@company.com,Admin,Executive,2021-01-06,EMP255817,2,Inactive,2025-02-13 01:44:20.576000+00:00,414,341612,4.15,2.0
+USR000349,Priya Kumar,priya.kumar@company.com,R&D,Executive,2021-03-05,EMP521198,4,Active,2025-02-13 05:21:35.349000+00:00,6,980169,3.99,2.0
+USR000350,Vihaan Kumar,vihaan.kumar@company.com,Hr,Hr Executive,2024-10-21,EMP221741,2,Active,2025-02-13 07:52:40.215000+00:00,263,713259,0.36,1.0
+USR000351,Aarav Kumar,aarav.kumar@company.com,It,Executive,2022-08-24,EMP496959,4,Active,2025-02-10 13:34:26.918000+00:00,31,427521,2.52,2.0
+USR000352,Riya Sharma,riya.sharma@company.com,Hr,Recruiter,2022-04-01,EMP981040,3,Active,2025-02-12 00:09:04.618000+00:00,191,337210,2.92,1.0
+USR000353,Anita Verma,anita.verma@company.com,Admin,Executive,2022-02-18,EMP315434,1,Active,2025-02-11 13:21:31.103000+00:00,150,507851,3.03,2.0
+USR000354,Suresh Singh,suresh.singh@company.com,Finance,Financial Analyst,2018-03-05,EMP101547,2,Active,2025-02-14 13:30:47.096000+00:00,260,126221,6.99,1.0
+USR000355,Sunita Shah,sunita.shah@company.com,R&D,Executive,2020-07-04,EMP249701,4,Inactive,2025-02-18 07:52:55.226000+00:00,421,565450,4.66,2.0
+USR000356,Ishita Joshi,ishita.joshi@company.com,Hr,Hr Manager,2024-11-01,EMP437379,3,Active,2025-02-10 07:37:06.183000+00:00,245,748027,0.33,1.0
+USR000357,Suresh Kumar,suresh.kumar@company.com,Marketing,Executive,2016-12-16,EMP195097,1,Active,2025-02-11 14:08:44.784000+00:00,722,990438,8.21,2.0
+USR000358,Dinesh Bansal,dinesh.bansal@company.com,Sales,Sales Manager,2021-10-02,EMP655398,2,Active,2025-02-09 16:19:32.945000+00:00,28,733457,3.41,1.0
+USR000359,Riya Singh,riya.singh@company.com,Procurement,Executive,2021-08-22,EMP353082,3,Active,2025-02-12 13:04:58.995000+00:00,932,742040,3.53,2.0
+USR000360,Aarav Joshi,aarav.joshi@company.com,Hr,Hr Manager,2022-12-15,EMP603199,4,Active,2025-02-18 22:33:20.910000+00:00,968,692891,2.21,1.0
+USR000361,Rajesh Kapoor,rajesh.kapoor@company.com,Finance,Controller,2022-07-08,EMP461642,2,Active,2025-02-10 14:22:32.146000+00:00,925,93923,2.65,1.0
+USR000362,Riya Singh,riya.singh@company.com,Procurement,Executive,2019-04-04,EMP535312,3,Active,2025-02-14 06:49:50.279000+00:00,19,635401,5.91,2.0
+USR000363,Advait Bansal,advait.bansal@company.com,Operations,Executive,2019-08-28,EMP502382,1,Active,2025-02-17 21:25:36.813000+00:00,133,493082,5.51,2.0
+USR000364,Rajesh Malhotra,rajesh.malhotra@company.com,Finance,Accountant,2018-02-03,EMP075307,2,Active,2025-02-11 01:28:28.639000+00:00,905,393195,7.07,1.0
+USR000365,Anita Shah,anita.shah@company.com,R&D,Executive,2015-09-04,EMP280262,4,Active,2025-02-17 08:42:33.824000+00:00,780,903553,9.49,2.0
+USR000366,Riya Reddy,riya.reddy@company.com,Marketing,Executive,2024-12-23,EMP185333,4,Active,2025-02-10 23:18:33.187000+00:00,902,147342,0.19,2.0
+USR000367,Vihaan Kapoor,vihaan.kapoor@company.com,It,Executive,2018-07-17,EMP008231,3,Active,2025-02-16 08:42:32.382000+00:00,968,543624,6.62,2.0
+USR000368,Aarav Reddy,aarav.reddy@company.com,Hr,Hr Manager,2023-09-11,EMP659979,1,Active,2025-02-18 08:53:06.537000+00:00,667,181368,1.47,1.0
+USR000369,Reyansh Chopra,reyansh.chopra@company.com,Procurement,Executive,2024-07-03,EMP762857,2,Active,2025-02-14 22:16:49.938000+00:00,906,630766,0.66,2.0
+USR000370,Diya Kapoor,diya.kapoor@company.com,Finance,Financial Analyst,2016-03-07,EMP660794,1,Active,2025-02-15 00:15:10.285000+00:00,477,691239,8.98,1.0
+USR000371,Deepika Kumar,deepika.kumar@company.com,Procurement,Executive,2016-07-12,EMP543811,4,Active,2025-02-15 10:29:58.124000+00:00,174,39864,8.64,2.0
+USR000372,Ishita Mehta,ishita.mehta@company.com,Finance,Accountant,2016-07-31,EMP357251,3,Active,2025-02-11 03:44:41.974000+00:00,157,309457,8.58,1.0
+USR000373,Ishita Chopra,ishita.chopra@company.com,Admin,Executive,2020-09-06,EMP092213,4,Active,2025-02-18 11:16:58.381000+00:00,718,452566,4.48,2.0
+USR000374,Ishita Kumar,ishita.kumar@company.com,Production,Executive,2017-06-24,EMP548213,4,Active,2025-02-13 20:25:15.124000+00:00,106,351374,7.69,2.0
+USR000375,Deepika Agarwal,deepika.agarwal@company.com,Production,Executive,2015-06-02,EMP349378,3,Active,2025-02-16 21:46:20.378000+00:00,507,870286,9.75,2.0
+USR000376,Ramesh Sharma,ramesh.sharma@company.com,Admin,Executive,2017-09-27,EMP432347,3,Active,2025-02-09 15:27:05.859000+00:00,976,770465,7.43,2.0
+USR000377,Arjun Gupta,arjun.gupta@company.com,Procurement,Executive,2017-06-01,EMP826676,2,Active,2025-02-15 16:00:40.635000+00:00,761,106902,7.75,2.0
+USR000378,Aarav Mehta,aarav.mehta@company.com,It,Executive,2017-07-21,EMP433603,3,Active,2025-02-09 19:18:57.890000+00:00,276,683805,7.61,2.0
+USR000379,Suresh Joshi,suresh.joshi@company.com,Marketing,Executive,2015-07-28,EMP868926,1,Active,2025-02-10 10:41:48.489000+00:00,302,480122,9.6,2.0
+USR000380,Kavita Shah,kavita.shah@company.com,Finance,Accountant,2019-05-27,EMP112662,4,Active,2025-02-16 21:27:04.179000+00:00,209,858946,5.77,1.0
+USR000381,Aarav Patel,aarav.patel@company.com,Production,Executive,2020-06-16,EMP090119,3,Active,2025-02-13 15:40:50.376000+00:00,722,728398,4.71,2.0
+USR000382,Ishita Reddy,ishita.reddy@company.com,Procurement,Executive,2021-08-22,EMP437038,4,Active,2025-02-17 15:16:51.192000+00:00,814,442510,3.53,2.0
+USR000383,Sunita Kumar,sunita.kumar@company.com,Sales,Business Developer,2017-02-04,EMP256506,3,Active,2025-02-18 00:39:24.875000+00:00,692,887124,8.07,1.0
+USR000384,Sunita Kapoor,sunita.kapoor@company.com,Production,Executive,2018-02-09,EMP288538,4,Active,2025-02-15 01:48:27.520000+00:00,194,959321,7.06,2.0
+USR000385,Deepika Kapoor,deepika.kapoor@company.com,R&D,Executive,2015-06-24,EMP710941,1,Active,2025-02-14 10:46:27.461000+00:00,808,258049,9.69,2.0
+USR000386,Diya Verma,diya.verma@company.com,Hr,Hr Manager,2015-02-28,EMP308296,4,Active,2025-02-12 00:39:51.498000+00:00,144,515658,10.01,1.0
+USR000387,Ishita Singh,ishita.singh@company.com,Procurement,Executive,2021-02-25,EMP124758,2,Active,2025-02-16 00:54:18.168000+00:00,910,803599,4.01,2.0
+USR000388,Vihaan Kapoor,vihaan.kapoor@company.com,Hr,Hr Executive,2018-09-16,EMP575697,3,Inactive,2025-02-14 11:51:21.603000+00:00,944,218466,6.46,1.0
+USR000389,Aarav Kapoor,aarav.kapoor@company.com,Operations,Executive,2020-03-15,EMP408232,1,Active,2025-02-15 17:38:36.739000+00:00,942,298914,4.96,2.0
+USR000390,Priyanka Bansal,priyanka.bansal@company.com,Marketing,Executive,2020-05-21,EMP482235,3,Active,2025-02-13 23:07:02.647000+00:00,234,275952,4.78,2.0
+USR000391,Vihaan Chopra,vihaan.chopra@company.com,Admin,Executive,2021-01-18,EMP193501,4,Inactive,2025-02-10 21:48:34.621000+00:00,58,349747,4.12,2.0
+USR000392,Kavita Reddy,kavita.reddy@company.com,Production,Executive,2024-07-10,EMP958746,4,Active,2025-02-12 08:40:18.714000+00:00,189,474399,0.64,2.0
+USR000393,Arjun Gupta,arjun.gupta@company.com,Production,Executive,2016-11-30,EMP412330,3,Inactive,2025-02-17 11:05:06.572000+00:00,112,704301,8.25,2.0
+USR000394,Arjun Malhotra,arjun.malhotra@company.com,Hr,Recruiter,2020-05-26,EMP064074,4,Active,2025-02-14 10:38:55.387000+00:00,556,438462,4.77,1.0
+USR000395,Deepika Kumar,deepika.kumar@company.com,Production,Executive,2019-11-07,EMP160966,3,Active,2025-02-13 14:37:37.119000+00:00,175,19836,5.32,2.0
+USR000396,Sunita Joshi,sunita.joshi@company.com,Hr,Hr Manager,2019-09-12,EMP385595,3,Active,2025-02-18 02:56:06.133000+00:00,219,781169,5.47,1.0
+USR000397,Ishita Patel,ishita.patel@company.com,Marketing,Executive,2018-05-03,EMP637457,4,Active,2025-02-16 06:07:55.459000+00:00,456,817407,6.83,2.0
+USR000398,Kavita Shah,kavita.shah@company.com,Sales,Sales Manager,2018-03-19,EMP423762,1,Active,2025-02-10 01:37:55.798000+00:00,771,275125,6.95,1.0
+USR000399,Sunita Kumar,sunita.kumar@company.com,Production,Executive,2018-05-25,EMP441470,1,Inactive,2025-02-14 09:46:15.042000+00:00,891,929341,6.77,2.0
+USR000400,Mukesh Mehta,mukesh.mehta@company.com,Sales,Sales Executive,2017-08-25,EMP320425,2,Active,2025-02-09 17:38:25.867000+00:00,510,464176,7.52,1.0
+USR000401,Vihaan Chopra,vihaan.chopra@company.com,R&D,Executive,2017-01-07,EMP824020,1,Active,2025-02-11 04:37:02.450000+00:00,178,128074,8.15,2.0
+USR000402,Mukesh Patel,mukesh.patel@company.com,Production,Executive,2019-08-19,EMP889005,1,Active,2025-02-16 16:45:59.692000+00:00,892,48576,5.54,2.0
+USR000403,Ishita Reddy,ishita.reddy@company.com,Marketing,Executive,2019-11-27,EMP454883,1,Active,2025-02-16 06:56:00.837000+00:00,531,351996,5.26,2.0
+USR000404,Deepika Gupta,deepika.gupta@company.com,Sales,Business Developer,2019-06-20,EMP175130,4,Active,2025-02-19 01:54:23.503000+00:00,844,173077,5.7,1.0
+USR000405,Reyansh Singh,reyansh.singh@company.com,Admin,Executive,2024-07-30,EMP402056,2,Active,2025-02-14 08:42:17.581000+00:00,756,485878,0.59,2.0
+USR000406,Suresh Reddy,suresh.reddy@company.com,Production,Executive,2024-10-14,EMP157514,1,Active,2025-02-15 01:19:49.437000+00:00,170,980038,0.38,2.0
+USR000407,Suresh Reddy,suresh.reddy@company.com,Sales,Sales Manager,2020-09-10,EMP897386,1,Active,2025-02-17 23:47:14.982000+00:00,272,220682,4.47,1.0
+USR000408,Deepika Verma,deepika.verma@company.com,Finance,Accountant,2021-07-22,EMP036691,1,Active,2025-02-10 23:58:43.788000+00:00,189,208837,3.61,1.0
+USR000409,Ishita Agarwal,ishita.agarwal@company.com,Sales,Sales Manager,2019-05-20,EMP316345,3,Active,2025-02-14 09:52:59.805000+00:00,524,441603,5.78,1.0
+USR000410,Riya Reddy,riya.reddy@company.com,R&D,Executive,2018-01-18,EMP008685,2,Active,2025-02-12 21:17:25.535000+00:00,724,536946,7.12,2.0
+USR000411,Priyanka Kapoor,priyanka.kapoor@company.com,Admin,Executive,2018-08-03,EMP038706,3,Inactive,2025-02-14 16:05:04.765000+00:00,960,107592,6.58,2.0
+USR000412,Priyanka Kumar,priyanka.kumar@company.com,Operations,Executive,2019-08-27,EMP027362,2,Active,2025-02-12 05:05:24.374000+00:00,460,424477,5.51,2.0
+USR000413,Aanya Shah,aanya.shah@company.com,Admin,Executive,2022-08-13,EMP544383,1,Active,2025-02-12 19:28:39.574000+00:00,179,752183,2.55,2.0
+USR000414,Diya Verma,diya.verma@company.com,Procurement,Executive,2015-09-24,EMP726662,2,Active,2025-02-13 20:15:16.447000+00:00,873,957653,9.44,2.0
+USR000415,Aanya Agarwal,aanya.agarwal@company.com,Production,Executive,2022-08-08,EMP561645,1,Active,2025-02-18 15:28:42.333000+00:00,648,425779,2.56,2.0
+USR000416,Reyansh Malhotra,reyansh.malhotra@company.com,Sales,Business Developer,2016-10-26,EMP036424,4,Active,2025-02-19 13:58:42.878000+00:00,869,706437,8.35,1.0
+USR000417,Aarav Patel,aarav.patel@company.com,It,Executive,2021-11-04,EMP858057,1,Active,2025-02-16 20:19:10.751000+00:00,547,74298,3.32,2.0
+USR000418,Mukesh Kumar,mukesh.kumar@company.com,Finance,Accountant,2022-10-15,EMP864023,4,Active,2025-02-09 17:44:11.688000+00:00,344,520859,2.38,1.0
+USR000419,Aanya Bansal,aanya.bansal@company.com,Operations,Executive,2022-02-19,EMP283735,4,Active,2025-02-16 22:42:21.607000+00:00,666,25689,3.03,2.0
+USR000420,Rajesh Reddy,rajesh.reddy@company.com,It,Executive,2018-01-23,EMP030915,3,Active,2025-02-09 23:06:57.248000+00:00,842,137083,7.1,2.0
+USR000421,Rajesh Patel,rajesh.patel@company.com,Operations,Executive,2022-01-18,EMP341931,4,Active,2025-02-09 17:23:21.162000+00:00,254,493928,3.12,2.0
+USR000422,Kavita Joshi,kavita.joshi@company.com,Admin,Executive,2022-10-30,EMP019351,3,Active,2025-02-09 19:45:07.101000+00:00,687,388759,2.34,2.0
+USR000423,Priyanka Bansal,priyanka.bansal@company.com,R&D,Executive,2024-12-10,EMP929232,3,Active,2025-02-09 18:24:17.713000+00:00,881,111293,0.22,2.0
+USR000424,Reyansh Reddy,reyansh.reddy@company.com,Finance,Accountant,2015-12-02,EMP542340,3,Active,2025-02-18 19:32:42.419000+00:00,816,408601,9.25,1.0
+USR000425,Priya Verma,priya.verma@company.com,Production,Executive,2017-03-03,EMP349825,3,Active,2025-02-10 23:04:35.048000+00:00,724,485205,8.0,2.0
+USR000426,Aanya Kapoor,aanya.kapoor@company.com,Hr,Hr Executive,2019-03-17,EMP881641,1,Active,2025-02-17 07:44:02.944000+00:00,963,264077,5.96,1.0
+USR000427,Suresh Shah,suresh.shah@company.com,Admin,Executive,2021-08-31,EMP976244,2,Active,2025-02-17 11:23:05.711000+00:00,624,958990,3.5,2.0
+USR000428,Ramesh Patel,ramesh.patel@company.com,Finance,Accountant,2020-05-18,EMP872702,2,Inactive,2025-02-09 19:15:03.965000+00:00,291,992953,4.79,1.0
+USR000429,Priya Joshi,priya.joshi@company.com,Admin,Executive,2024-07-20,EMP020182,3,Active,2025-02-13 07:26:14.828000+00:00,383,427668,0.62,2.0
+USR000430,Deepika Agarwal,deepika.agarwal@company.com,R&D,Executive,2017-04-25,EMP374487,1,Active,2025-02-16 15:08:27.569000+00:00,261,430198,7.85,2.0
+USR000431,Ramesh Agarwal,ramesh.agarwal@company.com,Production,Executive,2015-10-15,EMP149738,1,Active,2025-02-19 02:44:48.014000+00:00,99,637241,9.38,2.0
+USR000432,Riya Shah,riya.shah@company.com,Sales,Business Developer,2015-06-27,EMP429459,3,Active,2025-02-14 03:30:31.986000+00:00,977,549988,9.68,1.0
+USR000433,Anita Verma,anita.verma@company.com,Sales,Sales Manager,2017-02-15,EMP314857,2,Active,2025-02-12 05:24:31.492000+00:00,906,229011,8.04,1.0
+USR000434,Aarav Reddy,aarav.reddy@company.com,Admin,Executive,2024-12-21,EMP274483,3,Active,2025-02-12 06:25:19.305000+00:00,946,587281,0.19,2.0
+USR000435,Vihaan Verma,vihaan.verma@company.com,It,Executive,2023-07-06,EMP435032,1,Active,2025-02-17 04:10:05.507000+00:00,586,754841,1.66,2.0
+USR000436,Anita Singh,anita.singh@company.com,Operations,Executive,2016-04-25,EMP774630,3,Inactive,2025-02-11 03:57:32.001000+00:00,457,323451,8.85,2.0
+USR000437,Advait Patel,advait.patel@company.com,Marketing,Executive,2023-05-10,EMP551793,2,Active,2025-02-11 21:41:52.941000+00:00,231,792735,1.81,2.0
+USR000438,Suresh Malhotra,suresh.malhotra@company.com,R&D,Executive,2015-01-07,EMP598114,3,Inactive,2025-02-14 03:53:32.734000+00:00,319,251440,10.15,2.0
+USR000439,Priya Singh,priya.singh@company.com,Procurement,Executive,2022-11-27,EMP021523,1,Active,2025-02-19 06:54:47.367000+00:00,247,225328,2.26,2.0
+USR000440,Mukesh Shah,mukesh.shah@company.com,R&D,Executive,2015-10-03,EMP270334,4,Active,2025-02-18 00:10:27.391000+00:00,887,115019,9.41,2.0
+USR000441,Advait Singh,advait.singh@company.com,Procurement,Executive,2018-09-22,EMP138949,1,Active,2025-02-17 22:31:50.921000+00:00,970,660790,6.44,2.0
+USR000442,Aarav Malhotra,aarav.malhotra@company.com,Production,Executive,2021-02-28,EMP978955,3,Active,2025-02-13 09:54:43.944000+00:00,504,815335,4.0,2.0
+USR000443,Kavita Shah,kavita.shah@company.com,Marketing,Executive,2018-01-14,EMP143918,4,Active,2025-02-16 13:30:27.363000+00:00,655,604840,7.13,2.0
+USR000444,Arjun Verma,arjun.verma@company.com,R&D,Executive,2022-06-07,EMP935337,2,Active,2025-02-11 11:37:36.041000+00:00,978,626339,2.73,2.0
+USR000445,Mukesh Verma,mukesh.verma@company.com,Hr,Hr Executive,2015-06-27,EMP942925,2,Active,2025-02-10 21:38:25.225000+00:00,444,475389,9.68,1.0
+USR000446,Mukesh Singh,mukesh.singh@company.com,Finance,Accountant,2018-12-11,EMP422479,2,Active,2025-02-10 04:37:07.455000+00:00,653,112611,6.22,1.0
+USR000447,Anita Mehta,anita.mehta@company.com,Sales,Business Developer,2021-03-13,EMP847504,4,Active,2025-02-10 12:04:23.916000+00:00,832,967889,3.97,1.0
+USR000448,Priyanka Chopra,priyanka.chopra@company.com,Marketing,Executive,2015-04-06,EMP357799,2,Active,2025-02-13 23:53:41.105000+00:00,200,733230,9.9,2.0
+USR000449,Riya Bansal,riya.bansal@company.com,Procurement,Executive,2023-01-14,EMP841717,1,Active,2025-02-12 04:41:26.290000+00:00,945,420840,2.13,2.0
+USR000450,Reyansh Bansal,reyansh.bansal@company.com,It,Executive,2018-05-08,EMP106779,3,Active,2025-02-18 04:44:04.055000+00:00,966,605120,6.82,2.0
+USR000451,Sunita Chopra,sunita.chopra@company.com,Operations,Executive,2017-07-25,EMP618859,1,Inactive,2025-02-14 05:59:26.274000+00:00,163,475621,7.6,2.0
+USR000452,Aarav Malhotra,aarav.malhotra@company.com,Marketing,Executive,2018-11-07,EMP920219,3,Active,2025-02-15 07:35:04.582000+00:00,554,311069,6.32,2.0
+USR000453,Priyanka Patel,priyanka.patel@company.com,Operations,Executive,2020-04-14,EMP281900,1,Active,2025-02-10 03:34:49.882000+00:00,37,811767,4.88,2.0
+USR000454,Deepika Malhotra,deepika.malhotra@company.com,R&D,Executive,2023-04-09,EMP992563,4,Active,2025-02-12 01:32:06.007000+00:00,16,176036,1.9,2.0
+USR000455,Ishita Verma,ishita.verma@company.com,Marketing,Executive,2020-02-19,EMP457050,1,Inactive,2025-02-10 00:41:19.602000+00:00,552,542814,5.03,2.0
+USR000456,Kavita Agarwal,kavita.agarwal@company.com,Operations,Executive,2021-07-12,EMP654110,1,Inactive,2025-02-18 01:54:38.239000+00:00,712,353787,3.64,2.0
+USR000457,Riya Joshi,riya.joshi@company.com,Marketing,Executive,2024-10-09,EMP775681,1,Inactive,2025-02-16 21:37:46.763000+00:00,585,189534,0.39,2.0
+USR000458,Suresh Verma,suresh.verma@company.com,R&D,Executive,2020-08-21,EMP573954,1,Active,2025-02-13 19:36:48.424000+00:00,745,829225,4.53,2.0
+USR000459,Priya Joshi,priya.joshi@company.com,Marketing,Executive,2017-01-08,EMP328685,2,Active,2025-02-13 21:49:03.269000+00:00,145,192259,8.14,2.0
+USR000460,Priyanka Kapoor,priyanka.kapoor@company.com,Admin,Executive,2020-09-04,EMP326405,1,Active,2025-02-18 06:52:32.451000+00:00,834,39431,4.49,2.0
+USR000461,Kavita Singh,kavita.singh@company.com,Marketing,Executive,2020-04-09,EMP188702,2,Active,2025-02-16 22:42:29.896000+00:00,576,8101,4.89,2.0
+USR000462,Dinesh Sharma,dinesh.sharma@company.com,Finance,Controller,2018-01-01,EMP125779,4,Active,2025-02-15 10:10:23.392000+00:00,226,161967,7.16,1.0
+USR000463,Aarav Mehta,aarav.mehta@company.com,Production,Executive,2020-09-06,EMP540020,2,Active,2025-02-10 12:48:03.430000+00:00,387,844947,4.48,2.0
+USR000464,Advait Kapoor,advait.kapoor@company.com,It,Executive,2024-01-22,EMP126400,3,Active,2025-02-16 17:23:34.898000+00:00,963,701752,1.11,2.0
+USR000465,Dinesh Singh,dinesh.singh@company.com,R&D,Executive,2024-09-12,EMP413272,4,Active,2025-02-13 12:47:53.410000+00:00,869,934985,0.47,2.0
+USR000466,Suresh Verma,suresh.verma@company.com,Hr,Hr Manager,2017-08-12,EMP173806,4,Active,2025-02-12 18:29:46.973000+00:00,603,998155,7.55,1.0
+USR000467,Ishita Malhotra,ishita.malhotra@company.com,Finance,Financial Analyst,2022-06-14,EMP654622,3,Active,2025-02-10 10:59:17.004000+00:00,704,690665,2.72,1.0
+USR000468,Deepika Patel,deepika.patel@company.com,It,Executive,2022-03-22,EMP989769,2,Active,2025-02-12 08:21:06.441000+00:00,360,991303,2.95,2.0
+USR000469,Suresh Chopra,suresh.chopra@company.com,R&D,Executive,2024-01-01,EMP178138,2,Active,2025-02-19 00:07:49.992000+00:00,394,790966,1.17,2.0
+USR000470,Ramesh Shah,ramesh.shah@company.com,Operations,Executive,2024-09-08,EMP225073,3,Active,2025-02-09 22:48:46.342000+00:00,796,716039,0.48,2.0
+USR000471,Dinesh Patel,dinesh.patel@company.com,Finance,Accountant,2018-05-31,EMP829417,2,Active,2025-02-16 07:46:45.971000+00:00,605,186890,6.75,1.0
+USR000472,Deepika Gupta,deepika.gupta@company.com,It,Executive,2022-02-01,EMP574888,2,Active,2025-02-12 22:16:56.976000+00:00,555,504759,3.08,2.0
+USR000473,Mukesh Kapoor,mukesh.kapoor@company.com,R&D,Executive,2023-09-28,EMP664736,2,Active,2025-02-14 07:12:49.213000+00:00,572,309022,1.43,2.0
+USR000474,Aanya Sharma,aanya.sharma@company.com,R&D,Executive,2015-12-25,EMP936974,2,Active,2025-02-14 19:30:18.031000+00:00,884,848376,9.18,2.0
+USR000475,Riya Kapoor,riya.kapoor@company.com,Procurement,Executive,2021-12-26,EMP776111,4,Active,2025-02-17 00:16:14.544000+00:00,550,241868,3.18,2.0
+USR000476,Deepika Joshi,deepika.joshi@company.com,R&D,Executive,2018-11-03,EMP844410,3,Active,2025-02-18 06:01:45.428000+00:00,377,965237,6.33,2.0
+USR000477,Ishita Patel,ishita.patel@company.com,Operations,Executive,2016-01-23,EMP773298,4,Active,2025-02-10 14:06:24.333000+00:00,776,795971,9.11,2.0
+USR000478,Suresh Chopra,suresh.chopra@company.com,Finance,Financial Analyst,2022-10-20,EMP799333,1,Active,2025-02-11 10:41:40.394000+00:00,763,315271,2.36,1.0
+USR000479,Diya Kapoor,diya.kapoor@company.com,Production,Executive,2022-02-08,EMP204134,3,Active,2025-02-12 17:48:58.088000+00:00,504,384007,3.06,2.0
+USR000480,Kavita Kapoor,kavita.kapoor@company.com,Production,Executive,2015-09-14,EMP756679,4,Active,2025-02-11 15:09:05.490000+00:00,3,139194,9.46,2.0
+USR000481,Ishita Sharma,ishita.sharma@company.com,Admin,Executive,2017-07-16,EMP138717,3,Active,2025-02-17 08:06:01.889000+00:00,255,564393,7.63,2.0
+USR000482,Priya Joshi,priya.joshi@company.com,Production,Executive,2020-05-23,EMP325619,3,Active,2025-02-09 19:11:10.136000+00:00,327,71847,4.77,2.0
+USR000483,Deepika Kumar,deepika.kumar@company.com,Hr,Recruiter,2018-10-22,EMP228864,1,Active,2025-02-14 10:58:05.235000+00:00,608,916184,6.36,1.0
+USR000484,Anita Joshi,anita.joshi@company.com,It,Executive,2017-09-08,EMP924850,1,Active,2025-02-17 16:56:07.773000+00:00,282,140218,7.48,2.0
+USR000485,Mukesh Joshi,mukesh.joshi@company.com,Sales,Sales Executive,2021-12-24,EMP605901,2,Active,2025-02-09 23:01:57.118000+00:00,754,670746,3.19,1.0
+USR000486,Vihaan Bansal,vihaan.bansal@company.com,It,Executive,2020-03-01,EMP526965,3,Active,2025-02-18 10:23:39.667000+00:00,627,983871,5.0,2.0
+USR000487,Sunita Mehta,sunita.mehta@company.com,R&D,Executive,2018-06-05,EMP216267,1,Inactive,2025-02-12 18:54:03.644000+00:00,667,434893,6.74,2.0
+USR000488,Ishita Singh,ishita.singh@company.com,Production,Executive,2016-07-30,EMP697801,3,Active,2025-02-12 20:32:28.941000+00:00,638,89455,8.59,2.0
+USR000489,Diya Gupta,diya.gupta@company.com,Operations,Executive,2020-10-25,EMP624456,4,Inactive,2025-02-10 11:53:56.306000+00:00,281,414790,4.35,2.0
+USR000490,Deepika Mehta,deepika.mehta@company.com,It,Executive,2020-01-11,EMP874457,3,Active,2025-02-16 13:37:21.494000+00:00,522,244413,5.14,2.0
+USR000491,Diya Chopra,diya.chopra@company.com,Finance,Accountant,2023-04-19,EMP777044,3,Active,2025-02-16 19:28:28.031000+00:00,415,250053,1.87,1.0
+USR000492,Diya Agarwal,diya.agarwal@company.com,Marketing,Executive,2017-05-24,EMP312527,4,Active,2025-02-10 01:38:33.623000+00:00,4,870398,7.77,2.0
+USR000493,Advait Singh,advait.singh@company.com,Finance,Accountant,2016-06-19,EMP721715,2,Inactive,2025-02-16 14:52:39.552000+00:00,291,273461,8.7,1.0
+USR000494,Riya Kumar,riya.kumar@company.com,It,Executive,2019-07-24,EMP614878,4,Active,2025-02-13 20:57:31.915000+00:00,608,752161,5.61,2.0
+USR000495,Arjun Joshi,arjun.joshi@company.com,It,Executive,2023-09-09,EMP957648,3,Active,2025-02-12 01:39:00.518000+00:00,31,519915,1.48,2.0
+USR000496,Kavita Reddy,kavita.reddy@company.com,Procurement,Executive,2021-07-20,EMP516371,2,Active,2025-02-19 07:33:46.965000+00:00,490,624475,3.62,2.0
+USR000497,Deepika Patel,deepika.patel@company.com,It,Executive,2022-08-14,EMP680662,2,Active,2025-02-11 12:41:24.134000+00:00,878,97472,2.55,2.0
+USR000498,Deepika Kumar,deepika.kumar@company.com,Admin,Executive,2021-08-13,EMP483818,4,Active,2025-02-14 13:03:29.794000+00:00,487,101413,3.55,2.0
+USR000499,Advait Malhotra,advait.malhotra@company.com,It,Executive,2022-04-22,EMP413997,4,Active,2025-02-10 07:45:37.959000+00:00,467,515997,2.86,2.0
+USR000500,Vihaan Singh,vihaan.singh@company.com,Production,Executive,2015-10-30,EMP102298,4,Active,2025-02-17 05:41:44.400000+00:00,621,65670,9.34,2.0
+USR000501,Anita Sharma,anita.sharma@company.com,Operations,Executive,2024-01-11,EMP685364,1,Active,2025-02-10 11:53:46.097000+00:00,177,719350,1.14,2.0
+USR000502,Mukesh Kumar,mukesh.kumar@company.com,Admin,Executive,2022-02-24,EMP068791,2,Active,2025-02-15 08:05:25.380000+00:00,359,350383,3.02,2.0
+USR000503,Dinesh Sharma,dinesh.sharma@company.com,R&D,Executive,2023-01-11,EMP139907,3,Active,2025-02-17 17:57:21.209000+00:00,389,359926,2.14,2.0
+USR000504,Diya Kapoor,diya.kapoor@company.com,Sales,Sales Executive,2018-07-18,EMP188579,1,Active,2025-02-10 15:08:00.824000+00:00,276,285261,6.62,1.0
+USR000505,Suresh Gupta,suresh.gupta@company.com,Hr,Hr Manager,2017-10-15,EMP245481,3,Active,2025-02-16 10:30:18.210000+00:00,468,174998,7.38,1.0
+USR000506,Anita Mehta,anita.mehta@company.com,Hr,Hr Manager,2017-02-28,EMP924506,1,Active,2025-02-13 22:44:30.534000+00:00,196,217621,8.0,1.0
+USR000507,Vihaan Reddy,vihaan.reddy@company.com,Hr,Hr Manager,2024-12-24,EMP506731,3,Active,2025-02-10 09:19:50.144000+00:00,565,440854,0.19,1.0
+USR000508,Ramesh Kumar,ramesh.kumar@company.com,Procurement,Executive,2018-06-20,EMP942978,3,Inactive,2025-02-11 15:19:19.982000+00:00,634,826628,6.7,2.0
+USR000509,Vihaan Mehta,vihaan.mehta@company.com,Procurement,Executive,2024-08-19,EMP715036,2,Active,2025-02-14 21:19:17.939000+00:00,115,899480,0.53,2.0
+USR000510,Priyanka Kumar,priyanka.kumar@company.com,Sales,Sales Executive,2015-11-26,EMP411452,3,Active,2025-02-18 08:42:47.004000+00:00,265,953988,9.26,1.0
+USR000511,Diya Kumar,diya.kumar@company.com,Operations,Executive,2019-03-13,EMP800059,4,Inactive,2025-02-09 15:24:07.942000+00:00,794,875552,5.97,2.0
+USR000512,Vihaan Shah,vihaan.shah@company.com,Hr,Recruiter,2023-03-28,EMP194203,1,Active,2025-02-12 09:18:14.139000+00:00,835,279309,1.93,1.0
+USR000513,Priyanka Joshi,priyanka.joshi@company.com,Marketing,Executive,2021-02-12,EMP815089,1,Active,2025-02-17 05:53:57.588000+00:00,415,300394,4.05,2.0
+USR000514,Mukesh Chopra,mukesh.chopra@company.com,Finance,Financial Analyst,2022-03-11,EMP917669,2,Active,2025-02-19 09:43:33.882000+00:00,594,365518,2.98,1.0
+USR000515,Deepika Singh,deepika.singh@company.com,Finance,Accountant,2018-01-10,EMP975052,2,Active,2025-02-17 03:26:50.607000+00:00,510,139369,7.14,1.0
+USR000516,Arjun Bansal,arjun.bansal@company.com,Admin,Executive,2016-06-13,EMP912251,2,Active,2025-02-11 01:54:17.655000+00:00,197,752050,8.72,2.0
+USR000517,Advait Singh,advait.singh@company.com,Sales,Business Developer,2021-02-19,EMP689348,1,Active,2025-02-11 22:39:20.717000+00:00,459,827567,4.03,1.0
+USR000518,Kavita Sharma,kavita.sharma@company.com,It,Executive,2021-07-19,EMP727345,3,Active,2025-02-16 21:11:20.097000+00:00,3,812427,3.62,2.0
+USR000519,Priya Kapoor,priya.kapoor@company.com,Marketing,Executive,2019-02-05,EMP819831,1,Active,2025-02-13 23:44:12.030000+00:00,52,811394,6.07,2.0
+USR000520,Rajesh Reddy,rajesh.reddy@company.com,Marketing,Executive,2020-05-29,EMP812061,3,Active,2025-02-12 01:58:49.307000+00:00,761,433061,4.76,2.0
+USR000521,Diya Patel,diya.patel@company.com,Procurement,Executive,2023-10-02,EMP605133,1,Active,2025-02-16 06:55:24.405000+00:00,258,124383,1.41,2.0
+USR000522,Dinesh Kumar,dinesh.kumar@company.com,Hr,Hr Manager,2015-03-10,EMP577536,2,Active,2025-02-11 20:30:14.971000+00:00,705,901789,9.98,1.0
+USR000523,Priyanka Shah,priyanka.shah@company.com,Operations,Executive,2017-06-22,EMP604336,1,Active,2025-02-19 07:24:10.255000+00:00,734,705388,7.69,2.0
+USR000524,Ishita Singh,ishita.singh@company.com,Sales,Sales Manager,2021-10-14,EMP621740,3,Active,2025-02-13 13:31:38.517000+00:00,944,852717,3.38,1.0
+USR000525,Mukesh Gupta,mukesh.gupta@company.com,Hr,Hr Manager,2025-02-13,EMP973229,4,Active,2025-02-13 00:58:57.933000+00:00,400,465491,0.05,1.0
+USR000526,Sunita Chopra,sunita.chopra@company.com,Marketing,Executive,2016-04-10,EMP324854,1,Active,2025-02-11 05:11:16.045000+00:00,172,665232,8.89,2.0
+USR000527,Dinesh Kumar,dinesh.kumar@company.com,Production,Executive,2017-12-10,EMP867407,2,Active,2025-02-10 03:10:13.224000+00:00,454,729366,7.22,2.0
+USR000528,Aanya Kapoor,aanya.kapoor@company.com,Admin,Executive,2024-11-19,EMP900199,2,Active,2025-02-18 07:04:38.668000+00:00,642,549326,0.28,2.0
+USR000529,Reyansh Shah,reyansh.shah@company.com,Finance,Financial Analyst,2017-04-07,EMP035931,3,Active,2025-02-18 09:56:47.801000+00:00,938,160529,7.9,1.0
+USR000530,Sunita Sharma,sunita.sharma@company.com,Production,Executive,2016-11-02,EMP405344,1,Active,2025-02-13 15:04:59.121000+00:00,651,100110,8.33,2.0
+USR000531,Ramesh Gupta,ramesh.gupta@company.com,Operations,Executive,2015-11-12,EMP369040,4,Active,2025-02-19 05:36:30.957000+00:00,444,236070,9.3,2.0
+USR000532,Sunita Agarwal,sunita.agarwal@company.com,Marketing,Executive,2019-02-08,EMP874879,4,Active,2025-02-17 10:22:17.673000+00:00,551,35665,6.06,2.0
+USR000533,Anita Singh,anita.singh@company.com,It,Executive,2021-01-03,EMP540505,2,Active,2025-02-12 13:38:37.764000+00:00,285,393310,4.16,2.0
+USR000534,Aanya Agarwal,aanya.agarwal@company.com,It,Executive,2024-07-02,EMP978078,1,Active,2025-02-17 01:09:42.343000+00:00,370,831152,0.66,2.0
+USR000535,Arjun Singh,arjun.singh@company.com,Admin,Executive,2016-09-29,EMP120048,2,Inactive,2025-02-13 20:44:03.363000+00:00,753,728252,8.42,2.0
+USR000536,Suresh Malhotra,suresh.malhotra@company.com,R&D,Executive,2021-08-17,EMP931339,3,Active,2025-02-13 22:06:50.862000+00:00,899,368659,3.54,2.0
+USR000537,Ramesh Mehta,ramesh.mehta@company.com,Finance,Controller,2020-06-19,EMP473176,4,Active,2025-02-12 18:11:26.388000+00:00,765,570811,4.7,1.0
+USR000538,Advait Agarwal,advait.agarwal@company.com,Sales,Sales Manager,2018-07-04,EMP326860,4,Inactive,2025-02-11 12:58:30.463000+00:00,244,747080,6.66,1.0
+USR000539,Anita Gupta,anita.gupta@company.com,Finance,Financial Analyst,2017-04-17,EMP573481,2,Active,2025-02-16 14:22:25.913000+00:00,830,637325,7.87,1.0
+USR000540,Deepika Gupta,deepika.gupta@company.com,Procurement,Executive,2022-10-30,EMP465343,3,Active,2025-02-13 21:33:59.922000+00:00,117,274407,2.34,2.0
+USR000541,Mukesh Sharma,mukesh.sharma@company.com,Admin,Executive,2016-09-12,EMP376174,2,Active,2025-02-12 23:13:19.985000+00:00,757,194714,8.47,2.0
+USR000542,Deepika Reddy,deepika.reddy@company.com,Hr,Recruiter,2017-09-13,EMP757837,1,Active,2025-02-16 08:05:59.949000+00:00,37,667111,7.47,1.0
+USR000543,Sunita Gupta,sunita.gupta@company.com,Operations,Executive,2018-02-03,EMP525557,1,Active,2025-02-13 05:13:23.395000+00:00,108,84776,7.07,2.0
+USR000544,Sunita Shah,sunita.shah@company.com,Hr,Recruiter,2015-07-16,EMP204239,4,Active,2025-02-18 02:10:10.694000+00:00,274,902664,9.63,1.0
+USR000545,Vihaan Chopra,vihaan.chopra@company.com,Admin,Executive,2021-09-06,EMP609817,4,Inactive,2025-02-17 23:16:32.763000+00:00,346,510609,3.48,2.0
+USR000546,Ramesh Reddy,ramesh.reddy@company.com,Procurement,Executive,2024-05-12,EMP911366,4,Active,2025-02-16 03:00:03.219000+00:00,251,305276,0.8,2.0
+USR000547,Sunita Malhotra,sunita.malhotra@company.com,R&D,Executive,2017-01-15,EMP891102,3,Active,2025-02-13 16:03:19.468000+00:00,619,449422,8.13,2.0
+USR000548,Reyansh Reddy,reyansh.reddy@company.com,R&D,Executive,2021-07-03,EMP523396,2,Active,2025-02-13 02:45:52.174000+00:00,945,705499,3.66,2.0
+USR000549,Dinesh Singh,dinesh.singh@company.com,Operations,Executive,2018-10-31,EMP274450,2,Active,2025-02-11 21:00:21.859000+00:00,763,621048,6.33,2.0
+USR000550,Kavita Patel,kavita.patel@company.com,Marketing,Executive,2018-03-01,EMP110525,2,Active,2025-02-16 21:25:44.605000+00:00,631,886268,7.0,2.0
+USR000551,Priya Singh,priya.singh@company.com,Admin,Executive,2018-07-20,EMP189412,4,Active,2025-02-14 08:48:55.351000+00:00,337,741414,6.62,2.0
+USR000552,Diya Singh,diya.singh@company.com,Procurement,Executive,2018-07-19,EMP395138,2,Active,2025-02-14 16:46:50.177000+00:00,342,742871,6.62,2.0
+USR000553,Anita Singh,anita.singh@company.com,Marketing,Executive,2023-01-14,EMP191469,3,Active,2025-02-16 05:04:13.006000+00:00,429,469200,2.13,2.0
+USR000554,Diya Gupta,diya.gupta@company.com,Hr,Hr Manager,2016-02-26,EMP092494,1,Active,2025-02-17 01:15:07.789000+00:00,97,626991,9.01,1.0
+USR000555,Reyansh Chopra,reyansh.chopra@company.com,Operations,Executive,2015-01-06,EMP413001,2,Inactive,2025-02-10 01:35:40.633000+00:00,118,197306,10.15,2.0
+USR000556,Reyansh Malhotra,reyansh.malhotra@company.com,It,Executive,2020-10-21,EMP669765,3,Active,2025-02-17 04:59:11.998000+00:00,146,563504,4.36,2.0
+USR000557,Riya Shah,riya.shah@company.com,Finance,Accountant,2021-09-09,EMP115240,1,Active,2025-02-10 04:16:29.799000+00:00,916,53388,3.48,1.0
+USR000558,Arjun Malhotra,arjun.malhotra@company.com,Procurement,Executive,2024-10-28,EMP750056,4,Active,2025-02-16 18:23:20.036000+00:00,94,26241,0.34,2.0
+USR000559,Ishita Verma,ishita.verma@company.com,Sales,Sales Executive,2022-07-02,EMP021874,3,Active,2025-02-13 18:00:35.834000+00:00,446,559617,2.67,1.0
+USR000560,Diya Gupta,diya.gupta@company.com,Finance,Accountant,2017-12-21,EMP240670,1,Active,2025-02-10 11:19:21.756000+00:00,530,38595,7.19,1.0
+USR000561,Priya Gupta,priya.gupta@company.com,Finance,Controller,2018-08-21,EMP330588,2,Inactive,2025-02-14 12:19:35.003000+00:00,145,844647,6.53,1.0
+USR000562,Aanya Shah,aanya.shah@company.com,Procurement,Executive,2020-10-23,EMP020246,4,Inactive,2025-02-12 12:31:58.733000+00:00,291,595801,4.36,2.0
+USR000563,Kavita Chopra,kavita.chopra@company.com,Operations,Executive,2020-09-15,EMP708658,3,Active,2025-02-18 23:57:34.442000+00:00,942,910852,4.46,2.0
+USR000564,Diya Kapoor,diya.kapoor@company.com,Hr,Hr Manager,2018-02-14,EMP972492,3,Active,2025-02-15 11:04:42.124000+00:00,424,147639,7.04,1.0
+USR000565,Aarav Kumar,aarav.kumar@company.com,Hr,Hr Executive,2021-08-17,EMP831728,3,Active,2025-02-12 23:05:55.049000+00:00,58,563103,3.54,1.0
+USR000566,Priya Patel,priya.patel@company.com,Hr,Recruiter,2017-08-27,EMP881376,3,Active,2025-02-19 05:59:46.307000+00:00,220,717393,7.51,1.0
+USR000567,Aarav Kapoor,aarav.kapoor@company.com,It,Executive,2019-04-21,EMP063045,3,Active,2025-02-18 18:55:50.396000+00:00,484,919557,5.86,2.0
+USR000568,Mukesh Reddy,mukesh.reddy@company.com,It,Executive,2018-10-26,EMP901170,1,Active,2025-02-10 17:19:52.528000+00:00,978,481406,6.35,2.0
+USR000569,Dinesh Joshi,dinesh.joshi@company.com,Sales,Sales Executive,2018-01-24,EMP624448,4,Active,2025-02-12 19:43:00.706000+00:00,704,419630,7.1,1.0
+USR000570,Ramesh Malhotra,ramesh.malhotra@company.com,It,Executive,2023-05-07,EMP338958,2,Active,2025-02-15 07:40:44.326000+00:00,822,247180,1.82,2.0
+USR000571,Suresh Kapoor,suresh.kapoor@company.com,Operations,Executive,2015-01-21,EMP697947,4,Active,2025-02-16 08:37:19.676000+00:00,261,395195,10.11,2.0
+USR000572,Deepika Malhotra,deepika.malhotra@company.com,Marketing,Executive,2015-07-07,EMP972977,4,Active,2025-02-19 08:00:10.169000+00:00,719,734301,9.65,2.0
+USR000573,Ishita Reddy,ishita.reddy@company.com,R&D,Executive,2016-11-03,EMP631238,3,Active,2025-02-10 20:03:32.983000+00:00,340,503409,8.32,2.0
+USR000574,Anita Shah,anita.shah@company.com,Procurement,Executive,2015-01-12,EMP253529,4,Inactive,2025-02-16 17:47:09.432000+00:00,809,975487,10.13,2.0
+USR000575,Rajesh Sharma,rajesh.sharma@company.com,Procurement,Executive,2022-12-21,EMP843828,3,Active,2025-02-14 00:37:33.416000+00:00,54,313263,2.19,2.0
+USR000576,Suresh Mehta,suresh.mehta@company.com,Finance,Financial Analyst,2022-07-30,EMP069760,2,Active,2025-02-18 11:01:20.283000+00:00,708,807390,2.59,1.0
+USR000577,Dinesh Patel,dinesh.patel@company.com,Finance,Controller,2024-04-04,EMP969063,4,Active,2025-02-12 19:31:16.022000+00:00,520,137331,0.91,1.0
+USR000578,Priya Shah,priya.shah@company.com,Marketing,Executive,2019-12-24,EMP399251,3,Active,2025-02-18 05:39:46.596000+00:00,626,423057,5.19,2.0
+USR000579,Dinesh Patel,dinesh.patel@company.com,Operations,Executive,2024-05-19,EMP722511,4,Active,2025-02-12 10:43:22.412000+00:00,882,935511,0.78,2.0
+USR000580,Dinesh Joshi,dinesh.joshi@company.com,Hr,Recruiter,2024-08-15,EMP006428,1,Active,2025-02-18 22:22:50.458000+00:00,564,904106,0.54,1.0
+USR000581,Rajesh Gupta,rajesh.gupta@company.com,R&D,Executive,2023-04-11,EMP575830,3,Active,2025-02-17 20:48:03.448000+00:00,563,637837,1.89,2.0
+USR000582,Riya Shah,riya.shah@company.com,R&D,Executive,2023-05-31,EMP611714,4,Active,2025-02-10 03:54:23.456000+00:00,285,360377,1.75,2.0
+USR000583,Deepika Gupta,deepika.gupta@company.com,Finance,Controller,2019-08-08,EMP346129,2,Active,2025-02-19 06:04:16.966000+00:00,363,79056,5.57,1.0
+USR000584,Anita Gupta,anita.gupta@company.com,Finance,Financial Analyst,2018-12-30,EMP799635,1,Active,2025-02-15 05:10:47.735000+00:00,458,262672,6.17,1.0
+USR000585,Aanya Reddy,aanya.reddy@company.com,Hr,Hr Manager,2020-02-23,EMP213445,4,Active,2025-02-11 02:38:33.284000+00:00,863,456566,5.02,1.0
+USR000586,Ishita Reddy,ishita.reddy@company.com,Production,Executive,2017-06-25,EMP140323,2,Active,2025-02-11 03:27:27.889000+00:00,667,244494,7.68,2.0
+USR000587,Diya Shah,diya.shah@company.com,Marketing,Executive,2023-11-24,EMP297076,4,Active,2025-02-16 13:19:31.208000+00:00,376,517127,1.27,2.0
+USR000588,Ishita Malhotra,ishita.malhotra@company.com,Admin,Executive,2017-11-29,EMP492663,4,Active,2025-02-11 15:17:49.343000+00:00,494,670491,7.25,2.0
+USR000589,Dinesh Mehta,dinesh.mehta@company.com,Procurement,Executive,2024-06-08,EMP726308,2,Active,2025-02-18 01:40:52.800000+00:00,30,980281,0.73,2.0
+USR000590,Reyansh Kapoor,reyansh.kapoor@company.com,Finance,Accountant,2020-04-07,EMP473180,2,Active,2025-02-16 14:56:56.752000+00:00,431,87655,4.9,1.0
+USR000591,Mukesh Kapoor,mukesh.kapoor@company.com,Hr,Hr Manager,2024-01-28,EMP783729,2,Active,2025-02-18 06:31:46.770000+00:00,585,312566,1.09,1.0
+USR000592,Ramesh Gupta,ramesh.gupta@company.com,Operations,Executive,2016-12-24,EMP062352,4,Active,2025-02-11 01:53:03.828000+00:00,368,148874,8.19,2.0
+USR000593,Sunita Agarwal,sunita.agarwal@company.com,Admin,Executive,2018-03-08,EMP686570,3,Inactive,2025-02-17 17:52:12.364000+00:00,708,319625,6.98,2.0
+USR000594,Priya Sharma,priya.sharma@company.com,R&D,Executive,2023-10-22,EMP893365,3,Active,2025-02-11 00:41:59.857000+00:00,835,594418,1.36,2.0
+USR000595,Aarav Bansal,aarav.bansal@company.com,Finance,Controller,2019-03-14,EMP785069,3,Active,2025-02-11 03:39:26.041000+00:00,585,106843,5.97,1.0
+USR000596,Vihaan Mehta,vihaan.mehta@company.com,Operations,Executive,2016-10-03,EMP510218,3,Active,2025-02-13 20:40:58.879000+00:00,383,343041,8.41,2.0
+USR000597,Arjun Shah,arjun.shah@company.com,Marketing,Executive,2024-10-16,EMP116479,2,Active,2025-02-15 04:11:40.980000+00:00,338,368784,0.37,2.0
+USR000598,Deepika Kumar,deepika.kumar@company.com,Production,Executive,2016-10-06,EMP436813,2,Active,2025-02-17 22:24:47.664000+00:00,646,792631,8.4,2.0
+USR000599,Rajesh Patel,rajesh.patel@company.com,Production,Executive,2016-06-13,EMP747742,2,Active,2025-02-12 15:57:24.339000+00:00,48,344905,8.72,2.0
+USR000600,Kavita Shah,kavita.shah@company.com,Hr,Hr Executive,2021-08-07,EMP642485,3,Inactive,2025-02-15 16:03:48.867000+00:00,989,800257,3.57,1.0
+USR000601,Ramesh Shah,ramesh.shah@company.com,Finance,Accountant,2021-01-23,EMP935727,3,Inactive,2025-02-18 05:32:19.105000+00:00,859,38425,4.1,1.0
+USR000602,Priyanka Mehta,priyanka.mehta@company.com,Admin,Executive,2020-03-30,EMP972889,3,Active,2025-02-09 20:58:34.616000+00:00,957,825436,4.92,2.0
+USR000603,Sunita Bansal,sunita.bansal@company.com,Finance,Financial Analyst,2015-04-23,EMP230455,3,Active,2025-02-11 12:23:23.991000+00:00,783,808026,9.86,1.0
+USR000604,Priya Singh,priya.singh@company.com,Marketing,Executive,2018-08-22,EMP547716,3,Active,2025-02-11 23:31:24.880000+00:00,294,238233,6.53,2.0
+USR000605,Aarav Patel,aarav.patel@company.com,Procurement,Executive,2022-06-06,EMP988390,3,Active,2025-02-15 19:19:43.918000+00:00,985,438477,2.74,2.0
+USR000606,Rajesh Joshi,rajesh.joshi@company.com,Sales,Business Developer,2019-05-26,EMP408984,3,Active,2025-02-11 14:42:21.494000+00:00,669,637864,5.77,1.0
+USR000607,Reyansh Singh,reyansh.singh@company.com,Operations,Executive,2018-05-29,EMP844885,2,Active,2025-02-16 19:33:51.089000+00:00,114,890456,6.76,2.0
+USR000608,Advait Chopra,advait.chopra@company.com,Production,Executive,2015-12-17,EMP620888,1,Active,2025-02-14 03:23:27.974000+00:00,19,678198,9.21,2.0
+USR000609,Priya Sharma,priya.sharma@company.com,Marketing,Executive,2024-04-07,EMP774757,3,Active,2025-02-15 14:35:14.368000+00:00,135,656131,0.9,2.0
+USR000610,Dinesh Bansal,dinesh.bansal@company.com,Admin,Executive,2017-02-12,EMP318833,3,Active,2025-02-16 17:25:18.601000+00:00,431,901658,8.05,2.0
+USR000611,Ramesh Patel,ramesh.patel@company.com,Finance,Financial Analyst,2020-09-28,EMP159976,4,Active,2025-02-18 13:43:52.472000+00:00,253,943424,4.42,1.0
+USR000612,Sunita Joshi,sunita.joshi@company.com,Production,Executive,2020-05-10,EMP868587,3,Active,2025-02-09 17:33:12.917000+00:00,496,936248,4.81,2.0
+USR000613,Dinesh Kumar,dinesh.kumar@company.com,Marketing,Executive,2020-10-31,EMP907627,2,Active,2025-02-17 04:08:36.748000+00:00,931,747888,4.33,2.0
+USR000614,Ishita Sharma,ishita.sharma@company.com,Finance,Accountant,2020-05-19,EMP161634,1,Active,2025-02-14 05:34:24.363000+00:00,321,895923,4.78,1.0
+USR000615,Dinesh Singh,dinesh.singh@company.com,Admin,Executive,2021-01-25,EMP987983,1,Active,2025-02-18 13:25:17.377000+00:00,206,680105,4.1,2.0
+USR000616,Rajesh Sharma,rajesh.sharma@company.com,Procurement,Executive,2018-02-19,EMP688831,2,Active,2025-02-17 00:00:50.008000+00:00,530,579992,7.03,2.0
+USR000617,Priyanka Patel,priyanka.patel@company.com,Marketing,Executive,2023-11-08,EMP441809,1,Active,2025-02-15 00:51:21.503000+00:00,269,369943,1.31,2.0
+USR000618,Suresh Kapoor,suresh.kapoor@company.com,Production,Executive,2023-07-31,EMP464042,4,Active,2025-02-12 03:09:59.865000+00:00,218,169453,1.59,2.0
+USR000619,Aanya Reddy,aanya.reddy@company.com,It,Executive,2023-12-28,EMP516733,1,Active,2025-02-18 18:14:42.391000+00:00,265,820392,1.18,2.0
+USR000620,Kavita Kapoor,kavita.kapoor@company.com,Hr,Hr Executive,2017-10-28,EMP590636,3,Active,2025-02-16 12:28:04.972000+00:00,208,765256,7.34,1.0
+USR000621,Anita Malhotra,anita.malhotra@company.com,Procurement,Executive,2023-01-09,EMP664173,1,Active,2025-02-13 22:43:29.986000+00:00,677,317692,2.14,2.0
+USR000622,Aarav Verma,aarav.verma@company.com,Finance,Financial Analyst,2023-10-11,EMP246004,3,Active,2025-02-16 22:01:35.147000+00:00,657,911968,1.39,1.0
+USR000623,Vihaan Joshi,vihaan.joshi@company.com,R&D,Executive,2015-05-22,EMP962491,4,Active,2025-02-17 06:18:22.115000+00:00,203,545725,9.78,2.0
+USR000624,Aanya Kapoor,aanya.kapoor@company.com,Operations,Executive,2016-04-05,EMP907294,3,Active,2025-02-15 04:11:18.265000+00:00,701,365804,8.91,2.0
+USR000625,Riya Malhotra,riya.malhotra@company.com,R&D,Executive,2018-10-07,EMP934423,1,Active,2025-02-11 00:52:46.893000+00:00,372,89431,6.4,2.0
+USR000626,Riya Joshi,riya.joshi@company.com,Operations,Executive,2017-05-31,EMP082816,3,Active,2025-02-18 20:39:46.681000+00:00,75,508680,7.75,2.0
+USR000627,Vihaan Gupta,vihaan.gupta@company.com,Operations,Executive,2016-10-27,EMP379993,1,Active,2025-02-16 07:48:14.098000+00:00,675,955296,8.34,2.0
+USR000628,Advait Singh,advait.singh@company.com,Production,Executive,2021-08-15,EMP923679,4,Active,2025-02-17 11:04:14.700000+00:00,724,977496,3.54,2.0
+USR000629,Advait Patel,advait.patel@company.com,Admin,Executive,2020-03-28,EMP417027,3,Active,2025-02-14 03:00:46.500000+00:00,354,162201,4.93,2.0
+USR000630,Mukesh Malhotra,mukesh.malhotra@company.com,Procurement,Executive,2021-02-23,EMP993821,3,Active,2025-02-11 12:05:37.026000+00:00,709,474861,4.02,2.0
+USR000631,Advait Singh,advait.singh@company.com,Marketing,Executive,2016-12-03,EMP090736,3,Active,2025-02-12 14:24:14.800000+00:00,199,261495,8.24,2.0
+USR000632,Arjun Mehta,arjun.mehta@company.com,R&D,Executive,2021-03-26,EMP878646,3,Active,2025-02-15 02:37:01.411000+00:00,432,993464,3.93,2.0
+USR000633,Rajesh Chopra,rajesh.chopra@company.com,Finance,Controller,2021-09-17,EMP870346,2,Active,2025-02-18 01:24:24.976000+00:00,862,133181,3.45,1.0
+USR000634,Aarav Mehta,aarav.mehta@company.com,Finance,Financial Analyst,2023-02-11,EMP773083,1,Active,2025-02-14 02:27:53.197000+00:00,408,757029,2.05,1.0
+USR000635,Priya Malhotra,priya.malhotra@company.com,R&D,Executive,2022-06-26,EMP474515,4,Active,2025-02-13 10:16:20.947000+00:00,755,168965,2.68,2.0
+USR000636,Aarav Mehta,aarav.mehta@company.com,Marketing,Executive,2019-11-21,EMP365478,4,Active,2025-02-16 05:43:45.212000+00:00,122,172786,5.28,2.0
+USR000637,Ramesh Verma,ramesh.verma@company.com,Admin,Executive,2023-06-07,EMP131215,3,Inactive,2025-02-15 13:13:28.914000+00:00,99,303753,1.73,2.0
+USR000638,Reyansh Patel,reyansh.patel@company.com,Procurement,Executive,2016-01-09,EMP815545,4,Active,2025-02-17 05:18:30.172000+00:00,739,523735,9.14,2.0
+USR000639,Riya Joshi,riya.joshi@company.com,Admin,Executive,2015-10-02,EMP669525,2,Active,2025-02-16 02:34:08.421000+00:00,664,334811,9.41,2.0
+USR000640,Suresh Malhotra,suresh.malhotra@company.com,Procurement,Executive,2019-12-16,EMP439798,2,Active,2025-02-12 17:46:33.867000+00:00,860,802567,5.21,2.0
+USR000641,Suresh Joshi,suresh.joshi@company.com,Production,Executive,2020-08-19,EMP686365,4,Active,2025-02-16 13:50:58.073000+00:00,970,134548,4.53,2.0
+USR000642,Arjun Verma,arjun.verma@company.com,It,Executive,2024-01-21,EMP464759,2,Active,2025-02-11 17:34:22.545000+00:00,922,533441,1.11,2.0
+USR000643,Rajesh Mehta,rajesh.mehta@company.com,Production,Executive,2018-03-13,EMP716124,3,Active,2025-02-17 16:53:41.861000+00:00,949,222634,6.97,2.0
+USR000644,Reyansh Sharma,reyansh.sharma@company.com,Hr,Recruiter,2015-01-07,EMP019924,2,Active,2025-02-14 22:54:58.700000+00:00,72,420883,10.15,1.0
+USR000645,Rajesh Bansal,rajesh.bansal@company.com,Hr,Hr Manager,2016-05-22,EMP926626,4,Active,2025-02-13 00:47:09.135000+00:00,3,156941,8.78,1.0
+USR000646,Aanya Malhotra,aanya.malhotra@company.com,Marketing,Executive,2017-02-16,EMP275004,2,Active,2025-02-16 14:07:30.302000+00:00,480,165560,8.04,2.0
+USR000647,Anita Sharma,anita.sharma@company.com,Hr,Hr Manager,2015-01-20,EMP211378,1,Inactive,2025-02-12 21:30:52.821000+00:00,568,871336,10.11,1.0
+USR000648,Priyanka Malhotra,priyanka.malhotra@company.com,Procurement,Executive,2017-06-08,EMP755882,2,Active,2025-02-16 02:40:59.662000+00:00,955,432996,7.73,2.0
+USR000649,Reyansh Reddy,reyansh.reddy@company.com,Admin,Executive,2018-10-30,EMP801682,2,Active,2025-02-18 05:48:35.298000+00:00,557,809387,6.34,2.0
+USR000650,Anita Malhotra,anita.malhotra@company.com,Production,Executive,2016-02-23,EMP419314,1,Active,2025-02-10 01:56:59.503000+00:00,166,176548,9.02,2.0
+USR000651,Deepika Agarwal,deepika.agarwal@company.com,Production,Executive,2020-04-15,EMP811793,1,Active,2025-02-10 23:25:54.216000+00:00,370,239208,4.88,2.0
+USR000652,Priyanka Joshi,priyanka.joshi@company.com,Admin,Executive,2018-04-06,EMP420182,1,Active,2025-02-10 17:51:21.039000+00:00,558,490661,6.9,2.0
+USR000653,Advait Agarwal,advait.agarwal@company.com,Hr,Hr Manager,2019-07-12,EMP451697,1,Active,2025-02-11 15:06:12.394000+00:00,417,195842,5.64,1.0
+USR000654,Advait Verma,advait.verma@company.com,Sales,Sales Manager,2015-12-31,EMP266245,4,Active,2025-02-14 09:31:27.063000+00:00,963,226507,9.17,1.0
+USR000655,Sunita Agarwal,sunita.agarwal@company.com,Production,Executive,2022-01-30,EMP048123,2,Active,2025-02-14 04:54:47.258000+00:00,768,80517,3.08,2.0
+USR000656,Mukesh Kapoor,mukesh.kapoor@company.com,R&D,Executive,2022-11-03,EMP086106,3,Active,2025-02-15 02:51:23.653000+00:00,570,444529,2.33,2.0
+USR000657,Anita Reddy,anita.reddy@company.com,R&D,Executive,2024-07-27,EMP421430,4,Active,2025-02-10 20:30:25.295000+00:00,485,199681,0.6,2.0
+USR000658,Ishita Gupta,ishita.gupta@company.com,Production,Executive,2022-06-25,EMP192459,2,Active,2025-02-13 21:31:57.885000+00:00,772,931820,2.68,2.0
+USR000659,Suresh Chopra,suresh.chopra@company.com,It,Executive,2020-11-29,EMP572730,2,Inactive,2025-02-18 15:41:48.371000+00:00,108,569683,4.25,2.0
+USR000660,Ramesh Singh,ramesh.singh@company.com,Production,Executive,2021-04-26,EMP746534,4,Active,2025-02-11 09:10:27.928000+00:00,850,626216,3.85,2.0
+USR000661,Mukesh Kumar,mukesh.kumar@company.com,Marketing,Executive,2016-11-08,EMP796668,3,Active,2025-02-16 10:12:15.873000+00:00,521,124475,8.31,2.0
+USR000662,Anita Joshi,anita.joshi@company.com,It,Executive,2024-11-12,EMP720955,2,Active,2025-02-11 03:33:53.241000+00:00,579,564004,0.3,2.0
+USR000663,Arjun Malhotra,arjun.malhotra@company.com,R&D,Executive,2017-09-16,EMP294005,4,Active,2025-02-18 05:21:46.517000+00:00,440,998290,7.46,2.0
+USR000664,Mukesh Kapoor,mukesh.kapoor@company.com,Production,Executive,2022-01-31,EMP507657,1,Active,2025-02-13 19:26:26.868000+00:00,462,545055,3.08,2.0
+USR000665,Priya Kapoor,priya.kapoor@company.com,Production,Executive,2018-12-31,EMP940420,4,Active,2025-02-17 13:17:12.727000+00:00,255,114209,6.17,2.0
+USR000666,Advait Patel,advait.patel@company.com,Operations,Executive,2022-07-02,EMP819771,4,Active,2025-02-17 19:05:55.269000+00:00,460,394764,2.67,2.0
+USR000667,Dinesh Sharma,dinesh.sharma@company.com,Sales,Sales Executive,2024-02-22,EMP778997,1,Active,2025-02-15 20:19:50.928000+00:00,727,389673,1.02,1.0
+USR000668,Riya Agarwal,riya.agarwal@company.com,R&D,Executive,2018-12-01,EMP042593,2,Active,2025-02-16 04:06:51.588000+00:00,409,381725,6.25,2.0
+USR000669,Aanya Joshi,aanya.joshi@company.com,R&D,Executive,2015-02-24,EMP514517,1,Active,2025-02-13 06:18:44.900000+00:00,913,263844,10.02,2.0
+USR000670,Diya Patel,diya.patel@company.com,Sales,Sales Manager,2024-02-03,EMP238443,1,Active,2025-02-18 09:03:41.636000+00:00,286,816482,1.08,1.0
+USR000671,Dinesh Patel,dinesh.patel@company.com,It,Executive,2016-03-17,EMP325860,3,Active,2025-02-18 00:23:34.232000+00:00,423,150916,8.96,2.0
+USR000672,Priya Verma,priya.verma@company.com,Marketing,Executive,2021-10-15,EMP034984,3,Active,2025-02-16 16:33:31.112000+00:00,234,575802,3.38,2.0
+USR000673,Ramesh Joshi,ramesh.joshi@company.com,Finance,Financial Analyst,2022-02-02,EMP260882,3,Active,2025-02-16 01:44:22.860000+00:00,135,472002,3.08,1.0
+USR000674,Mukesh Reddy,mukesh.reddy@company.com,Sales,Business Developer,2022-01-25,EMP733316,3,Active,2025-02-14 16:23:07.052000+00:00,923,462210,3.1,1.0
+USR000675,Anita Malhotra,anita.malhotra@company.com,Procurement,Executive,2021-02-08,EMP951075,3,Active,2025-02-17 13:51:39.500000+00:00,182,866790,4.06,2.0
+USR000676,Priyanka Gupta,priyanka.gupta@company.com,Finance,Financial Analyst,2023-07-28,EMP272451,4,Active,2025-02-11 17:18:40.569000+00:00,411,285516,1.6,1.0
+USR000677,Dinesh Gupta,dinesh.gupta@company.com,Operations,Executive,2023-08-27,EMP395005,1,Active,2025-02-12 09:33:19.036000+00:00,686,806061,1.51,2.0
+USR000678,Advait Patel,advait.patel@company.com,Sales,Business Developer,2015-04-21,EMP658671,1,Active,2025-02-19 08:36:13.814000+00:00,499,659406,9.86,1.0
+USR000679,Rajesh Joshi,rajesh.joshi@company.com,Production,Executive,2017-11-15,EMP538247,4,Active,2025-02-14 15:42:24.922000+00:00,837,119904,7.29,2.0
+USR000680,Rajesh Kumar,rajesh.kumar@company.com,R&D,Executive,2021-05-26,EMP072848,3,Active,2025-02-10 14:09:55.102000+00:00,573,230440,3.77,2.0
+USR000681,Anita Reddy,anita.reddy@company.com,R&D,Executive,2016-05-29,EMP056291,4,Active,2025-02-13 09:10:41.930000+00:00,644,700514,8.76,2.0
+USR000682,Priyanka Bansal,priyanka.bansal@company.com,Hr,Hr Manager,2017-07-05,EMP242850,3,Active,2025-02-16 04:27:05.046000+00:00,752,192553,7.66,1.0
+USR000683,Aarav Mehta,aarav.mehta@company.com,Procurement,Executive,2021-09-17,EMP459915,4,Active,2025-02-14 07:37:45.669000+00:00,760,899730,3.45,2.0
+USR000684,Reyansh Patel,reyansh.patel@company.com,R&D,Executive,2023-05-09,EMP417946,1,Active,2025-02-10 14:47:04.547000+00:00,240,373648,1.81,2.0
+USR000685,Kavita Verma,kavita.verma@company.com,Hr,Recruiter,2015-05-01,EMP713687,3,Active,2025-02-12 17:27:00.538000+00:00,315,738383,9.84,1.0
+USR000686,Anita Kapoor,anita.kapoor@company.com,Operations,Executive,2024-01-18,EMP803530,3,Inactive,2025-02-18 15:30:53.997000+00:00,910,360242,1.12,2.0
+USR000687,Kavita Joshi,kavita.joshi@company.com,It,Executive,2020-12-01,EMP677061,2,Active,2025-02-10 05:15:33.036000+00:00,841,436170,4.25,2.0
+USR000688,Suresh Chopra,suresh.chopra@company.com,Admin,Executive,2022-11-09,EMP760229,3,Active,2025-02-14 20:38:49.028000+00:00,694,898080,2.31,2.0
+USR000689,Suresh Chopra,suresh.chopra@company.com,R&D,Executive,2017-04-16,EMP126655,1,Active,2025-02-11 12:46:00.031000+00:00,429,601934,7.88,2.0
+USR000690,Sunita Mehta,sunita.mehta@company.com,Marketing,Executive,2024-05-30,EMP401885,1,Active,2025-02-13 13:30:31.798000+00:00,853,85729,0.75,2.0
+USR000691,Riya Bansal,riya.bansal@company.com,Hr,Hr Executive,2021-02-06,EMP033929,2,Inactive,2025-02-10 16:56:01.350000+00:00,66,830697,4.06,1.0
+USR000692,Vihaan Singh,vihaan.singh@company.com,Hr,Recruiter,2019-01-10,EMP251482,4,Active,2025-02-12 17:04:30.127000+00:00,98,80514,6.14,1.0
+USR000693,Vihaan Joshi,vihaan.joshi@company.com,Finance,Accountant,2017-03-28,EMP218435,2,Active,2025-02-18 00:07:20.349000+00:00,985,607910,7.93,1.0
+USR000694,Ishita Patel,ishita.patel@company.com,Finance,Financial Analyst,2018-09-14,EMP764466,3,Active,2025-02-12 03:54:55.252000+00:00,403,98295,6.46,1.0
+USR000695,Advait Patel,advait.patel@company.com,Production,Executive,2019-04-13,EMP731757,2,Active,2025-02-12 08:47:47.012000+00:00,954,444514,5.89,2.0
+USR000696,Advait Verma,advait.verma@company.com,Operations,Executive,2021-05-22,EMP656498,2,Active,2025-02-12 00:16:54.240000+00:00,932,157942,3.78,2.0
+USR000697,Vihaan Shah,vihaan.shah@company.com,Procurement,Executive,2021-06-02,EMP199646,1,Active,2025-02-12 16:04:06.135000+00:00,511,996652,3.75,2.0
+USR000698,Deepika Mehta,deepika.mehta@company.com,Admin,Executive,2023-12-30,EMP075647,2,Active,2025-02-16 06:39:38.645000+00:00,790,797947,1.17,2.0
+USR000699,Vihaan Chopra,vihaan.chopra@company.com,Finance,Controller,2017-03-13,EMP994628,1,Active,2025-02-12 20:17:01.933000+00:00,568,75988,7.97,1.0
+USR000700,Sunita Kapoor,sunita.kapoor@company.com,Sales,Sales Manager,2022-01-28,EMP927751,4,Inactive,2025-02-16 12:44:42.724000+00:00,307,838123,3.09,1.0
+USR000701,Anita Mehta,anita.mehta@company.com,Finance,Controller,2020-09-16,EMP602290,4,Active,2025-02-10 10:57:29.352000+00:00,944,789388,4.46,1.0
+USR000702,Reyansh Reddy,reyansh.reddy@company.com,Hr,Hr Manager,2023-05-30,EMP568540,4,Active,2025-02-12 08:07:35.981000+00:00,425,613956,1.76,1.0
+USR000703,Rajesh Bansal,rajesh.bansal@company.com,Finance,Controller,2022-08-20,EMP493760,2,Active,2025-02-11 18:52:44.830000+00:00,132,901193,2.53,1.0
+USR000704,Aarav Chopra,aarav.chopra@company.com,Marketing,Executive,2018-02-07,EMP285301,2,Inactive,2025-02-14 09:13:37.667000+00:00,909,57471,7.06,2.0
+USR000705,Priya Bansal,priya.bansal@company.com,Finance,Financial Analyst,2024-10-15,EMP418508,3,Active,2025-02-12 17:43:58.478000+00:00,266,130585,0.38,1.0
+USR000706,Suresh Joshi,suresh.joshi@company.com,Sales,Business Developer,2015-10-30,EMP908571,4,Active,2025-02-09 19:06:01.308000+00:00,64,151964,9.34,1.0
+USR000707,Reyansh Patel,reyansh.patel@company.com,Hr,Recruiter,2015-07-25,EMP871686,2,Active,2025-02-12 22:59:56.960000+00:00,340,381208,9.6,1.0
+USR000708,Anita Kapoor,anita.kapoor@company.com,It,Executive,2020-04-27,EMP260214,2,Active,2025-02-17 13:42:17.436000+00:00,844,104845,4.85,2.0
+USR000709,Mukesh Singh,mukesh.singh@company.com,Sales,Business Developer,2016-06-22,EMP175315,1,Active,2025-02-18 09:53:25.237000+00:00,138,919167,8.69,1.0
+USR000710,Advait Bansal,advait.bansal@company.com,Hr,Recruiter,2018-03-08,EMP707719,4,Inactive,2025-02-11 03:31:28.460000+00:00,399,80178,6.98,1.0
+USR000711,Priyanka Verma,priyanka.verma@company.com,Operations,Executive,2019-03-03,EMP717149,1,Active,2025-02-18 23:27:19.993000+00:00,2,835266,6.0,2.0
+USR000712,Diya Kumar,diya.kumar@company.com,Marketing,Executive,2019-09-17,EMP530130,3,Inactive,2025-02-18 07:12:19.378000+00:00,723,234621,5.46,2.0
+USR000713,Vihaan Bansal,vihaan.bansal@company.com,R&D,Executive,2020-02-20,EMP696036,3,Active,2025-02-16 12:38:00.960000+00:00,476,268939,5.03,2.0
+USR000714,Sunita Gupta,sunita.gupta@company.com,R&D,Executive,2021-03-16,EMP337690,1,Active,2025-02-18 01:13:57.973000+00:00,65,862931,3.96,2.0
+USR000715,Ishita Verma,ishita.verma@company.com,Procurement,Executive,2015-07-19,EMP060522,3,Active,2025-02-18 20:07:01.894000+00:00,48,618225,9.62,2.0
+USR000716,Dinesh Reddy,dinesh.reddy@company.com,Admin,Executive,2023-10-30,EMP867614,2,Active,2025-02-16 14:28:27.956000+00:00,111,647072,1.34,2.0
+USR000717,Rajesh Singh,rajesh.singh@company.com,Sales,Business Developer,2021-07-12,EMP733510,1,Active,2025-02-10 12:16:15.301000+00:00,75,184085,3.64,1.0
+USR000718,Mukesh Mehta,mukesh.mehta@company.com,Hr,Hr Manager,2020-05-23,EMP199358,4,Active,2025-02-11 12:42:32.728000+00:00,681,383373,4.77,1.0
+USR000719,Ishita Gupta,ishita.gupta@company.com,Production,Executive,2017-10-11,EMP884226,2,Active,2025-02-18 04:47:43.102000+00:00,775,805225,7.39,2.0
+USR000720,Kavita Joshi,kavita.joshi@company.com,Admin,Executive,2015-01-20,EMP101908,2,Active,2025-02-17 05:02:31.639000+00:00,475,709950,10.11,2.0
+USR000721,Suresh Patel,suresh.patel@company.com,Hr,Hr Executive,2021-05-15,EMP911555,2,Active,2025-02-10 17:36:54.646000+00:00,638,220873,3.8,1.0
+USR000722,Aanya Shah,aanya.shah@company.com,Sales,Business Developer,2018-03-14,EMP676652,3,Active,2025-02-15 20:52:22.045000+00:00,743,325712,6.97,1.0
+USR000723,Advait Kapoor,advait.kapoor@company.com,Production,Executive,2024-12-07,EMP407246,3,Active,2025-02-10 07:03:58.225000+00:00,987,440909,0.23,2.0
+USR000724,Priyanka Sharma,priyanka.sharma@company.com,Admin,Executive,2023-05-08,EMP786524,1,Active,2025-02-16 05:12:03.443000+00:00,61,137588,1.82,2.0
+USR000725,Kavita Bansal,kavita.bansal@company.com,Hr,Hr Manager,2020-11-17,EMP952755,3,Active,2025-02-11 22:07:04.269000+00:00,836,885053,4.29,1.0
+USR000726,Dinesh Malhotra,dinesh.malhotra@company.com,Operations,Executive,2020-02-11,EMP734825,1,Active,2025-02-17 20:07:50.272000+00:00,196,857836,5.05,2.0
+USR000727,Ramesh Agarwal,ramesh.agarwal@company.com,Hr,Hr Executive,2023-01-01,EMP524025,1,Inactive,2025-02-11 04:31:33.889000+00:00,139,417828,2.16,1.0
+USR000728,Priyanka Sharma,priyanka.sharma@company.com,R&D,Executive,2017-03-20,EMP119959,4,Active,2025-02-18 00:40:40.142000+00:00,744,176384,7.95,2.0
+USR000729,Deepika Verma,deepika.verma@company.com,It,Executive,2023-12-29,EMP100779,4,Active,2025-02-17 16:17:07.511000+00:00,205,211939,1.17,2.0
+USR000730,Aanya Shah,aanya.shah@company.com,R&D,Executive,2019-07-10,EMP225394,3,Active,2025-02-10 14:14:00.160000+00:00,723,32583,5.64,2.0
+USR000731,Aanya Chopra,aanya.chopra@company.com,Operations,Executive,2017-04-11,EMP309471,1,Active,2025-02-19 08:15:35.089000+00:00,463,584836,7.89,2.0
+USR000732,Priyanka Shah,priyanka.shah@company.com,Hr,Recruiter,2019-12-29,EMP444275,3,Active,2025-02-13 01:04:52.623000+00:00,754,254960,5.17,1.0
+USR000733,Dinesh Bansal,dinesh.bansal@company.com,It,Executive,2024-01-06,EMP992259,2,Active,2025-02-16 11:37:33.381000+00:00,19,196208,1.15,2.0
+USR000734,Ramesh Verma,ramesh.verma@company.com,Production,Executive,2023-12-25,EMP195924,1,Active,2025-02-15 16:47:32.372000+00:00,676,520752,1.18,2.0
+USR000735,Mukesh Verma,mukesh.verma@company.com,Sales,Business Developer,2018-03-11,EMP190872,3,Active,2025-02-14 22:56:19.818000+00:00,824,111871,6.98,1.0
+USR000736,Diya Chopra,diya.chopra@company.com,Finance,Accountant,2022-04-22,EMP289085,1,Active,2025-02-10 09:44:28.596000+00:00,935,142847,2.86,1.0
+USR000737,Sunita Gupta,sunita.gupta@company.com,Hr,Hr Executive,2020-03-04,EMP072709,4,Active,2025-02-15 06:56:27.920000+00:00,469,956477,4.99,1.0
+USR000738,Vihaan Joshi,vihaan.joshi@company.com,Production,Executive,2024-06-23,EMP202912,2,Active,2025-02-19 06:06:18.444000+00:00,453,845662,0.69,2.0
+USR000739,Ishita Bansal,ishita.bansal@company.com,Operations,Executive,2024-12-21,EMP490395,4,Active,2025-02-17 00:34:00.099000+00:00,74,380000,0.19,2.0
+USR000740,Anita Patel,anita.patel@company.com,R&D,Executive,2019-10-25,EMP924337,4,Active,2025-02-11 20:26:32.893000+00:00,284,912482,5.35,2.0
+USR000741,Priya Patel,priya.patel@company.com,Admin,Executive,2015-08-07,EMP432359,2,Active,2025-02-16 00:29:14.090000+00:00,920,845356,9.57,2.0
+USR000742,Priyanka Singh,priyanka.singh@company.com,Hr,Recruiter,2021-05-29,EMP339656,1,Active,2025-02-16 01:51:03.804000+00:00,738,151170,3.76,1.0
+USR000743,Anita Sharma,anita.sharma@company.com,Production,Executive,2021-10-29,EMP352819,1,Active,2025-02-16 12:50:30.613000+00:00,440,697335,3.34,2.0
+USR000744,Ramesh Joshi,ramesh.joshi@company.com,Operations,Executive,2025-01-07,EMP073574,3,Inactive,2025-02-13 06:51:49.456000+00:00,817,924575,0.15,2.0
+USR000745,Priya Kumar,priya.kumar@company.com,Procurement,Executive,2024-05-24,EMP254489,4,Active,2025-02-12 12:17:23.964000+00:00,272,427106,0.77,2.0
+USR000746,Diya Gupta,diya.gupta@company.com,Procurement,Executive,2017-10-28,EMP001798,2,Active,2025-02-18 13:10:25.525000+00:00,432,245029,7.34,2.0
+USR000747,Reyansh Kumar,reyansh.kumar@company.com,Marketing,Executive,2023-11-13,EMP384160,4,Active,2025-02-15 13:42:35.570000+00:00,965,878377,1.3,2.0
+USR000748,Deepika Mehta,deepika.mehta@company.com,Procurement,Executive,2019-10-09,EMP375282,4,Active,2025-02-18 04:28:35.560000+00:00,98,597164,5.4,2.0
+USR000749,Rajesh Gupta,rajesh.gupta@company.com,R&D,Executive,2023-01-04,EMP262391,1,Active,2025-02-18 00:09:19.206000+00:00,281,204593,2.16,2.0
+USR000750,Anita Bansal,anita.bansal@company.com,Operations,Executive,2015-07-07,EMP847092,2,Active,2025-02-18 15:43:06.349000+00:00,352,57777,9.65,2.0
+USR000751,Anita Kumar,anita.kumar@company.com,Sales,Business Developer,2018-10-28,EMP905184,4,Active,2025-02-15 21:27:34.242000+00:00,282,207774,6.34,1.0
+USR000752,Suresh Shah,suresh.shah@company.com,Finance,Financial Analyst,2024-02-17,EMP910152,3,Active,2025-02-18 03:22:22.740000+00:00,22,448166,1.04,1.0
+USR000753,Anita Shah,anita.shah@company.com,R&D,Executive,2020-12-02,EMP974695,3,Active,2025-02-10 08:30:21.126000+00:00,80,775035,4.25,2.0
+USR000754,Aanya Reddy,aanya.reddy@company.com,Marketing,Executive,2015-08-24,EMP508394,3,Active,2025-02-19 01:19:31.873000+00:00,725,347714,9.52,2.0
+USR000755,Anita Patel,anita.patel@company.com,Sales,Sales Manager,2023-05-10,EMP197631,3,Active,2025-02-18 21:55:35.221000+00:00,212,884792,1.81,1.0
+USR000756,Reyansh Bansal,reyansh.bansal@company.com,Marketing,Executive,2016-05-16,EMP355780,4,Active,2025-02-17 21:56:22.269000+00:00,103,768204,8.79,2.0
+USR000757,Anita Patel,anita.patel@company.com,Production,Executive,2020-05-29,EMP462516,1,Active,2025-02-14 01:50:12.322000+00:00,785,663006,4.76,2.0
+USR000758,Anita Reddy,anita.reddy@company.com,Marketing,Executive,2019-03-05,EMP333495,2,Active,2025-02-11 05:28:23.734000+00:00,361,624647,5.99,2.0
+USR000759,Dinesh Malhotra,dinesh.malhotra@company.com,Production,Executive,2023-05-17,EMP913122,4,Active,2025-02-13 12:46:54.993000+00:00,207,373347,1.79,2.0
+USR000760,Priya Joshi,priya.joshi@company.com,Admin,Executive,2016-03-01,EMP207380,2,Active,2025-02-13 01:23:35.271000+00:00,934,853751,9.0,2.0
+USR000761,Diya Gupta,diya.gupta@company.com,Hr,Hr Manager,2024-05-27,EMP302039,1,Inactive,2025-02-16 05:03:49.457000+00:00,954,308936,0.76,1.0
+USR000762,Riya Bansal,riya.bansal@company.com,Admin,Executive,2017-07-19,EMP547565,3,Active,2025-02-14 04:45:28.468000+00:00,508,271781,7.62,2.0
+USR000763,Aarav Reddy,aarav.reddy@company.com,Procurement,Executive,2016-11-18,EMP812112,3,Active,2025-02-10 22:58:57.179000+00:00,736,921643,8.28,2.0
+USR000764,Rajesh Gupta,rajesh.gupta@company.com,It,Executive,2023-02-24,EMP258380,1,Active,2025-02-16 20:14:50.532000+00:00,319,250737,2.02,2.0
+USR000765,Suresh Gupta,suresh.gupta@company.com,Finance,Accountant,2019-01-03,EMP815305,4,Active,2025-02-11 09:58:27.375000+00:00,874,245483,6.16,1.0
+USR000766,Aarav Gupta,aarav.gupta@company.com,Marketing,Executive,2023-08-13,EMP684125,3,Active,2025-02-17 10:32:31.638000+00:00,60,506660,1.55,2.0
+USR000767,Reyansh Shah,reyansh.shah@company.com,Production,Executive,2019-04-04,EMP931145,3,Active,2025-02-15 17:27:04.598000+00:00,818,765473,5.91,2.0
+USR000768,Aarav Gupta,aarav.gupta@company.com,Operations,Executive,2018-03-28,EMP067845,3,Inactive,2025-02-15 23:04:29.691000+00:00,437,693898,6.93,2.0
+USR000769,Anita Kapoor,anita.kapoor@company.com,Sales,Sales Executive,2021-01-05,EMP631406,2,Active,2025-02-13 05:49:10.828000+00:00,790,89136,4.15,1.0
+USR000770,Riya Kapoor,riya.kapoor@company.com,Procurement,Executive,2018-08-04,EMP228582,1,Active,2025-02-17 09:15:34.886000+00:00,807,34440,6.58,2.0
+USR000771,Deepika Verma,deepika.verma@company.com,Finance,Financial Analyst,2024-06-18,EMP335005,4,Active,2025-02-12 15:28:27.068000+00:00,242,35477,0.7,1.0
+USR000772,Dinesh Gupta,dinesh.gupta@company.com,Operations,Executive,2022-09-27,EMP023193,1,Active,2025-02-14 14:09:34.991000+00:00,699,491121,2.43,2.0
+USR000773,Diya Mehta,diya.mehta@company.com,Admin,Executive,2015-06-07,EMP115718,3,Active,2025-02-12 02:39:24.795000+00:00,815,865489,9.73,2.0
+USR000774,Riya Chopra,riya.chopra@company.com,Production,Executive,2022-06-23,EMP439507,1,Active,2025-02-16 06:46:07.145000+00:00,78,813464,2.69,2.0
+USR000775,Ramesh Joshi,ramesh.joshi@company.com,Production,Executive,2023-05-09,EMP759579,2,Active,2025-02-19 14:15:20.716000+00:00,551,211241,1.81,2.0
+USR000776,Advait Chopra,advait.chopra@company.com,Production,Executive,2016-12-15,EMP302826,2,Active,2025-02-12 16:19:10.346000+00:00,330,536860,8.21,2.0
+USR000777,Reyansh Reddy,reyansh.reddy@company.com,Finance,Accountant,2024-07-28,EMP118915,3,Active,2025-02-18 16:28:25.025000+00:00,609,403347,0.59,1.0
+USR000778,Aarav Chopra,aarav.chopra@company.com,Admin,Executive,2017-01-12,EMP533851,1,Active,2025-02-11 04:35:08.026000+00:00,45,61516,8.13,2.0
+USR000779,Ishita Kapoor,ishita.kapoor@company.com,Production,Executive,2021-09-28,EMP028370,3,Active,2025-02-09 22:49:47.608000+00:00,163,917193,3.42,2.0
+USR000780,Ramesh Reddy,ramesh.reddy@company.com,It,Executive,2023-12-19,EMP543567,4,Inactive,2025-02-11 05:55:03.922000+00:00,767,100976,1.2,2.0
+USR000781,Sunita Malhotra,sunita.malhotra@company.com,Marketing,Executive,2024-05-19,EMP086793,1,Active,2025-02-17 21:45:38.504000+00:00,723,421569,0.78,2.0
+USR000782,Aarav Malhotra,aarav.malhotra@company.com,Finance,Accountant,2021-12-26,EMP281340,1,Active,2025-02-13 04:40:14.632000+00:00,240,93680,3.18,1.0
+USR000783,Advait Bansal,advait.bansal@company.com,R&D,Executive,2018-07-20,EMP790875,1,Active,2025-02-18 04:00:11.148000+00:00,513,522208,6.62,2.0
+USR000784,Ramesh Verma,ramesh.verma@company.com,Finance,Financial Analyst,2017-10-17,EMP373863,2,Active,2025-02-10 21:35:28.565000+00:00,317,889992,7.37,1.0
+USR000785,Aanya Verma,aanya.verma@company.com,Marketing,Executive,2017-03-19,EMP131669,4,Active,2025-02-15 17:22:42.643000+00:00,902,270647,7.95,2.0
+USR000786,Suresh Agarwal,suresh.agarwal@company.com,Hr,Hr Executive,2018-05-23,EMP561433,4,Active,2025-02-10 16:26:43.499000+00:00,519,57249,6.78,1.0
+USR000787,Mukesh Bansal,mukesh.bansal@company.com,Sales,Sales Manager,2018-10-29,EMP514613,2,Inactive,2025-02-19 13:34:09.953000+00:00,142,114454,6.34,1.0
+USR000788,Arjun Agarwal,arjun.agarwal@company.com,Finance,Controller,2024-08-29,EMP053432,4,Active,2025-02-10 16:29:16.928000+00:00,571,516143,0.51,1.0
+USR000789,Riya Kapoor,riya.kapoor@company.com,Finance,Accountant,2019-07-03,EMP740634,3,Inactive,2025-02-10 20:58:39.767000+00:00,237,915399,5.66,1.0
+USR000790,Priyanka Joshi,priyanka.joshi@company.com,Hr,Hr Manager,2015-08-08,EMP062249,1,Inactive,2025-02-18 00:15:18.222000+00:00,4,976743,9.57,1.0
+USR000791,Rajesh Agarwal,rajesh.agarwal@company.com,It,Executive,2024-10-05,EMP719750,2,Active,2025-02-17 08:53:00.369000+00:00,783,554106,0.4,2.0
+USR000792,Rajesh Joshi,rajesh.joshi@company.com,Marketing,Executive,2020-08-10,EMP820836,2,Inactive,2025-02-11 17:36:14.278000+00:00,272,836078,4.56,2.0
+USR000793,Deepika Malhotra,deepika.malhotra@company.com,Procurement,Executive,2015-01-12,EMP573795,3,Active,2025-02-10 21:49:54.928000+00:00,424,465513,10.13,2.0
+USR000794,Deepika Agarwal,deepika.agarwal@company.com,Finance,Controller,2024-09-01,EMP086648,3,Active,2025-02-10 02:46:29.442000+00:00,125,147559,0.5,1.0
+USR000795,Deepika Gupta,deepika.gupta@company.com,Hr,Recruiter,2017-09-17,EMP921797,3,Active,2025-02-18 22:42:17.746000+00:00,305,473594,7.45,1.0
+USR000796,Aanya Verma,aanya.verma@company.com,R&D,Executive,2023-12-20,EMP279110,4,Active,2025-02-13 23:21:29.038000+00:00,99,24695,1.2,2.0
+USR000797,Anita Kapoor,anita.kapoor@company.com,Operations,Executive,2023-12-24,EMP059328,2,Active,2025-02-16 18:02:58.825000+00:00,635,683316,1.19,2.0
+USR000798,Priya Chopra,priya.chopra@company.com,Procurement,Executive,2023-09-27,EMP258101,2,Inactive,2025-02-10 12:47:50.790000+00:00,201,259492,1.43,2.0
+USR000799,Kavita Shah,kavita.shah@company.com,Admin,Executive,2020-08-01,EMP730325,1,Active,2025-02-12 12:27:51.946000+00:00,283,395441,4.58,2.0
+USR000800,Suresh Verma,suresh.verma@company.com,R&D,Executive,2020-05-21,EMP935468,3,Active,2025-02-17 14:16:19.753000+00:00,595,556537,4.78,2.0
+USR000801,Priya Reddy,priya.reddy@company.com,Finance,Controller,2021-12-03,EMP717876,1,Active,2025-02-09 15:46:11.977000+00:00,101,581659,3.24,1.0
+USR000802,Ishita Kumar,ishita.kumar@company.com,Production,Executive,2024-05-03,EMP082708,2,Active,2025-02-14 08:57:20.146000+00:00,297,64719,0.83,2.0
+USR000803,Dinesh Kapoor,dinesh.kapoor@company.com,Finance,Controller,2020-05-26,EMP915730,3,Active,2025-02-19 02:04:54.442000+00:00,267,858071,4.77,1.0
+USR000804,Aanya Malhotra,aanya.malhotra@company.com,Marketing,Executive,2020-07-10,EMP832624,2,Active,2025-02-11 00:14:50.904000+00:00,268,787835,4.64,2.0
+USR000805,Aanya Sharma,aanya.sharma@company.com,Finance,Accountant,2022-10-10,EMP690687,2,Active,2025-02-18 01:32:11.280000+00:00,400,326438,2.39,1.0
+USR000806,Anita Kapoor,anita.kapoor@company.com,It,Executive,2021-03-18,EMP534311,4,Active,2025-02-18 08:00:19.608000+00:00,666,176931,3.96,2.0
+USR000807,Rajesh Reddy,rajesh.reddy@company.com,R&D,Executive,2023-04-09,EMP233973,4,Active,2025-02-13 04:41:38.960000+00:00,238,321612,1.9,2.0
+USR000808,Riya Mehta,riya.mehta@company.com,It,Executive,2017-12-28,EMP090172,2,Active,2025-02-10 02:07:02.443000+00:00,536,464209,7.17,2.0
+USR000809,Mukesh Verma,mukesh.verma@company.com,Operations,Executive,2020-02-16,EMP021456,2,Inactive,2025-02-18 03:07:13.933000+00:00,704,143548,5.04,2.0
+USR000810,Priyanka Kumar,priyanka.kumar@company.com,R&D,Executive,2015-06-28,EMP107846,2,Active,2025-02-12 18:10:05.083000+00:00,251,775831,9.68,2.0
+USR000811,Anita Singh,anita.singh@company.com,Hr,Recruiter,2020-07-31,EMP768120,2,Active,2025-02-16 21:02:49.359000+00:00,727,465464,4.58,1.0
+USR000812,Suresh Patel,suresh.patel@company.com,It,Executive,2021-02-25,EMP447759,3,Active,2025-02-17 08:37:51.988000+00:00,111,789382,4.01,2.0
+USR000813,Vihaan Singh,vihaan.singh@company.com,Sales,Business Developer,2020-05-19,EMP846393,2,Active,2025-02-19 08:32:57.500000+00:00,829,851909,4.78,1.0
+USR000814,Advait Kumar,advait.kumar@company.com,Marketing,Executive,2018-02-03,EMP334338,2,Active,2025-02-18 07:21:50.630000+00:00,387,409943,7.07,2.0
+USR000815,Mukesh Shah,mukesh.shah@company.com,Marketing,Executive,2023-03-22,EMP507872,2,Active,2025-02-18 02:50:11.561000+00:00,628,260142,1.95,2.0
+USR000816,Vihaan Chopra,vihaan.chopra@company.com,Admin,Executive,2020-08-11,EMP540068,4,Active,2025-02-17 06:07:13.307000+00:00,297,568977,4.55,2.0
+USR000817,Arjun Reddy,arjun.reddy@company.com,Hr,Recruiter,2021-06-06,EMP795048,4,Active,2025-02-18 15:22:05.166000+00:00,947,691297,3.74,1.0
+USR000818,Deepika Verma,deepika.verma@company.com,Finance,Accountant,2019-08-15,EMP355335,1,Active,2025-02-14 19:12:45.336000+00:00,374,100950,5.55,1.0
+USR000819,Dinesh Reddy,dinesh.reddy@company.com,Admin,Executive,2020-01-17,EMP509858,2,Active,2025-02-18 01:49:54.056000+00:00,575,474493,5.12,2.0
+USR000820,Priya Kapoor,priya.kapoor@company.com,It,Executive,2021-03-07,EMP994380,3,Active,2025-02-13 16:32:12.398000+00:00,892,567285,3.99,2.0
+USR000821,Sunita Malhotra,sunita.malhotra@company.com,Sales,Sales Manager,2022-10-17,EMP059594,1,Active,2025-02-17 11:57:33.947000+00:00,359,19549,2.37,1.0
+USR000822,Ishita Kumar,ishita.kumar@company.com,Operations,Executive,2015-06-13,EMP515911,3,Active,2025-02-10 00:20:02.319000+00:00,377,173156,9.72,2.0
+USR000823,Diya Chopra,diya.chopra@company.com,Procurement,Executive,2019-10-23,EMP503832,1,Active,2025-02-14 09:11:56.764000+00:00,223,66803,5.36,2.0
+USR000824,Aanya Shah,aanya.shah@company.com,Operations,Executive,2024-10-10,EMP193622,1,Active,2025-02-11 04:02:38.422000+00:00,212,628223,0.39,2.0
+USR000825,Reyansh Sharma,reyansh.sharma@company.com,Hr,Hr Manager,2023-11-07,EMP631956,2,Inactive,2025-02-10 11:48:29.865000+00:00,809,614823,1.32,1.0
+USR000826,Priyanka Chopra,priyanka.chopra@company.com,Finance,Controller,2017-12-16,EMP279813,1,Inactive,2025-02-14 23:52:20.752000+00:00,954,576824,7.21,1.0
+USR000827,Dinesh Shah,dinesh.shah@company.com,Hr,Hr Manager,2015-11-21,EMP287156,1,Active,2025-02-17 04:49:00.712000+00:00,702,367444,9.28,1.0
+USR000828,Vihaan Singh,vihaan.singh@company.com,Admin,Executive,2022-11-21,EMP243384,1,Active,2025-02-14 08:11:44.393000+00:00,225,300111,2.28,2.0
+USR000829,Riya Verma,riya.verma@company.com,Marketing,Executive,2021-11-01,EMP880168,2,Active,2025-02-11 06:09:44.886000+00:00,989,428554,3.33,2.0
+USR000830,Sunita Mehta,sunita.mehta@company.com,Finance,Financial Analyst,2023-02-26,EMP214888,3,Inactive,2025-02-19 01:16:33.743000+00:00,425,71566,2.01,1.0
+USR000831,Rajesh Verma,rajesh.verma@company.com,Admin,Executive,2022-05-11,EMP904448,2,Active,2025-02-13 02:13:02.497000+00:00,440,414657,2.81,2.0
+USR000832,Vihaan Gupta,vihaan.gupta@company.com,Marketing,Executive,2022-11-17,EMP063888,2,Active,2025-02-13 00:43:53.866000+00:00,96,518260,2.29,2.0
+USR000833,Dinesh Bansal,dinesh.bansal@company.com,It,Executive,2021-12-05,EMP196293,3,Active,2025-02-19 09:57:59.920000+00:00,189,43592,3.24,2.0
+USR000834,Riya Mehta,riya.mehta@company.com,It,Executive,2018-11-08,EMP200695,3,Active,2025-02-16 15:29:22.434000+00:00,293,203031,6.31,2.0
+USR000835,Suresh Shah,suresh.shah@company.com,It,Executive,2022-04-22,EMP752015,4,Active,2025-02-13 19:08:28.133000+00:00,540,336945,2.86,2.0
+USR000836,Riya Shah,riya.shah@company.com,Marketing,Executive,2016-07-12,EMP682377,1,Active,2025-02-14 22:51:28.419000+00:00,239,473461,8.64,2.0
+USR000837,Suresh Gupta,suresh.gupta@company.com,R&D,Executive,2017-07-11,EMP092928,4,Active,2025-02-13 23:22:26.724000+00:00,581,162668,7.64,2.0
+USR000838,Diya Chopra,diya.chopra@company.com,R&D,Executive,2016-06-27,EMP698612,2,Active,2025-02-16 12:04:30.179000+00:00,245,755116,8.68,2.0
+USR000839,Ishita Patel,ishita.patel@company.com,Production,Executive,2021-04-24,EMP991855,3,Active,2025-02-14 03:44:16.937000+00:00,501,709135,3.85,2.0
+USR000840,Deepika Kumar,deepika.kumar@company.com,Admin,Executive,2018-12-06,EMP490676,4,Active,2025-02-10 03:21:23.652000+00:00,243,657150,6.24,2.0
+USR000841,Advait Patel,advait.patel@company.com,Admin,Executive,2020-08-15,EMP840012,2,Active,2025-02-13 11:31:52.713000+00:00,944,904502,4.54,2.0
+USR000842,Arjun Shah,arjun.shah@company.com,Marketing,Executive,2024-03-21,EMP164267,4,Active,2025-02-10 07:56:35.112000+00:00,878,11625,0.95,2.0
+USR000843,Sunita Patel,sunita.patel@company.com,It,Executive,2016-12-06,EMP012955,2,Active,2025-02-11 21:57:30.364000+00:00,185,812804,8.23,2.0
+USR000844,Ramesh Gupta,ramesh.gupta@company.com,Operations,Executive,2017-03-05,EMP328882,1,Active,2025-02-17 03:35:29.464000+00:00,969,872581,7.99,2.0
+USR000845,Deepika Kumar,deepika.kumar@company.com,Hr,Hr Manager,2017-02-06,EMP669152,2,Active,2025-02-14 06:06:07.075000+00:00,420,987146,8.06,1.0
+USR000846,Priyanka Malhotra,priyanka.malhotra@company.com,Hr,Hr Executive,2020-12-19,EMP051932,4,Active,2025-02-12 10:42:46.507000+00:00,447,205864,4.2,1.0
+USR000847,Ishita Singh,ishita.singh@company.com,Finance,Financial Analyst,2023-03-05,EMP455075,1,Active,2025-02-13 09:00:44.726000+00:00,708,830302,1.99,1.0
+USR000848,Mukesh Malhotra,mukesh.malhotra@company.com,Admin,Executive,2017-11-12,EMP493276,3,Active,2025-02-17 19:50:27.411000+00:00,502,879341,7.3,2.0
+USR000849,Kavita Joshi,kavita.joshi@company.com,Operations,Executive,2016-07-16,EMP738702,4,Inactive,2025-02-09 15:09:53.912000+00:00,872,347529,8.63,2.0
+USR000850,Diya Kumar,diya.kumar@company.com,Finance,Financial Analyst,2019-08-11,EMP939820,2,Active,2025-02-19 08:42:59.824000+00:00,656,825481,5.56,1.0
+USR000851,Aarav Malhotra,aarav.malhotra@company.com,Finance,Financial Analyst,2015-08-30,EMP982818,1,Inactive,2025-02-14 12:17:02.378000+00:00,103,960535,9.5,1.0
+USR000852,Diya Singh,diya.singh@company.com,Hr,Hr Manager,2024-09-27,EMP286681,4,Active,2025-02-17 04:51:00.016000+00:00,890,989511,0.43,1.0
+USR000853,Aarav Shah,aarav.shah@company.com,Marketing,Executive,2018-09-01,EMP198700,2,Active,2025-02-19 11:43:43.810000+00:00,687,220430,6.5,2.0
+USR000854,Kavita Verma,kavita.verma@company.com,Finance,Accountant,2024-10-13,EMP797301,3,Inactive,2025-02-13 07:45:13.885000+00:00,344,878326,0.38,1.0
+USR000855,Aanya Malhotra,aanya.malhotra@company.com,Production,Executive,2024-10-11,EMP571159,3,Active,2025-02-19 14:36:18.074000+00:00,922,358747,0.39,2.0
+USR000856,Aarav Kumar,aarav.kumar@company.com,Admin,Executive,2017-02-22,EMP299327,1,Active,2025-02-11 10:08:29.687000+00:00,539,613588,8.02,2.0
+USR000857,Rajesh Verma,rajesh.verma@company.com,Finance,Accountant,2016-06-03,EMP037329,4,Active,2025-02-15 17:39:22.551000+00:00,220,471173,8.74,1.0
+USR000858,Reyansh Sharma,reyansh.sharma@company.com,Hr,Hr Executive,2023-08-12,EMP422220,2,Active,2025-02-15 13:18:42.975000+00:00,648,772526,1.55,1.0
+USR000859,Suresh Verma,suresh.verma@company.com,Hr,Hr Executive,2023-07-12,EMP344928,4,Active,2025-02-14 13:16:45.844000+00:00,495,638933,1.64,1.0
+USR000860,Aanya Agarwal,aanya.agarwal@company.com,Finance,Accountant,2023-07-31,EMP798637,3,Active,2025-02-13 01:26:05.103000+00:00,728,472528,1.59,1.0
+USR000861,Arjun Gupta,arjun.gupta@company.com,R&D,Executive,2017-07-31,EMP264488,4,Active,2025-02-10 23:49:03.299000+00:00,991,695845,7.59,2.0
+USR000862,Vihaan Agarwal,vihaan.agarwal@company.com,Sales,Sales Manager,2018-06-13,EMP939219,4,Active,2025-02-11 04:25:40.082000+00:00,243,893544,6.72,1.0
+USR000863,Deepika Bansal,deepika.bansal@company.com,Procurement,Executive,2018-01-11,EMP645572,3,Active,2025-02-10 05:16:10.545000+00:00,25,269204,7.14,2.0
+USR000864,Advait Malhotra,advait.malhotra@company.com,Finance,Controller,2019-07-26,EMP033565,2,Inactive,2025-02-17 11:15:54.750000+00:00,309,406496,5.6,1.0
+USR000865,Reyansh Shah,reyansh.shah@company.com,Hr,Recruiter,2016-07-25,EMP745573,2,Active,2025-02-11 05:10:51.981000+00:00,944,879893,8.6,1.0
+USR000866,Priya Joshi,priya.joshi@company.com,Procurement,Executive,2023-09-13,EMP050463,4,Active,2025-02-18 15:37:47.315000+00:00,383,96142,1.47,2.0
+USR000867,Sunita Joshi,sunita.joshi@company.com,Hr,Recruiter,2015-09-27,EMP057944,3,Active,2025-02-12 11:49:09.326000+00:00,263,521069,9.43,1.0
+USR000868,Priyanka Malhotra,priyanka.malhotra@company.com,Operations,Executive,2023-06-26,EMP875572,4,Active,2025-02-16 00:01:53.779000+00:00,587,285283,1.68,2.0
+USR000869,Sunita Chopra,sunita.chopra@company.com,It,Executive,2019-04-14,EMP338442,3,Active,2025-02-12 18:07:26.699000+00:00,253,831325,5.88,2.0
+USR000870,Ramesh Agarwal,ramesh.agarwal@company.com,Procurement,Executive,2019-12-11,EMP067414,3,Active,2025-02-16 19:09:32.190000+00:00,302,80896,5.22,2.0
+USR000871,Priyanka Malhotra,priyanka.malhotra@company.com,Sales,Sales Manager,2016-05-25,EMP059560,3,Active,2025-02-18 03:58:13.968000+00:00,991,576882,8.77,1.0
+USR000872,Mukesh Verma,mukesh.verma@company.com,Sales,Sales Manager,2016-07-19,EMP697642,3,Active,2025-02-10 20:57:35.764000+00:00,685,362459,8.62,1.0
+USR000873,Ishita Joshi,ishita.joshi@company.com,Operations,Executive,2025-01-09,EMP725558,3,Active,2025-02-11 00:00:36.361000+00:00,56,637575,0.14,2.0
+USR000874,Suresh Joshi,suresh.joshi@company.com,Operations,Executive,2019-04-30,EMP009855,4,Active,2025-02-19 09:34:59.814000+00:00,659,588310,5.84,2.0
+USR000875,Mukesh Agarwal,mukesh.agarwal@company.com,R&D,Executive,2019-01-25,EMP778505,1,Active,2025-02-16 08:33:15.099000+00:00,659,987237,6.1,2.0
+USR000876,Aanya Singh,aanya.singh@company.com,R&D,Executive,2019-08-23,EMP192982,4,Active,2025-02-18 15:45:53.474000+00:00,845,184335,5.52,2.0
+USR000877,Arjun Mehta,arjun.mehta@company.com,Admin,Executive,2019-11-04,EMP650634,4,Inactive,2025-02-17 02:25:26.532000+00:00,933,570690,5.32,2.0
+USR000878,Riya Joshi,riya.joshi@company.com,R&D,Executive,2020-06-17,EMP123270,3,Active,2025-02-16 04:36:06.540000+00:00,951,490259,4.71,2.0
+USR000879,Aanya Chopra,aanya.chopra@company.com,Admin,Executive,2015-12-14,EMP676489,2,Active,2025-02-10 10:11:37.848000+00:00,839,920650,9.21,2.0
+USR000880,Mukesh Verma,mukesh.verma@company.com,R&D,Executive,2023-06-04,EMP394030,2,Inactive,2025-02-19 09:01:41.148000+00:00,369,298990,1.74,2.0
+USR000881,Ishita Agarwal,ishita.agarwal@company.com,Procurement,Executive,2023-11-01,EMP488058,1,Active,2025-02-15 20:54:30.877000+00:00,538,706464,1.33,2.0
+USR000882,Dinesh Chopra,dinesh.chopra@company.com,Finance,Accountant,2015-01-13,EMP001127,4,Active,2025-02-11 18:38:25.889000+00:00,525,993193,10.13,1.0
+USR000883,Diya Sharma,diya.sharma@company.com,Operations,Executive,2019-03-15,EMP313849,3,Active,2025-02-13 07:07:11.289000+00:00,956,516024,5.96,2.0
+USR000884,Vihaan Bansal,vihaan.bansal@company.com,It,Executive,2020-05-09,EMP757747,4,Active,2025-02-11 16:56:37.731000+00:00,229,203328,4.81,2.0
+USR000885,Rajesh Reddy,rajesh.reddy@company.com,Production,Executive,2018-07-12,EMP372285,1,Active,2025-02-15 07:54:58.050000+00:00,882,400571,6.64,2.0
+USR000886,Ishita Joshi,ishita.joshi@company.com,Production,Executive,2021-04-02,EMP882941,3,Active,2025-02-11 06:05:38.689000+00:00,957,379263,3.91,2.0
+USR000887,Anita Gupta,anita.gupta@company.com,Marketing,Executive,2016-12-12,EMP901328,3,Active,2025-02-16 14:13:10.485000+00:00,319,782576,8.22,2.0
+USR000888,Sunita Chopra,sunita.chopra@company.com,Procurement,Executive,2016-01-13,EMP646076,2,Active,2025-02-17 12:34:36.248000+00:00,451,905766,9.13,2.0
+USR000889,Priya Kumar,priya.kumar@company.com,Marketing,Executive,2022-10-06,EMP995499,1,Active,2025-02-14 17:21:50.054000+00:00,235,144453,2.4,2.0
+USR000890,Vihaan Kumar,vihaan.kumar@company.com,Marketing,Executive,2024-07-10,EMP367080,4,Active,2025-02-18 15:48:29.520000+00:00,570,788465,0.64,2.0
+USR000891,Aanya Agarwal,aanya.agarwal@company.com,Finance,Accountant,2015-05-26,EMP835307,4,Active,2025-02-16 23:20:30.263000+00:00,760,356111,9.77,1.0
+USR000892,Vihaan Kumar,vihaan.kumar@company.com,Marketing,Executive,2022-08-18,EMP953854,4,Active,2025-02-17 00:26:27.909000+00:00,372,139370,2.54,2.0
+USR000893,Diya Bansal,diya.bansal@company.com,Admin,Executive,2019-08-15,EMP059556,3,Active,2025-02-12 04:29:41.274000+00:00,533,728527,5.55,2.0
+USR000894,Riya Malhotra,riya.malhotra@company.com,Finance,Controller,2017-09-22,EMP558447,1,Active,2025-02-12 14:28:52.670000+00:00,128,752235,7.44,1.0
+USR000895,Diya Reddy,diya.reddy@company.com,Admin,Executive,2016-02-05,EMP931314,2,Active,2025-02-17 12:43:41.349000+00:00,393,684419,9.07,2.0
+USR000896,Priya Kapoor,priya.kapoor@company.com,It,Executive,2024-10-13,EMP954527,4,Active,2025-02-17 00:55:07.281000+00:00,242,870789,0.38,2.0
+USR000897,Reyansh Patel,reyansh.patel@company.com,Procurement,Executive,2018-10-27,EMP204560,2,Inactive,2025-02-16 08:31:29.724000+00:00,596,474576,6.35,2.0
+USR000898,Advait Gupta,advait.gupta@company.com,Procurement,Executive,2019-03-19,EMP552893,3,Active,2025-02-10 03:00:05.536000+00:00,539,469511,5.95,2.0
+USR000899,Suresh Chopra,suresh.chopra@company.com,Operations,Executive,2019-01-04,EMP213801,4,Active,2025-02-13 11:32:20.564000+00:00,583,83594,6.16,2.0
+USR000900,Suresh Agarwal,suresh.agarwal@company.com,Production,Executive,2022-12-22,EMP669332,1,Inactive,2025-02-17 18:30:14.607000+00:00,550,156883,2.19,2.0
+USR000901,Priya Sharma,priya.sharma@company.com,Hr,Recruiter,2018-02-11,EMP067195,2,Active,2025-02-19 10:09:04.036000+00:00,598,96680,7.05,1.0
+USR000902,Deepika Verma,deepika.verma@company.com,Admin,Executive,2023-12-22,EMP098508,1,Active,2025-02-11 11:07:03.187000+00:00,52,71806,1.19,2.0
+USR000903,Priyanka Joshi,priyanka.joshi@company.com,Finance,Accountant,2024-05-16,EMP664772,4,Active,2025-02-17 15:50:23.612000+00:00,349,599244,0.79,1.0
+USR000904,Dinesh Sharma,dinesh.sharma@company.com,Sales,Business Developer,2023-07-25,EMP499530,4,Active,2025-02-13 02:35:03.551000+00:00,136,452267,1.6,1.0
+USR000905,Priya Bansal,priya.bansal@company.com,Marketing,Executive,2020-02-12,EMP460487,1,Active,2025-02-15 16:47:44.891000+00:00,976,561728,5.05,2.0
+USR000906,Mukesh Bansal,mukesh.bansal@company.com,Operations,Executive,2020-07-11,EMP683389,1,Active,2025-02-12 09:54:42.963000+00:00,463,172137,4.64,2.0
+USR000907,Aarav Chopra,aarav.chopra@company.com,Operations,Executive,2018-06-08,EMP328672,4,Active,2025-02-15 18:20:41.292000+00:00,609,384654,6.73,2.0
+USR000908,Suresh Malhotra,suresh.malhotra@company.com,Procurement,Executive,2023-11-27,EMP521218,3,Active,2025-02-17 09:29:50.581000+00:00,815,826944,1.26,2.0
+USR000909,Vihaan Kapoor,vihaan.kapoor@company.com,It,Executive,2023-05-26,EMP556761,4,Active,2025-02-19 04:12:49.127000+00:00,521,96169,1.77,2.0
+USR000910,Riya Sharma,riya.sharma@company.com,Admin,Executive,2024-04-25,EMP126752,4,Active,2025-02-15 03:05:59.195000+00:00,692,654364,0.85,2.0
+USR000911,Priyanka Mehta,priyanka.mehta@company.com,Operations,Executive,2017-05-31,EMP609546,2,Active,2025-02-13 08:13:40.091000+00:00,297,538605,7.75,2.0
+USR000912,Mukesh Mehta,mukesh.mehta@company.com,Operations,Executive,2024-08-09,EMP469813,4,Active,2025-02-16 09:30:26.604000+00:00,428,552481,0.56,2.0
+USR000913,Rajesh Shah,rajesh.shah@company.com,It,Executive,2019-06-18,EMP739462,4,Active,2025-02-09 22:55:05.966000+00:00,776,292281,5.7,2.0
+USR000914,Arjun Reddy,arjun.reddy@company.com,It,Executive,2024-12-31,EMP005410,3,Active,2025-02-12 23:31:04.317000+00:00,228,265699,0.17,2.0
+USR000915,Reyansh Malhotra,reyansh.malhotra@company.com,It,Executive,2022-02-01,EMP219980,2,Active,2025-02-10 15:39:32.196000+00:00,392,42875,3.08,2.0
+USR000916,Reyansh Bansal,reyansh.bansal@company.com,Hr,Hr Executive,2024-09-07,EMP825734,3,Active,2025-02-16 02:54:26.489000+00:00,534,686874,0.48,1.0
+USR000917,Priya Chopra,priya.chopra@company.com,It,Executive,2022-05-15,EMP811034,4,Active,2025-02-10 02:28:17.225000+00:00,736,137725,2.8,2.0
+USR000918,Dinesh Mehta,dinesh.mehta@company.com,Operations,Executive,2015-02-05,EMP397202,3,Active,2025-02-17 18:09:05.815000+00:00,279,596270,10.07,2.0
+USR000919,Arjun Sharma,arjun.sharma@company.com,Marketing,Executive,2023-06-15,EMP591526,3,Active,2025-02-15 20:54:54.892000+00:00,428,7563,1.71,2.0
+USR000920,Reyansh Gupta,reyansh.gupta@company.com,Finance,Accountant,2024-10-30,EMP066569,3,Active,2025-02-12 04:15:28.064000+00:00,529,601539,0.34,1.0
+USR000921,Reyansh Mehta,reyansh.mehta@company.com,Sales,Sales Executive,2015-08-21,EMP142494,3,Active,2025-02-18 10:10:12.593000+00:00,96,273227,9.53,1.0
+USR000922,Ishita Joshi,ishita.joshi@company.com,Hr,Hr Executive,2018-03-25,EMP008339,3,Active,2025-02-18 20:23:13.349000+00:00,229,411276,6.94,1.0
+USR000923,Aarav Mehta,aarav.mehta@company.com,Finance,Controller,2021-03-16,EMP330510,1,Active,2025-02-15 14:08:01.574000+00:00,323,600491,3.96,1.0
+USR000924,Sunita Reddy,sunita.reddy@company.com,Finance,Controller,2024-10-27,EMP096698,4,Active,2025-02-10 07:18:58.511000+00:00,731,702497,0.34,1.0
+USR000925,Aanya Mehta,aanya.mehta@company.com,It,Executive,2015-04-11,EMP646169,2,Active,2025-02-18 17:33:44.935000+00:00,571,518546,9.89,2.0
+USR000926,Mukesh Bansal,mukesh.bansal@company.com,Admin,Executive,2020-08-24,EMP277604,4,Active,2025-02-15 18:57:11.847000+00:00,31,317048,4.52,2.0
+USR000927,Ishita Reddy,ishita.reddy@company.com,It,Executive,2023-08-21,EMP300690,1,Active,2025-02-15 04:10:43.716000+00:00,901,65407,1.53,2.0
+USR000928,Ishita Malhotra,ishita.malhotra@company.com,Admin,Executive,2017-09-13,EMP496998,1,Active,2025-02-13 08:50:51.724000+00:00,710,194371,7.47,2.0
+USR000929,Riya Sharma,riya.sharma@company.com,Marketing,Executive,2020-02-17,EMP533337,1,Active,2025-02-12 01:19:28.107000+00:00,91,564849,5.04,2.0
+USR000930,Advait Chopra,advait.chopra@company.com,Operations,Executive,2018-08-24,EMP513260,1,Active,2025-02-11 23:24:10.101000+00:00,452,456922,6.52,2.0
+USR000931,Dinesh Patel,dinesh.patel@company.com,Sales,Sales Executive,2016-03-06,EMP391162,1,Active,2025-02-10 07:32:50.968000+00:00,779,168443,8.99,1.0
+USR000932,Arjun Shah,arjun.shah@company.com,Finance,Financial Analyst,2021-12-25,EMP738611,1,Active,2025-02-13 02:03:28.677000+00:00,420,922826,3.18,1.0
+USR000933,Anita Malhotra,anita.malhotra@company.com,Hr,Hr Executive,2024-05-06,EMP664848,4,Active,2025-02-17 13:19:00.347000+00:00,321,932514,0.82,1.0
+USR000934,Suresh Bansal,suresh.bansal@company.com,It,Executive,2019-12-12,EMP503554,1,Inactive,2025-02-12 09:47:43.157000+00:00,476,552403,5.22,2.0
+USR000935,Deepika Kumar,deepika.kumar@company.com,Sales,Business Developer,2019-06-20,EMP882757,1,Active,2025-02-11 02:26:56.557000+00:00,758,881907,5.7,1.0
+USR000936,Mukesh Gupta,mukesh.gupta@company.com,Production,Executive,2022-09-16,EMP465502,2,Active,2025-02-17 05:13:28.091000+00:00,82,882980,2.46,2.0
+USR000937,Rajesh Joshi,rajesh.joshi@company.com,Marketing,Executive,2018-09-12,EMP871185,3,Active,2025-02-13 15:05:50.247000+00:00,262,365474,6.47,2.0
+USR000938,Mukesh Malhotra,mukesh.malhotra@company.com,Procurement,Executive,2020-03-25,EMP447494,2,Active,2025-02-18 07:30:16.351000+00:00,865,574634,4.94,2.0
+USR000939,Kavita Verma,kavita.verma@company.com,It,Executive,2015-01-15,EMP284719,3,Active,2025-02-13 01:17:03.368000+00:00,928,913800,10.13,2.0
+USR000940,Kavita Sharma,kavita.sharma@company.com,Marketing,Executive,2019-07-22,EMP024878,1,Active,2025-02-15 23:12:11.419000+00:00,124,681117,5.61,2.0
+USR000941,Kavita Malhotra,kavita.malhotra@company.com,R&D,Executive,2015-07-06,EMP914718,1,Active,2025-02-10 23:53:47.721000+00:00,477,915173,9.66,2.0
+USR000942,Aanya Malhotra,aanya.malhotra@company.com,Procurement,Executive,2015-07-20,EMP217182,3,Active,2025-02-18 06:33:58.396000+00:00,372,907157,9.62,2.0
+USR000943,Priya Malhotra,priya.malhotra@company.com,Admin,Executive,2017-07-04,EMP354816,2,Active,2025-02-11 20:39:22.527000+00:00,547,138186,7.66,2.0
+USR000944,Diya Reddy,diya.reddy@company.com,Procurement,Executive,2025-02-15,EMP183335,3,Active,2025-02-10 05:15:15.758000+00:00,580,232473,0.04,2.0
+USR000945,Ishita Verma,ishita.verma@company.com,Sales,Business Developer,2016-09-30,EMP037032,2,Active,2025-02-09 15:16:56.306000+00:00,830,781132,8.42,1.0
+USR000946,Priya Bansal,priya.bansal@company.com,It,Executive,2019-09-07,EMP579885,1,Active,2025-02-17 09:27:24.661000+00:00,701,817563,5.48,2.0
+USR000947,Riya Patel,riya.patel@company.com,Production,Executive,2020-01-08,EMP294544,3,Active,2025-02-16 12:03:46.434000+00:00,808,702017,5.15,2.0
+USR000948,Mukesh Kapoor,mukesh.kapoor@company.com,Production,Executive,2023-12-27,EMP127183,4,Active,2025-02-18 10:11:55.028000+00:00,855,968983,1.18,2.0
+USR000949,Ishita Agarwal,ishita.agarwal@company.com,Procurement,Executive,2017-07-17,EMP916882,2,Inactive,2025-02-18 15:24:36.424000+00:00,120,268644,7.62,2.0
+USR000950,Diya Sharma,diya.sharma@company.com,Marketing,Executive,2021-07-18,EMP334752,3,Active,2025-02-11 14:24:23.984000+00:00,622,410684,3.62,2.0
+USR000951,Vihaan Malhotra,vihaan.malhotra@company.com,Marketing,Executive,2020-04-24,EMP902433,4,Active,2025-02-14 12:06:16.638000+00:00,223,586748,4.85,2.0
+USR000952,Anita Kapoor,anita.kapoor@company.com,Hr,Hr Manager,2025-02-12,EMP103990,4,Active,2025-02-16 00:54:59.578000+00:00,705,150701,0.05,1.0
+USR000953,Ishita Kumar,ishita.kumar@company.com,Hr,Hr Executive,2016-10-22,EMP248832,4,Active,2025-02-12 01:24:25.066000+00:00,791,209196,8.36,1.0
+USR000954,Mukesh Joshi,mukesh.joshi@company.com,It,Executive,2020-06-15,EMP316125,1,Active,2025-02-19 03:19:12.975000+00:00,263,577660,4.71,2.0
+USR000955,Suresh Patel,suresh.patel@company.com,Hr,Recruiter,2015-02-25,EMP392933,3,Active,2025-02-13 10:32:51.107000+00:00,118,817124,10.01,1.0
+USR000956,Anita Kapoor,anita.kapoor@company.com,It,Executive,2015-02-22,EMP382645,4,Active,2025-02-15 20:48:07.381000+00:00,112,690075,10.02,2.0
+USR000957,Vihaan Bansal,vihaan.bansal@company.com,Production,Executive,2020-07-10,EMP644787,3,Active,2025-02-13 23:19:06.950000+00:00,409,661516,4.64,2.0
+USR000958,Deepika Reddy,deepika.reddy@company.com,Hr,Hr Manager,2016-09-24,EMP838861,2,Active,2025-02-13 17:07:56.444000+00:00,751,341756,8.43,1.0
+USR000959,Suresh Patel,suresh.patel@company.com,R&D,Executive,2018-10-30,EMP701789,1,Active,2025-02-14 02:33:03.975000+00:00,733,208752,6.34,2.0
+USR000960,Anita Patel,anita.patel@company.com,Sales,Business Developer,2019-10-27,EMP401321,3,Active,2025-02-15 05:19:04.651000+00:00,49,489808,5.35,1.0
+USR000961,Suresh Singh,suresh.singh@company.com,Operations,Executive,2018-06-16,EMP387377,3,Active,2025-02-15 02:35:53.541000+00:00,387,11686,6.71,2.0
+USR000962,Arjun Verma,arjun.verma@company.com,Admin,Executive,2017-09-23,EMP467542,2,Active,2025-02-12 19:59:45.230000+00:00,571,763987,7.44,2.0
+USR000963,Advait Gupta,advait.gupta@company.com,It,Executive,2018-07-22,EMP803130,4,Active,2025-02-11 05:15:33.093000+00:00,867,152691,6.61,2.0
+USR000964,Sunita Kapoor,sunita.kapoor@company.com,Marketing,Executive,2023-07-08,EMP789866,4,Active,2025-02-19 14:02:10.617000+00:00,159,202820,1.65,2.0
+USR000965,Ramesh Kapoor,ramesh.kapoor@company.com,Production,Executive,2020-12-13,EMP745553,4,Active,2025-02-10 18:14:28.213000+00:00,255,211746,4.22,2.0
+USR000966,Kavita Reddy,kavita.reddy@company.com,Admin,Executive,2020-01-26,EMP073781,2,Active,2025-02-14 21:36:09.254000+00:00,970,301510,5.1,2.0
+USR000967,Priyanka Malhotra,priyanka.malhotra@company.com,R&D,Executive,2022-01-14,EMP135656,3,Inactive,2025-02-13 16:39:27.227000+00:00,441,554731,3.13,2.0
+USR000968,Advait Gupta,advait.gupta@company.com,Marketing,Executive,2018-01-15,EMP361465,1,Active,2025-02-13 06:14:25.765000+00:00,751,750292,7.13,2.0
+USR000969,Mukesh Chopra,mukesh.chopra@company.com,Hr,Hr Manager,2019-12-03,EMP237548,4,Inactive,2025-02-15 01:31:17.575000+00:00,216,242766,5.24,1.0
+USR000970,Arjun Agarwal,arjun.agarwal@company.com,Finance,Accountant,2015-03-24,EMP618532,4,Active,2025-02-18 17:22:06.632000+00:00,376,420483,9.94,1.0
+USR000971,Dinesh Verma,dinesh.verma@company.com,Marketing,Executive,2017-01-30,EMP239019,1,Active,2025-02-15 10:14:27.296000+00:00,622,206809,8.08,2.0
+USR000972,Ramesh Joshi,ramesh.joshi@company.com,Hr,Hr Executive,2020-04-23,EMP488029,4,Active,2025-02-12 05:36:59.325000+00:00,737,916375,4.86,1.0
+USR000973,Ramesh Bansal,ramesh.bansal@company.com,Sales,Sales Manager,2018-04-20,EMP409973,4,Active,2025-02-17 08:00:25.624000+00:00,467,58120,6.87,1.0
+USR000974,Advait Bansal,advait.bansal@company.com,Admin,Executive,2017-03-12,EMP012770,3,Active,2025-02-12 18:45:43.891000+00:00,448,954871,7.97,2.0
+USR000975,Priyanka Malhotra,priyanka.malhotra@company.com,Operations,Executive,2023-02-11,EMP928784,2,Inactive,2025-02-13 06:41:21.202000+00:00,343,767387,2.05,2.0
+USR000976,Suresh Bansal,suresh.bansal@company.com,Sales,Business Developer,2024-05-09,EMP346992,3,Active,2025-02-17 07:06:51.342000+00:00,328,536925,0.81,1.0
+USR000977,Suresh Gupta,suresh.gupta@company.com,Procurement,Executive,2017-01-22,EMP009888,4,Active,2025-02-11 18:39:03.253000+00:00,275,511238,8.11,2.0
+USR000978,Vihaan Reddy,vihaan.reddy@company.com,Hr,Recruiter,2018-04-16,EMP195185,4,Active,2025-02-18 07:44:24.814000+00:00,781,310100,6.88,1.0
+USR000979,Advait Kapoor,advait.kapoor@company.com,Finance,Accountant,2023-08-11,EMP866010,2,Active,2025-02-09 19:19:41.511000+00:00,417,371153,1.56,1.0
+USR000980,Vihaan Gupta,vihaan.gupta@company.com,Procurement,Executive,2021-03-16,EMP480060,4,Active,2025-02-18 07:48:00.206000+00:00,927,622566,3.96,2.0
+USR000981,Arjun Agarwal,arjun.agarwal@company.com,Procurement,Executive,2018-10-13,EMP389348,2,Active,2025-02-17 00:08:01.869000+00:00,166,504177,6.38,2.0
+USR000982,Priya Patel,priya.patel@company.com,Production,Executive,2022-03-11,EMP527718,3,Active,2025-02-18 16:19:03.801000+00:00,183,732376,2.98,2.0
+USR000983,Riya Chopra,riya.chopra@company.com,Procurement,Executive,2020-03-19,EMP502760,3,Active,2025-02-18 14:38:42.105000+00:00,683,543297,4.95,2.0
+USR000984,Ramesh Sharma,ramesh.sharma@company.com,Hr,Recruiter,2023-07-29,EMP476713,4,Active,2025-02-10 10:12:20.815000+00:00,250,86719,1.59,1.0
+USR000985,Mukesh Joshi,mukesh.joshi@company.com,Procurement,Executive,2018-08-11,EMP168362,1,Active,2025-02-10 00:58:02.914000+00:00,892,311558,6.56,2.0
+USR000986,Rajesh Sharma,rajesh.sharma@company.com,Marketing,Executive,2018-02-06,EMP104372,1,Active,2025-02-11 09:22:09.389000+00:00,761,88505,7.07,2.0
+USR000987,Anita Singh,anita.singh@company.com,Finance,Financial Analyst,2021-05-30,EMP199672,1,Active,2025-02-15 02:11:54.146000+00:00,233,312483,3.76,1.0
+USR000988,Priyanka Mehta,priyanka.mehta@company.com,Marketing,Executive,2021-03-12,EMP469789,3,Active,2025-02-15 12:40:44.983000+00:00,551,618837,3.97,2.0
+USR000989,Reyansh Chopra,reyansh.chopra@company.com,Sales,Business Developer,2022-11-14,EMP327304,4,Active,2025-02-13 09:52:26.217000+00:00,670,96642,2.3,1.0
+USR000990,Rajesh Gupta,rajesh.gupta@company.com,Procurement,Executive,2015-01-19,EMP216323,2,Active,2025-02-17 20:35:49.938000+00:00,607,922852,10.12,2.0
+USR000991,Diya Singh,diya.singh@company.com,Production,Executive,2017-11-11,EMP197728,1,Active,2025-02-10 10:43:36.463000+00:00,967,97075,7.3,2.0
+USR000992,Diya Agarwal,diya.agarwal@company.com,It,Executive,2015-10-08,EMP608553,4,Active,2025-02-12 19:03:32.164000+00:00,959,407022,9.4,2.0
+USR000993,Rajesh Chopra,rajesh.chopra@company.com,Finance,Controller,2021-08-17,EMP429580,3,Active,2025-02-19 07:21:53.560000+00:00,383,762691,3.54,1.0
+USR000994,Suresh Sharma,suresh.sharma@company.com,Finance,Accountant,2020-03-11,EMP832940,2,Active,2025-02-18 09:33:43.352000+00:00,585,124865,4.97,1.0
+USR000995,Anita Joshi,anita.joshi@company.com,Production,Executive,2019-01-25,EMP394417,1,Active,2025-02-15 01:28:45.664000+00:00,554,338265,6.1,2.0
+USR000996,Advait Patel,advait.patel@company.com,R&D,Executive,2025-02-16,EMP699682,1,Active,2025-02-16 07:43:07.698000+00:00,348,100996,0.04,2.0
+USR000997,Advait Bansal,advait.bansal@company.com,Hr,Recruiter,2020-01-15,EMP345325,2,Active,2025-02-13 03:17:30.913000+00:00,601,7570,5.13,1.0
+USR000998,Aarav Malhotra,aarav.malhotra@company.com,Production,Executive,2020-04-19,EMP808264,1,Active,2025-02-11 15:13:42.394000+00:00,140,688931,4.87,2.0
+USR000999,Diya Mehta,diya.mehta@company.com,Admin,Executive,2017-02-01,EMP584794,3,Active,2025-02-12 21:21:49.878000+00:00,61,700630,8.08,2.0
+USR001000,Reyansh Singh,reyansh.singh@company.com,Sales,Sales Executive,2016-08-26,EMP257922,1,Active,2025-02-16 16:51:56.449000+00:00,878,490635,8.51,1.0

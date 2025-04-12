@@ -1,0 +1,32 @@
+# Python virtual environments
+venv/
+env/
+ENV/
+virtualenv/
+.venv/
+.env/
+.ENV/
+.virtualenv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local configuration
+.env
+.env.local
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo 

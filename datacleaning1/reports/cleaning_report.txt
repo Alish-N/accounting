@@ -1,0 +1,20 @@
+=== Data Cleaning Report ===
+
+Financial Metrics:
+Original rows: 60000
+Cleaned rows: 60000
+Rows removed: 0
+Missing values filled: 0
+
+Transactions:
+Original rows: 60000
+Cleaned rows: 60000
+Rows removed: 0
+Missing values filled: 41918
+
+Users:
+Original rows: 1000
+Cleaned rows: 1000
+Rows removed: 0
+Missing values filled: 0
+
