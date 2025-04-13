@@ -261,21 +261,8 @@ class FraudDetector:
                     X_fold_val = X_train_processed[val_idx]
                     y_fold_val = y_train.iloc[val_idx]
                     
-                    # Apply SMOTE only on training fold
-                    if len(y_fold_train[y_fold_train==1]) > 5:
-                        smote = SMOTE(
-                            sampling_strategy=0.1,  # Create minority class as 10% of majority
-                            k_neighbors=min(5, len(y_fold_train[y_fold_train==1]) - 1),
-                            random_state=42
-                        )
-                        X_fold_train_resampled, y_fold_train_resampled = smote.fit_resample(
-                            X_fold_train, y_fold_train
-                        )
-                    else:
-                        X_fold_train_resampled, y_fold_train_resampled = X_fold_train, y_fold_train
-                    
-                    # Train model
-                    model.fit(X_fold_train_resampled, y_fold_train_resampled)
+                    # Train model directly on original data (no SMOTE)
+                    model.fit(X_fold_train, y_fold_train)
                     
                     # Evaluate on validation fold
                     y_fold_pred_proba = model.predict_proba(X_fold_val)[:, 1]
@@ -286,20 +273,8 @@ class FraudDetector:
                 
                 print(f"\nCross-validation AUC-ROC: {np.mean(cv_scores):.4f} (+/- {np.std(cv_scores):.4f})")
                 
-                # Retrain on full training set
-                if len(y_train[y_train==1]) > 5:
-                    smote = SMOTE(
-                        sampling_strategy=0.1,
-                        k_neighbors=min(5, len(y_train[y_train==1]) - 1),
-                        random_state=42
-                    )
-                    X_train_resampled, y_train_resampled = smote.fit_resample(
-                        X_train_processed, y_train
-                    )
-                else:
-                    X_train_resampled, y_train_resampled = X_train_processed, y_train
-                
-                model.fit(X_train_resampled, y_train_resampled)
+                # Retrain on full training set (no SMOTE)
+                model.fit(X_train_processed, y_train)
                 
                 # Evaluate on test set
                 y_pred_proba = model.predict_proba(X_test_processed)[:, 1]
