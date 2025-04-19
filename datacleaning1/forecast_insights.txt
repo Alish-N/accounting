@@ -1,18 +1,18 @@
 Revenue Analysis:
 - Historical growth (last 12 months): 3.95%
-- Expected growth over next 12 months: 7.46%
+- Expected growth over next 12 months: 9.68%
 - Avg monthly revenue (last 12m): 47909909.62
 - Min monthly revenue (last 12m): 45079484.40
 - Max monthly revenue (last 12m): 51379933.54
 Expenses Analysis:
 - Historical growth (last 12 months): 5.18%
-- Expected growth over next 12 months: 4.01%
+- Expected growth over next 12 months: 5.72%
 - Avg monthly expenses (last 12m): 38143128.75
 - Min monthly expenses (last 12m): 34632550.53
 - Max monthly expenses (last 12m): 40956225.69
 Cash_flow Analysis:
 - Historical growth (last 12 months): 3.68%
-- Expected growth over next 12 months: 7.07%
+- Expected growth over next 12 months: 19.97%
 - Avg monthly cash_flow (last 12m): 4814098.58
 - Min monthly cash_flow (last 12m): 4191838.55
 - Max monthly cash_flow (last 12m): 5686460.71

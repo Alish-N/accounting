@@ -14,8 +14,10 @@ warnings.filterwarnings('ignore')
 plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
-# Define the correct path to the dataset
-DATASET_PATH = '../financial_metrics.csv'
+# Get the script's directory
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Define the correct path to the dataset (one directory up from the script)
+DATASET_PATH = os.path.join(os.path.dirname(SCRIPT_DIR), 'financial_metrics.csv')
 
 def analyze_dataset(file_path):
     """
@@ -210,8 +212,8 @@ def train_models(data, metric, periods=36):
     
     # SARIMA Model
     sarima_model = SARIMAX(train_data[metric],
-                          order=(1,1,1),
-                          seasonal_order=(1,1,1,12),
+                          order=(2, 1, 2),
+                          seasonal_order=(1, 1, 1, 12),
                           enforce_stationarity=False,
                           enforce_invertibility=False)
     
@@ -858,8 +860,8 @@ def generate_forecast_report(data, forecasts, metrics, model_metrics, output_pat
                 <p>This forecast was generated using the SARIMA (Seasonal AutoRegressive Integrated Moving Average) time series model, which captures trend, seasonality, and autocorrelation patterns in the data.</p>
                 <p>The model specifications used:</p>
                 <ul>
-                    <li>Order parameters (p,d,q): (1,1,1)</li>
-                    <li>Seasonal order parameters (P,D,Q,s): (1,1,1,12)</li>
+                    <li>Order parameters (p,d,q): (2, 1, 2)</li>
+                    <li>Seasonal order parameters (P,D,Q,s): (1, 1, 1, 12)</li>
                 </ul>
                 <p>The forecasts are based on historical patterns and do not account for unexpected external factors or market disruptions.</p>
             </div>
