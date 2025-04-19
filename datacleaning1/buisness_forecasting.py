@@ -16,8 +16,8 @@ sns.set_palette("husl")
 
 # Get the script's directory
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Define the correct path to the dataset (one directory up from the script)
-DATASET_PATH = os.path.join(os.path.dirname(SCRIPT_DIR), 'financial_metrics.csv')
+# Define the correct path to the dataset (in the same directory as the script)
+DATASET_PATH = os.path.join(SCRIPT_DIR, 'financial_metrics.csv')
 
 def analyze_dataset(file_path):
     """

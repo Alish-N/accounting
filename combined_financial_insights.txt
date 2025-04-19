@@ -1,0 +1,38 @@
+
+COMBINED FINANCIAL ANALYSIS (Current & Forecasted)
+==================================================
+
+1. Current vs Next Month Analysis:
+------------------------------
+Current Ratio:
+  Current: 2.11
+  Next Month: 1.80
+ADEQUATE liquidity position - Sufficient ability to cover short-term obligations.
+
+Quick Ratio:
+  Current: 1.10
+  Next Month: 1.20
+STRONG immediate liquidity - Can cover immediate obligations without inventory.
+
+Profitability Metrics:
+  Current Profit Margin: 2189.5%
+  Next Month Profit Margin: 17.5%
+  Current ROI: 1766.3%
+  Next Month ROI: 9.4%
+STRONG profit margins indicating efficient operations. BELOW TARGET return on investment.
+
+Leverage Analysis:
+  Current Debt-to-Equity: 0.97
+  Next Month Debt-to-Equity: 1.50
+BALANCED leverage position - Moderate use of debt financing.
+
+2. Three-Month Forecast Summary:
+------------------------------
+Profit Margin: Increasing trend over next 3 months
+  Range: 0.17 to 0.22
+ROI: Increasing trend over next 3 months
+  Range: 0.09 to 0.11
+Current Ratio: Increasing trend over next 3 months
+  Range: 1.80 to 1.80
+Debt to Equity: Increasing trend over next 3 months
+  Range: 1.50 to 1.50

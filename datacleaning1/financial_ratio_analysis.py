@@ -12,9 +12,9 @@ class FinancialRatioAnalyzer:
         """Initialize the Financial Ratio Analyzer with the data file path"""
         # Get the script's directory
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        # If file_path is not absolute, make it relative to the parent directory of the script
+        # If file_path is not absolute, make it relative to the script directory
         if not os.path.isabs(file_path):
-            file_path = os.path.join(os.path.dirname(script_dir), file_path)
+            file_path = os.path.join(script_dir, file_path)
         self.file_path = file_path
         self.df = None
         self.ratios_df = None

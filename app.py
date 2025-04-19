@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 from typing import List, Dict, Any, Optional
 import pandas as pd
 import io
@@ -14,14 +14,20 @@ import random
 import uuid
 import traceback
 from io import StringIO
+import numpy as np
+import shutil
 
 # Import the anomaly and fraud detection classes
 from datacleaning1.anomaly_detection import TransactionAnomalyDetector
 from datacleaning1.fraud_detection import FraudDetector
+# Import the business forecasting service
+from datacleaning1.business_service import BusinessForecastingService
+from datacleaning1.buisness_forecasting import DATASET_PATH as BUSINESS_FORECAST_DATASET_PATH
+from datacleaning1.financial_ratio_analysis import FinancialRatioAnalyzer
 
 app = FastAPI(
-    title="Transaction Anomaly and Fraud Detection API",
-    description="API for detecting anomalies and fraud in transaction data",
+    title="Financial Analytics and Forecasting API",
+    description="API for detecting anomalies, identifying fraud in transaction data, and forecasting financial metrics",
     version="1.0.0"
 )
 
@@ -31,6 +37,7 @@ os.makedirs('anomaly_results', exist_ok=True)
 os.makedirs('models', exist_ok=True)
 os.makedirs('evaluation_results', exist_ok=True)
 os.makedirs('fraud_results', exist_ok=True)
+os.makedirs('financial_ratio_results', exist_ok=True)
 
 # Pydantic models for request validation
 class Transaction(BaseModel):
@@ -81,9 +88,56 @@ class OutputCapture:
 anomaly_detector = None
 fraud_detector = None
 
+# Initialize the business forecasting service
+business_forecasting_service = BusinessForecastingService()
+
 @app.get("/")
 async def root():
-    return {"message": "Transaction Anomaly Detection API", "status": "active"}
+    return {
+        "message": "Financial Analysis API",
+        "status": "active",
+        "available_services": {
+            "anomaly_detection": {
+                "description": "Detect anomalies in transaction data",
+                "endpoints": [
+                    "/api/upload-transactions",
+                    "/api/detect-anomalies",
+                    "/api/anomaly-results"
+                ]
+            },
+            "fraud_detection": {
+                "description": "Detect potential fraud in transaction data",
+                "endpoints": [
+                    "/api/detect-fraud",
+                    "/api/fraud-results",
+                    "/api/quick-fraud-analysis",
+                    "/api/run-full-pipeline"
+                ]
+            },
+            "business_forecasting": {
+                "description": "Forecast financial metrics like revenue, expenses, and cash flow",
+                "endpoints": [
+                    "/api/business/upload-data",
+                    "/api/business/generate-sample-data",
+                    "/api/business/use-original-dataset",
+                    "/api/business/forecast",
+                    "/api/business/forecast-results",
+                    "/api/business/dashboard",
+                    "/api/business/report",
+                    "/api/business/quick-forecast"
+                ]
+            },
+            "financial_ratio_analysis": {
+                "description": "Analyze financial ratios from the dataset",
+                "endpoints": [
+                    "/api/financial-ratios/analyze",
+                    "/api/financial-ratios/results", 
+                    "/api/financial-ratios/dashboard"
+                ]
+            }
+        },
+        "documentation": "/docs"
+    }
 
 @app.post("/api/upload-transactions")
 async def upload_transactions(transactions: TransactionList):
@@ -1256,6 +1310,771 @@ async def fix_fraud_detection():
             content={
                 "status": "error",
                 "message": f"Error during system diagnosis: {str(e)}",
+                "error_trace": error_trace
+            }
+        )
+
+# Business Forecasting API Endpoints
+class FinancialData(BaseModel):
+    date: str
+    revenue: Optional[float] = None
+    expenses: Optional[float] = None
+    cash_flow: Optional[float] = None
+    
+    @validator('date')
+    def validate_date(cls, v):
+        try:
+            # Check if we can parse the date
+            pd.to_datetime(v)
+            return v
+        except Exception as e:
+            raise ValueError(f"Invalid date format. Please use YYYY-MM-DD format: {str(e)}")
+
+class FinancialDataList(BaseModel):
+    data: List[FinancialData]
+
+class ForecastRequest(BaseModel):
+    periods: int = 12
+    period_type: str = "month"  # "month" or "year"
+
+@app.post("/api/business/upload-data")
+async def upload_financial_data(financial_data: FinancialDataList):
+    """Upload financial data for forecasting"""
+    try:
+        # Convert to dataframe
+        data_df = pd.DataFrame([item.dict() for item in financial_data.data])
+        
+        # Convert date strings to datetime with robust error handling
+        if 'date' in data_df.columns:
+            try:
+                data_df['date'] = pd.to_datetime(data_df['date'], errors='coerce')
+                # Check if we have any NaT (Not a Time) values after conversion
+                if data_df['date'].isna().any():
+                    bad_dates = [d for i, d in enumerate(financial_data.data) if pd.isna(data_df['date'].iloc[i])]
+                    return JSONResponse(
+                        status_code=400,
+                        content={
+                            "status": "error",
+                            "message": f"Invalid date format found in {len(bad_dates)} rows. Please use YYYY-MM-DD format.",
+                            "examples": [{"row": i, "date": d.date} for i, d in enumerate(bad_dates[:5])] if bad_dates else []
+                        }
+                    )
+            except Exception as e:
+                return JSONResponse(
+                    status_code=400,
+                    content={
+                        "status": "error",
+                        "message": f"Error converting dates: {str(e)}",
+                        "suggestion": "Please ensure all dates are in YYYY-MM-DD format."
+                    }
+                )
+            
+        # Use the business service to handle the upload
+        result = business_forecasting_service.upload_financial_data(data_df)
+        
+        return JSONResponse(content=result)
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error uploading financial data: {str(e)}\n{error_trace}"
+        )
+
+@app.post("/api/business/generate-sample-data")
+async def generate_sample_financial_data(num_records: int = 36):
+    """Generate sample financial data for forecasting"""
+    try:
+        # Use the business service to generate sample data
+        result = business_forecasting_service.generate_sample_data(num_records)
+        
+        return JSONResponse(content=result)
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error generating sample data: {str(e)}\n{error_trace}"
+        )
+
+@app.post("/api/business/forecast")
+async def run_business_forecast(request: ForecastRequest = None):
+    """Run business forecasting on the financial data"""
+    try:
+        # Use default values if no request body is provided
+        periods = 12
+        period_type = "month"
+        
+        if request:
+            periods = request.periods
+            period_type = request.period_type
+        
+        # Validate inputs
+        if periods <= 0:
+            raise HTTPException(status_code=400, detail="Forecast periods must be greater than 0")
+            
+        if period_type.lower() not in ["month", "year"]:
+            raise HTTPException(status_code=400, detail="Period type must be 'month' or 'year'")
+        
+        # Use the business service to run the forecast
+        result = business_forecasting_service.forecast(
+            forecast_periods=periods,
+            output_type=period_type
+        )
+        
+        return JSONResponse(content=result)
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error running business forecast: {str(e)}\n{error_trace}"
+        )
+
+@app.get("/api/business/forecast-results")
+async def get_business_forecast_results():
+    """Get the results of the last business forecast"""
+    try:
+        # Use the business service to get the forecast results
+        result = business_forecasting_service.get_forecast_results()
+        
+        if result["status"] == "error":
+            raise HTTPException(status_code=404, detail=result["message"])
+        
+        return JSONResponse(content=result)
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error retrieving business forecast results: {str(e)}\n{error_trace}"
+        )
+
+@app.get("/api/business/dashboard")
+async def get_business_dashboard():
+    """Get the business forecast dashboard"""
+    try:
+        # Use the business service to get the dashboard
+        result = business_forecasting_service.get_dashboard()
+        
+        if result["status"] == "error":
+            raise HTTPException(status_code=404, detail=result["message"])
+        
+        return JSONResponse(content=result)
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error retrieving business dashboard: {str(e)}\n{error_trace}"
+        )
+
+@app.get("/api/business/report")
+async def get_business_report():
+    """Get the business forecast report"""
+    try:
+        # Use the business service to get the report
+        result = business_forecasting_service.get_report()
+        
+        if result["status"] == "error":
+            raise HTTPException(status_code=404, detail=result["message"])
+        
+        return JSONResponse(content=result)
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error retrieving business report: {str(e)}\n{error_trace}"
+        )
+
+@app.delete("/api/business/data")
+async def delete_business_forecast_data():
+    """Delete all business forecast data and results"""
+    try:
+        # Use the business service to delete the data
+        result = business_forecasting_service.delete_forecast_data()
+        
+        return JSONResponse(content=result)
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error deleting business forecast data: {str(e)}\n{error_trace}"
+        )
+
+@app.get("/api/business/quick-forecast")
+async def quick_business_forecast(periods: int = 12, period_type: str = "month"):
+    """One-click endpoint to use the original dataset and run a forecast"""
+    try:
+        # Instead of generating sample data, we'll use the original dataset
+        # The business_forecasting_service already has the correct dataset_path set
+        
+        # Run forecast directly on the original dataset
+        forecast_result = business_forecasting_service.forecast(
+            forecast_periods=periods,
+            output_type=period_type
+        )
+        
+        if forecast_result["status"] != "success":
+            return JSONResponse(
+                status_code=500,
+                content={
+                    "status": "error",
+                    "message": "Failed to run forecast",
+                    "details": forecast_result
+                }
+            )
+        
+        # 3. Prepare simplified response with key information
+        response = {
+            "status": "success",
+            "message": "Quick forecast completed successfully using original dataset",
+            "forecast_periods": periods,
+            "period_type": period_type,
+            "data": {
+                "file_path": business_forecasting_service.dataset_path,
+                "date_range": forecast_result.get("data_range", {})
+            },
+            "forecast": {
+                "metrics": forecast_result["metrics"],
+                "insights": forecast_result["insights"][:5] if len(forecast_result["insights"]) > 5 else forecast_result["insights"],
+                "sample_forecasts": forecast_result["sample_forecasts"]
+            },
+            "links": {
+                "detailed_results": "/api/business/forecast-results",
+                "dashboard": "/api/business/dashboard",
+                "report": "/api/business/report"
+            }
+        }
+        
+        return JSONResponse(content=response)
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error running quick business forecast: {str(e)}\n{error_trace}"
+        )
+
+@app.get("/api/business/use-original-dataset")
+async def use_original_dataset():
+    """Use the original financial dataset with 60,000 rows spanning 2019-2024"""
+    try:
+        # Get the path to the original dataset from the business forecasting module
+        original_dataset_path = business_forecasting_service.dataset_path
+        
+        # Get absolute path for better debugging
+        absolute_path = os.path.abspath(original_dataset_path)
+        
+        # Print diagnostic information
+        print(f"Looking for original dataset at: {original_dataset_path}")
+        print(f"Absolute path: {absolute_path}")
+        
+        # Check if parent directory exists
+        parent_dir = os.path.dirname(absolute_path)
+        if os.path.exists(parent_dir):
+            print(f"Parent directory exists: {parent_dir}")
+            print("Directory contents:")
+            for item in os.listdir(parent_dir):
+                print(f"  - {item}")
+        else:
+            print(f"Parent directory does not exist: {parent_dir}")
+        
+        # Check if the file exists
+        if not os.path.exists(original_dataset_path):
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "status": "error",
+                    "message": f"Original dataset not found at path: {original_dataset_path}",
+                    "absolute_path": absolute_path,
+                    "working_directory": os.getcwd(),
+                    "parent_directory": parent_dir,
+                    "parent_exists": os.path.exists(parent_dir),
+                    "parent_contents": os.listdir(parent_dir) if os.path.exists(parent_dir) else [],
+                    "suggestion": "Please make sure the financial_metrics.csv file exists at the expected location."
+                }
+            )
+        
+        # Load the dataset
+        try:
+            df = pd.read_csv(original_dataset_path)
+            
+            # Convert date column to datetime
+            if 'date' in df.columns:
+                df['date'] = pd.to_datetime(df['date'], errors='coerce')
+            
+            # Get basic statistics
+            row_count = len(df)
+            columns = df.columns.tolist()
+            
+            # Get date range if available
+            date_range = None
+            if 'date' in df.columns and not df['date'].isna().all():
+                start_date = df['date'].min().strftime('%Y-%m-%d')
+                end_date = df['date'].max().strftime('%Y-%m-%d')
+                date_range = f"{start_date} to {end_date}"
+            
+            # Get sample data
+            sample_data = df.head(5).copy()
+            if 'date' in sample_data.columns:
+                sample_data['date'] = sample_data['date'].dt.strftime('%Y-%m-%d')
+            sample_data = sample_data.to_dict('records')
+            
+            # Prepare response
+            result = {
+                "status": "success",
+                "message": f"Successfully loaded original financial dataset with {row_count} rows",
+                "record_count": row_count,
+                "columns": columns,
+                "date_range": date_range,
+                "sample_data": sample_data,
+                "file_path": original_dataset_path
+            }
+            
+            # No need to use the service's upload function since we're using the original dataset directly
+            return JSONResponse(content=result)
+            
+        except Exception as e:
+            error_trace = traceback.format_exc()
+            return JSONResponse(
+                status_code=500,
+                content={
+                    "status": "error",
+                    "message": f"Error reading original dataset: {str(e)}",
+                    "error_trace": error_trace
+                }
+            )
+            
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error accessing original dataset: {str(e)}\n{error_trace}"
+        )
+
+@app.post("/api/business/ensure-original-dataset")
+async def ensure_original_dataset():
+    """
+    Ensures the original dataset is available at the correct path defined in buisness_forecasting.py
+    If not found, attempts to fix the path
+    """
+    try:
+        expected_path = BUSINESS_FORECAST_DATASET_PATH
+        abs_path = os.path.abspath(expected_path)
+        parent_dir = os.path.dirname(abs_path)
+        
+        # Log detailed information
+        print(f"Expected dataset path: {expected_path}")
+        print(f"Absolute path: {abs_path}")
+        print(f"Parent directory: {parent_dir}")
+        
+        # Check if it already exists
+        if os.path.exists(expected_path):
+            # Validate it's readable
+            try:
+                df = pd.read_csv(expected_path)
+                record_count = len(df)
+                return JSONResponse(
+                    content={
+                        "status": "success",
+                        "message": f"Original dataset already exists at {expected_path}",
+                        "record_count": record_count,
+                        "columns": df.columns.tolist(),
+                        "file_path": expected_path,
+                        "absolute_path": abs_path
+                    }
+                )
+            except Exception as e:
+                return JSONResponse(
+                    status_code=500,
+                    content={
+                        "status": "error",
+                        "message": f"Dataset exists but cannot be read: {str(e)}",
+                        "file_path": expected_path,
+                        "absolute_path": abs_path
+                    }
+                )
+        
+        # Create parent directory if needed
+        if not os.path.exists(parent_dir):
+            os.makedirs(parent_dir, exist_ok=True)
+            print(f"Created parent directory: {parent_dir}")
+            
+        # Case 1: Check if dataset_path from the module exists (it might be somewhere else)
+        potential_source = business_forecasting_service.dataset_path
+        if os.path.exists(potential_source) and potential_source != expected_path:
+            print(f"Found dataset at {potential_source}, copying to {expected_path}")
+            # Read original
+            df = pd.read_csv(potential_source)
+            # Save to expected path
+            df.to_csv(expected_path, index=False)
+            return JSONResponse(
+                content={
+                    "status": "success",
+                    "message": f"Copied dataset from {potential_source} to {expected_path}",
+                    "record_count": len(df),
+                    "file_path": expected_path,
+                    "source_path": potential_source
+                }
+            )
+            
+        # Case 2: Look for the file in various places
+        search_paths = [
+            os.path.join(os.getcwd(), 'financial_metrics.csv'),
+            os.path.join(os.getcwd(), 'datacleaning1', 'financial_metrics.csv'),
+            os.path.join(os.getcwd(), 'data', 'financial_metrics.csv')
+        ]
+        
+        for search_path in search_paths:
+            if os.path.exists(search_path):
+                print(f"Found dataset at {search_path}, copying to {expected_path}")
+                # Read original
+                df = pd.read_csv(search_path)
+                # Save to expected path
+                df.to_csv(expected_path, index=False)
+                return JSONResponse(
+                    content={
+                        "status": "success",
+                        "message": f"Copied dataset from {search_path} to {expected_path}",
+                        "record_count": len(df),
+                        "file_path": expected_path,
+                        "source_path": search_path
+                    }
+                )
+        
+        # Case 3: If we couldn't find it anywhere, create it using our force-large-dataset endpoint
+        print("Dataset not found, creating a new one")
+        
+        # Call the force-large-dataset endpoint logic here directly
+        start_date = datetime(2019, 1, 1)
+        end_date = datetime(2024, 3, 1)
+        
+        # Generate dates
+        days = (end_date - start_date).days + 1
+        dates = [start_date + timedelta(days=i) for i in range(days)]
+        
+        # Ensure we have at least 60,000 records
+        if len(dates) < 60000:
+            # Duplicate dates as needed to reach 60,000
+            dates = dates * (60000 // len(dates) + 1)
+            dates = dates[:60000]
+        
+        # Generate sample data
+        np.random.seed(42)  # For reproducibility
+        
+        # Create metrics
+        data = {
+            'date': dates,
+            'revenue': [random.uniform(10000, 50000) for _ in range(len(dates))],
+            'expenses': [random.uniform(8000, 40000) for _ in range(len(dates))],
+            'cash_flow': [random.uniform(2000, 10000) for _ in range(len(dates))]
+        }
+        
+        # Create DataFrame
+        df = pd.DataFrame(data)
+        
+        # Make sure parent directory exists
+        os.makedirs(parent_dir, exist_ok=True)
+        
+        # Save the dataset
+        df.to_csv(expected_path, index=False)
+        
+        return JSONResponse(
+            content={
+                "status": "success",
+                "message": f"Created new dataset at {expected_path}",
+                "record_count": len(df),
+                "file_path": expected_path,
+                "absolute_path": abs_path,
+                "date_range": f"{dates[0].strftime('%Y-%m-%d')} to {dates[-1].strftime('%Y-%m-%d')}",
+                "columns": list(data.keys())
+            }
+        )
+    
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "message": f"Error ensuring original dataset: {str(e)}",
+                "error_trace": error_trace
+            }
+        )
+
+# Financial Ratio Analysis API Endpoints
+@app.post("/api/financial-ratios/analyze")
+async def analyze_financial_ratios():
+    """
+    Analyze financial ratios using the dataset from buisness_forecasting.py
+    """
+    try:
+        # Initialize the analyzer with the same dataset used by buisness_forecasting
+        analyzer = FinancialRatioAnalyzer(BUSINESS_FORECAST_DATASET_PATH)
+        
+        # Capture console output to include in response
+        output_capture = StringIO()
+        with redirect_stdout(output_capture):
+            # Run the analysis steps
+            if analyzer.load_and_analyze_data():
+                if analyzer.preprocess_data():
+                    if analyzer.compute_key_ratios():
+                        analyzer.plot_key_ratios()
+                        analyzer.generate_business_insights()
+                        
+                        # Check if forecast data exists and run additional analysis if available
+                        forecast_available = analyzer.load_forecast_data()
+                        if forecast_available:
+                            analyzer.generate_combined_insights()
+                            analyzer.plot_combined_ratios()
+                            analyzer.generate_quotation_analysis()
+        
+        # Collect results and paths to output files
+        results = {
+            "status": "success",
+            "message": "Financial ratio analysis completed successfully",
+            "dataset_path": BUSINESS_FORECAST_DATASET_PATH,
+            "output_files": {}
+        }
+        
+        # Check for output files and add them to the response
+        output_files = [
+            'financial_insights.txt',
+            'key_financial_ratios.png',
+            'combined_financial_insights.txt',
+            'combined_ratio_analysis.png',
+            'financial_analysis_report.txt'
+        ]
+        
+        for file in output_files:
+            if os.path.exists(file):
+                # Move to the financial_ratio_results directory if not already there
+                destination = os.path.join('financial_ratio_results', file)
+                if not os.path.exists(destination) or os.path.getmtime(file) > os.path.getmtime(destination):
+                    shutil.copy(file, destination)
+                results["output_files"][file] = destination
+        
+        # Add console output for debugging
+        results["console_output"] = output_capture.getvalue()
+        
+        return JSONResponse(content=results)
+        
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "message": f"Error analyzing financial ratios: {str(e)}",
+                "error_trace": error_trace
+            }
+        )
+
+@app.get("/api/financial-ratios/results")
+async def get_financial_ratio_results():
+    """
+    Retrieve financial ratio analysis results
+    """
+    try:
+        # Check if results directory exists
+        if not os.path.exists('financial_ratio_results'):
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "status": "error",
+                    "message": "No financial ratio analysis results found",
+                    "suggestion": "Run /api/financial-ratios/analyze first to generate results"
+                }
+            )
+        
+        # Check for key result files
+        insights_path = os.path.join('financial_ratio_results', 'financial_insights.txt')
+        combined_insights_path = os.path.join('financial_ratio_results', 'combined_financial_insights.txt')
+        analysis_report_path = os.path.join('financial_ratio_results', 'financial_analysis_report.txt')
+        
+        # Gather insights if available
+        insights = []
+        if os.path.exists(insights_path):
+            with open(insights_path, 'r') as f:
+                insights = [line.strip() for line in f.readlines() if line.strip()]
+        
+        combined_insights = []
+        if os.path.exists(combined_insights_path):
+            with open(combined_insights_path, 'r') as f:
+                combined_insights = [line.strip() for line in f.readlines() if line.strip()]
+        
+        # List available image files
+        image_files = []
+        for file in os.listdir('financial_ratio_results'):
+            if file.endswith('.png'):
+                image_files.append(os.path.join('financial_ratio_results', file))
+        
+        # Create results summary
+        response = {
+            "status": "success",
+            "message": "Financial ratio analysis results retrieved successfully",
+            "insights": insights[:10] if len(insights) > 10 else insights,  # Limit to first 10 for brevity
+            "combined_insights": combined_insights[:10] if len(combined_insights) > 10 else combined_insights,
+            "visualization_files": image_files,
+            "available_files": os.listdir('financial_ratio_results')
+        }
+        
+        # Check if analysis report exists and include summary
+        if os.path.exists(analysis_report_path):
+            with open(analysis_report_path, 'r') as f:
+                report_content = f.read()
+                # Include a summary (first 500 chars) of the report
+                response["analysis_report_summary"] = report_content[:500] + "..." if len(report_content) > 500 else report_content
+        
+        return JSONResponse(content=response)
+        
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "message": f"Error retrieving financial ratio results: {str(e)}",
+                "error_trace": error_trace
+            }
+        )
+
+@app.get("/api/financial-ratios/dashboard")
+async def get_financial_ratio_dashboard():
+    """
+    Generate and retrieve a dashboard for financial ratio analysis
+    """
+    try:
+        # Check if results exist
+        if not os.path.exists('financial_ratio_results'):
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "status": "error",
+                    "message": "No financial ratio analysis results found",
+                    "suggestion": "Run /api/financial-ratios/analyze first to generate results"
+                }
+            )
+        
+        # Check for visualization files
+        visualization_files = [f for f in os.listdir('financial_ratio_results') if f.endswith('.png')]
+        if not visualization_files:
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "status": "error",
+                    "message": "No visualization files found",
+                    "suggestion": "Run /api/financial-ratios/analyze first to generate visualizations"
+                }
+            )
+        
+        # Generate a simple HTML dashboard
+        dashboard_path = os.path.join('financial_ratio_results', 'dashboard.html')
+        
+        # Get insights content
+        insights_content = ""
+        insights_path = os.path.join('financial_ratio_results', 'financial_insights.txt')
+        if os.path.exists(insights_path):
+            with open(insights_path, 'r') as f:
+                insights_content = f.read().replace('\n', '<br>')
+        
+        # Get combined insights content
+        combined_insights_content = ""
+        combined_insights_path = os.path.join('financial_ratio_results', 'combined_financial_insights.txt')
+        if os.path.exists(combined_insights_path):
+            with open(combined_insights_path, 'r') as f:
+                combined_insights_content = f.read().replace('\n', '<br>')
+        
+        # Create HTML dashboard
+        html_content = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Financial Ratio Analysis Dashboard</title>
+            <style>
+                body {{ font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }}
+                .container {{ max-width: 1200px; margin: 0 auto; padding: 20px; }}
+                .header {{ background-color: #2c3e50; color: white; padding: 20px; text-align: center; }}
+                .card {{ background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }}
+                h1, h2, h3 {{ margin-top: 0; }}
+                img {{ max-width: 100%; border: 1px solid #ddd; margin-bottom: 20px; }}
+                .insights {{ background-color: #f9f9f9; padding: 15px; border-left: 4px solid #2c3e50; }}
+                .combined {{ background-color: #f0f7ff; padding: 15px; border-left: 4px solid #3498db; }}
+                .footer {{ font-size: 12px; color: #777; text-align: center; margin-top: 20px; }}
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>Financial Ratio Analysis Dashboard</h1>
+                <p>Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <h2>Key Financial Ratios</h2>
+                    <img src="../financial_ratio_results/key_financial_ratios.png" alt="Key Financial Ratios">
+                </div>
+        """
+        
+        # Add combined ratios if available
+        if os.path.exists(os.path.join('financial_ratio_results', 'combined_ratio_analysis.png')):
+            html_content += """
+                <div class="card">
+                    <h2>Combined Ratio Analysis (Historical & Forecast)</h2>
+                    <img src="../financial_ratio_results/combined_ratio_analysis.png" alt="Combined Ratio Analysis">
+                </div>
+            """
+        
+        # Add insights
+        if insights_content:
+            html_content += f"""
+                <div class="card">
+                    <h2>Business Insights</h2>
+                    <div class="insights">
+                        {insights_content}
+                    </div>
+                </div>
+            """
+        
+        # Add combined insights
+        if combined_insights_content:
+            html_content += f"""
+                <div class="card">
+                    <h2>Combined Historical & Forecast Insights</h2>
+                    <div class="combined">
+                        {combined_insights_content}
+                    </div>
+                </div>
+            """
+        
+        # Close HTML
+        html_content += """
+                <div class="footer">
+                    <p>Generated using Financial Ratio Analyzer</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        """
+        
+        # Write dashboard to file
+        with open(dashboard_path, 'w') as f:
+            f.write(html_content)
+        
+        return JSONResponse(content={
+            "status": "success",
+            "message": "Financial ratio dashboard generated successfully",
+            "dashboard_path": dashboard_path,
+            "visualization_files": visualization_files
+        })
+        
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "message": f"Error generating financial ratio dashboard: {str(e)}",
                 "error_trace": error_trace
             }
         )

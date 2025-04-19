@@ -1,0 +1,440 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Financial Forecasting Report (SARIMA Model)</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; color: #333; }
+            h1, h2, h3 { color: #2c3e50; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .summary { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+            .metric-section { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .highlight { background-color: #e8f4f8; font-weight: bold; }
+            .good { color: green; }
+            .bad { color: red; }
+            img { max-width: 100%; height: auto; margin: 20px 0; }
+            .footer { font-size: 12px; color: #777; margin-top: 30px; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Financial Forecasting Report (SARIMA Model)</h1>
+            <div class="summary">
+                <h2>Executive Summary</h2>
+                <p>This report provides a detailed analysis of historical financial metrics and forecasts for the next 12 months. 
+                The forecasts were generated using SARIMA time series model with data from 2019-01-31 to 2024-02-29.</p>
+                
+                <h3>Key Findings:</h3>
+                <ul>
+    
+                    <li><strong>Revenue:</strong> Historical growth: <span class="good">4.0%</span> | 
+                    Forecast growth: <span class="good">9.4%</span>. 
+                    Revenue is increasing trend for the next 6 months.</li>
+            
+                    <li><strong>Expenses:</strong> Historical growth: <span class="good">5.2%</span> | 
+                    Forecast growth: <span class="bad">6.9%</span>. 
+                    Expenses is increasing trend for the next 6 months.</li>
+            
+                    <li><strong>Cash_flow:</strong> Historical growth: <span class="good">3.7%</span> | 
+                    Forecast growth: <span class="">14.2%</span>. 
+                    Cash_flow is increasing trend for the next 6 months.</li>
+            
+                </ul>
+            </div>
+    
+            <div class="metric-section">
+                <h2>Revenue Analysis</h2>
+                <p>The revenue shows a historical growth of 3.95% over the last 12 months and is forecasted to 
+                increase by 9.68% over the next 12 months.</p>
+                
+                <h3>Historical Performance</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Current revenue (latest month)</td>
+                        <td>46,024,261.93</td>
+                    </tr>
+                    <tr>
+                        <td>Average revenue (last 12 months)</td>
+                        <td>47,909,909.62</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum revenue (last 12 months)</td>
+                        <td>45,079,484.40</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum revenue (last 12 months)</td>
+                        <td>51,379,933.54</td>
+                    </tr>
+                    <tr>
+                        <td>Year-over-Year Growth</td>
+                        <td class="good">3.95%</td>
+                    </tr>
+                </table>
+                
+                <h3>Forecast Performance</h3>
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>SARIMA Forecast</th>
+                    </tr>
+            
+                    <tr>
+                        <td>Mar 2024</td>
+                        <td class="highlight">44,870,615.95</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Apr 2024</td>
+                        <td class="highlight">48,798,542.29</td>
+                    </tr>
+                
+                    <tr>
+                        <td>May 2024</td>
+                        <td class="highlight">47,876,498.36</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jun 2024</td>
+                        <td class="highlight">48,281,107.02</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jul 2024</td>
+                        <td class="highlight">46,393,681.58</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Aug 2024</td>
+                        <td class="highlight">50,333,155.06</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Sep 2024</td>
+                        <td class="highlight">50,175,169.77</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Oct 2024</td>
+                        <td class="highlight">49,187,710.94</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Nov 2024</td>
+                        <td class="highlight">48,392,199.90</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Dec 2024</td>
+                        <td class="highlight">47,378,600.93</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jan 2025</td>
+                        <td class="highlight">49,857,587.85</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Feb 2025</td>
+                        <td class="highlight">49,212,980.52</td>
+                    </tr>
+                
+                </table>
+                
+                <h3>Model Performance</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+            
+                <tr>
+                    <td>Mean Absolute Error (MAE)</td>
+                    <td>1,424,083.39</td>
+                </tr>
+                <tr>
+                    <td>Root Mean Square Error (RMSE)</td>
+                    <td>1,666,497.60</td>
+                </tr>
+                <tr>
+                    <td>Mean Absolute Percentage Error (MAPE)</td>
+                    <td>2.94%</td>
+                </tr>
+                
+                </table>
+            </div>
+            
+            <div class="metric-section">
+                <h2>Expenses Analysis</h2>
+                <p>The expenses shows a historical growth of 5.18% over the last 12 months and is forecasted to 
+                increase by 5.72% over the next 12 months.</p>
+                
+                <h3>Historical Performance</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Current expenses (latest month)</td>
+                        <td>36,923,467.97</td>
+                    </tr>
+                    <tr>
+                        <td>Average expenses (last 12 months)</td>
+                        <td>38,143,128.75</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum expenses (last 12 months)</td>
+                        <td>34,632,550.53</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum expenses (last 12 months)</td>
+                        <td>40,956,225.69</td>
+                    </tr>
+                    <tr>
+                        <td>Year-over-Year Growth</td>
+                        <td class="good">5.18%</td>
+                    </tr>
+                </table>
+                
+                <h3>Forecast Performance</h3>
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>SARIMA Forecast</th>
+                    </tr>
+            
+                    <tr>
+                        <td>Mar 2024</td>
+                        <td class="highlight">37,018,583.37</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Apr 2024</td>
+                        <td class="highlight">39,535,053.21</td>
+                    </tr>
+                
+                    <tr>
+                        <td>May 2024</td>
+                        <td class="highlight">37,453,554.37</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jun 2024</td>
+                        <td class="highlight">36,235,402.21</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jul 2024</td>
+                        <td class="highlight">38,186,236.73</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Aug 2024</td>
+                        <td class="highlight">39,477,795.52</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Sep 2024</td>
+                        <td class="highlight">39,039,285.18</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Oct 2024</td>
+                        <td class="highlight">39,295,118.02</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Nov 2024</td>
+                        <td class="highlight">38,233,824.36</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Dec 2024</td>
+                        <td class="highlight">38,243,842.21</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jan 2025</td>
+                        <td class="highlight">38,250,689.84</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Feb 2025</td>
+                        <td class="highlight">39,134,968.77</td>
+                    </tr>
+                
+                </table>
+                
+                <h3>Model Performance</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+            
+                <tr>
+                    <td>Mean Absolute Error (MAE)</td>
+                    <td>1,205,547.92</td>
+                </tr>
+                <tr>
+                    <td>Root Mean Square Error (RMSE)</td>
+                    <td>1,611,031.87</td>
+                </tr>
+                <tr>
+                    <td>Mean Absolute Percentage Error (MAPE)</td>
+                    <td>3.14%</td>
+                </tr>
+                
+                </table>
+            </div>
+            
+            <div class="metric-section">
+                <h2>Cash_flow Analysis</h2>
+                <p>The cash_flow shows a historical growth of 3.68% over the last 12 months and is forecasted to 
+                increase by 19.97% over the next 12 months.</p>
+                
+                <h3>Historical Performance</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Current cash_flow (latest month)</td>
+                        <td>4,555,851.69</td>
+                    </tr>
+                    <tr>
+                        <td>Average cash_flow (last 12 months)</td>
+                        <td>4,814,098.58</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum cash_flow (last 12 months)</td>
+                        <td>4,191,838.55</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum cash_flow (last 12 months)</td>
+                        <td>5,686,460.71</td>
+                    </tr>
+                    <tr>
+                        <td>Year-over-Year Growth</td>
+                        <td class="good">3.68%</td>
+                    </tr>
+                </table>
+                
+                <h3>Forecast Performance</h3>
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>SARIMA Forecast</th>
+                    </tr>
+            
+                    <tr>
+                        <td>Mar 2024</td>
+                        <td class="highlight">4,224,451.79</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Apr 2024</td>
+                        <td class="highlight">4,991,542.40</td>
+                    </tr>
+                
+                    <tr>
+                        <td>May 2024</td>
+                        <td class="highlight">5,063,097.23</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jun 2024</td>
+                        <td class="highlight">4,537,142.98</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jul 2024</td>
+                        <td class="highlight">4,786,887.90</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Aug 2024</td>
+                        <td class="highlight">5,204,994.25</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Sep 2024</td>
+                        <td class="highlight">5,082,614.95</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Oct 2024</td>
+                        <td class="highlight">4,716,269.39</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Nov 2024</td>
+                        <td class="highlight">4,834,485.06</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Dec 2024</td>
+                        <td class="highlight">4,629,772.05</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Jan 2025</td>
+                        <td class="highlight">5,120,248.17</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Feb 2025</td>
+                        <td class="highlight">5,068,092.96</td>
+                    </tr>
+                
+                </table>
+                
+                <h3>Model Performance</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+            
+                <tr>
+                    <td>Mean Absolute Error (MAE)</td>
+                    <td>233,043.36</td>
+                </tr>
+                <tr>
+                    <td>Root Mean Square Error (RMSE)</td>
+                    <td>313,176.59</td>
+                </tr>
+                <tr>
+                    <td>Mean Absolute Percentage Error (MAPE)</td>
+                    <td>4.80%</td>
+                </tr>
+                
+                </table>
+            </div>
+            
+            <div class="metric-section">
+                <h2>Methodology</h2>
+                <p>This forecast was generated using the SARIMA (Seasonal AutoRegressive Integrated Moving Average) time series model, which captures trend, seasonality, and autocorrelation patterns in the data.</p>
+                <p>The model specifications used:</p>
+                <ul>
+                    <li>Order parameters (p,d,q): (2, 1, 2)</li>
+                    <li>Seasonal order parameters (P,D,Q,s): (1, 1, 1, 12)</li>
+                </ul>
+                <p>The forecasts are based on historical patterns and do not account for unexpected external factors or market disruptions.</p>
+            </div>
+            
+            <div class="footer">
+                <p>Generated on 2025-04-19</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    
