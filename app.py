@@ -117,8 +117,6 @@ async def root():
             "business_forecasting": {
                 "description": "Forecast financial metrics like revenue, expenses, and cash flow",
                 "endpoints": [
-                    "/api/business/upload-data",
-                    "/api/business/generate-sample-data",
                     "/api/business/use-original-dataset",
                     "/api/business/forecast",
                     "/api/business/forecast-results",
@@ -146,9 +144,21 @@ async def upload_transactions(transactions: TransactionList):
         # Convert to dataframe
         transactions_df = pd.DataFrame([t.dict() for t in transactions.transactions])
         
-        # Convert date strings to datetime
+        # Convert date strings to datetime with robust error handling
         if 'date' in transactions_df.columns:
-            transactions_df['date'] = pd.to_datetime(transactions_df['date'])
+            # First check if any values are the literal string "string"
+            transactions_df['date'] = transactions_df['date'].replace('string', pd.NaT)
+            
+            # Try to convert to datetime with robust error handling
+            transactions_df['date'] = pd.to_datetime(transactions_df['date'], errors='coerce')
+            
+            # Check if we have any NaT values after conversion
+            if transactions_df['date'].isna().any():
+                invalid_count = transactions_df['date'].isna().sum()
+                print(f"Warning: Found {invalid_count} invalid date values. Filling with current date.")
+                
+                # Fill NaT values with the current date
+                transactions_df['date'] = transactions_df['date'].fillna(pd.Timestamp.now())
             
         # Save to CSV
         transactions_df.to_csv('cleaned_data/cleaned_transactions.csv', index=False)
@@ -167,6 +177,22 @@ async def upload_users(users: UserList):
     try:
         # Convert to dataframe
         users_df = pd.DataFrame([u.dict() for u in users.users])
+        
+        # Convert joining_date strings to datetime with robust error handling
+        if 'joining_date' in users_df.columns:
+            # First check if any values are the literal string "string"
+            users_df['joining_date'] = users_df['joining_date'].replace('string', pd.NaT)
+            
+            # Try to convert to datetime with robust error handling
+            users_df['joining_date'] = pd.to_datetime(users_df['joining_date'], errors='coerce')
+            
+            # Check if we have any NaT values after conversion
+            if users_df['joining_date'].isna().any():
+                invalid_count = users_df['joining_date'].isna().sum()
+                print(f"Warning: Found {invalid_count} invalid joining_date values. Filling with current date.")
+                
+                # Fill NaT values with the current date
+                users_df['joining_date'] = users_df['joining_date'].fillna(pd.Timestamp.now())
             
         # Save to CSV
         users_df.to_csv('cleaned_data/cleaned_users.csv', index=False)
@@ -418,7 +444,7 @@ async def detect_anomalies(background_tasks: BackgroundTasks):
                 "status": "success",
                 "total_transactions": len(results),
                 "anomaly_count": len(anomaly_df),
-                "anomaly_percentage": (len(anomaly_df) / len(results) * 100) if len(results) > 0 else 0,
+                "anomaly_percentage": float((len(anomaly_df) / len(results) * 100) if len(results) > 0 else 0),
                 "console_output": output_capture.get_output(),
                 "anomalies": []
             }
@@ -432,15 +458,29 @@ async def detect_anomalies(background_tasks: BackgroundTasks):
                 ]
                 display_columns = [col for col in display_columns if col in anomaly_df.columns]
                 
-                # Convert sample anomalies to list of dicts (handle datetime serialization)
-                sample_anomalies = anomaly_df[display_columns].head(10).to_dict('records')
+                # Convert sample anomalies to list of dicts with proper handling of special values
+                anomalies_list = []
+                for _, row in anomaly_df[display_columns].head(10).iterrows():
+                    anomaly_dict = {}
+                    for col in display_columns:
+                        value = row[col]
+                        # Handle NaN, Infinity values
+                        if pd.isna(value) or np.isinf(value):
+                            anomaly_dict[col] = None
+                        # Handle datetime objects
+                        elif isinstance(value, pd.Timestamp) or isinstance(value, datetime):
+                            anomaly_dict[col] = value.isoformat()
+                        # Handle boolean values
+                        elif isinstance(value, bool):
+                            anomaly_dict[col] = bool(value)
+                        # Handle numeric values
+                        elif isinstance(value, (int, float)):
+                            anomaly_dict[col] = float(value)
+                        else:
+                            anomaly_dict[col] = str(value)
+                    anomalies_list.append(anomaly_dict)
                 
-                # Convert datetime to string
-                for anomaly in sample_anomalies:
-                    if 'date' in anomaly and isinstance(anomaly['date'], datetime):
-                        anomaly['date'] = anomaly['date'].isoformat()
-                
-                response_data['anomalies'] = sample_anomalies
+                response_data['anomalies'] = anomalies_list
                 
             return JSONResponse(content=response_data)
             
@@ -449,7 +489,11 @@ async def detect_anomalies(background_tasks: BackgroundTasks):
             sys.stdout = original_stdout
             
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error during anomaly detection: {str(e)}")
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error during anomaly detection: {str(e)}\nTrace: {error_trace}"
+        )
 
 @app.get("/api/anomaly-results")
 async def get_anomaly_results():
@@ -479,14 +523,16 @@ async def get_anomaly_results():
         if os.path.exists(metrics_path):
             metrics_df = pd.read_csv(metrics_path)
             if not metrics_df.empty:
-                metrics = metrics_df.iloc[0].to_dict()
+                metrics_dict = metrics_df.iloc[0].to_dict()
+                # Replace any NaN values with None for JSON serialization
+                metrics = {k: (None if pd.isna(v) or np.isinf(v) else v) for k, v in metrics_dict.items()}
         
         # Prepare response
         response_data = {
             "status": "success",
             "total_transactions": len(results_df),
             "anomaly_count": len(anomaly_df),
-            "anomaly_percentage": (len(anomaly_df) / len(results_df) * 100) if len(results_df) > 0 else 0,
+            "anomaly_percentage": float((len(anomaly_df) / len(results_df) * 100) if len(results_df) > 0 else 0),
             "metrics": metrics,
             "anomalies": []
         }
@@ -501,13 +547,37 @@ async def get_anomaly_results():
             display_columns = [col for col in display_columns if col in anomaly_df.columns]
             
             # Convert anomalies to list of dicts
-            anomalies = anomaly_df[display_columns].to_dict('records')
-            response_data['anomalies'] = anomalies
+            anomalies_list = []
+            for _, row in anomaly_df[display_columns].head(10).iterrows():
+                anomaly_dict = {}
+                for col in display_columns:
+                    value = row[col]
+                    # Handle NaN, Infinity values
+                    if pd.isna(value) or np.isinf(value):
+                        anomaly_dict[col] = None
+                    # Handle datetime objects
+                    elif isinstance(value, pd.Timestamp) or isinstance(value, datetime):
+                        anomaly_dict[col] = value.isoformat()
+                    # Handle boolean values
+                    elif isinstance(value, bool):
+                        anomaly_dict[col] = bool(value)
+                    # Handle numeric values
+                    elif isinstance(value, (int, float)):
+                        anomaly_dict[col] = float(value)
+                    else:
+                        anomaly_dict[col] = str(value)
+                anomalies_list.append(anomaly_dict)
+            
+            response_data['anomalies'] = anomalies_list
         
         return JSONResponse(content=response_data)
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error retrieving anomaly results: {str(e)}")
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error retrieving anomaly results: {str(e)}\nTrace: {error_trace}"
+        )
 
 # Add this new test endpoint to generate sample data and run detection
 @app.post("/api/test")
@@ -552,30 +622,48 @@ async def generate_test_data_and_detect():
 @app.post("/api/detect-fraud")
 async def detect_fraud(run_anomaly_if_needed: bool = True):
     """
-    Run fraud detection on the anomaly detection results
+    Detect fraud in transactions using machine learning models.
+    
+    This endpoint will:
+    1. Check if anomaly detection has been run
+    2. If not, optionally run anomaly detection first
+    3. Apply fraud detection models to identify suspicious transactions
+    4. Return statistics and sample fraud cases
     
     Parameters:
-    - run_anomaly_if_needed: If True and no anomaly results exist, run anomaly detection first
+    - run_anomaly_if_needed: If True, will automatically run anomaly detection if results aren't found
+    
+    Returns:
+    - JSON with fraud detection results and statistics
     """
+    # Define paths
+    anomaly_results_path = "anomaly_results/complete_transactions_with_anomalies.csv"
+    fraud_results_path = "datacleaning1/fraud_results/fraud_report.csv"
+    
     try:
-        # Check if anomaly results exist
-        anomaly_results_path = 'anomaly_results/complete_transactions_with_anomalies.csv'
-        
-        # If anomaly results don't exist but autorun is enabled, run anomaly detection
-        if not os.path.exists(anomaly_results_path) and run_anomaly_if_needed:
-            print("Anomaly results not found. Running anomaly detection first...")
-            ensure_sample_data_exists()
-            anomaly_detector = TransactionAnomalyDetector()
-            anomaly_results = anomaly_detector.detect_anomalies()
-        elif not os.path.exists(anomaly_results_path):
-            return JSONResponse(
-                status_code=404,
-                content={
-                    "status": "error",
-                    "message": "No anomaly detection results found. Run anomaly detection first.",
-                    "suggestion": "Run anomaly detection by making a POST request to /api/detect-anomalies or use parameter 'run_anomaly_if_needed=true'"
-                }
-            )
+        # Check if anomaly detection results exist
+        if not os.path.exists(anomaly_results_path):
+            if run_anomaly_if_needed:
+                # Run anomaly detection first
+                anomaly_response = await detect_anomalies()
+                if anomaly_response.status_code != 200:
+                    return JSONResponse(
+                        status_code=400,
+                        content={
+                            "status": "error",
+                            "message": "Anomaly detection failed. Please run anomaly detection first.",
+                            "suggestion": "Run the /api/detect-anomalies endpoint and then try again."
+                        }
+                    )
+            else:
+                return JSONResponse(
+                    status_code=400,
+                    content={
+                        "status": "error",
+                        "message": "No anomaly detection results found.",
+                        "suggestion": "Run anomaly detection first with the /api/detect-anomalies endpoint."
+                    }
+                )
         
         # Capture console output
         output_capture = OutputCapture()
@@ -604,6 +692,32 @@ async def detect_fraud(run_anomaly_if_needed: bool = True):
                         "suggestion": "Run anomaly detection again to ensure all required columns are present"
                     }
                 )
+            
+            # Clean and fix date column if needed
+            try:
+                # Check if date column contains invalid values
+                if 'date' in transactions.columns:
+                    # First check if any values are the literal string "string"
+                    transactions['date'] = transactions['date'].replace('string', pd.NaT)
+                    
+                    # Try to convert to datetime with robust error handling
+                    transactions['date'] = pd.to_datetime(transactions['date'], errors='coerce')
+                    
+                    # Check if we have NaT values and handle them
+                    if transactions['date'].isna().any():
+                        # Count null values
+                        null_count = transactions['date'].isna().sum()
+                        print(f"Warning: Found {null_count} invalid date values. Filling with current date.")
+                        
+                        # Fill NaT values with the current date
+                        transactions['date'] = transactions['date'].fillna(pd.Timestamp.now())
+                        
+                print("Date column successfully processed and cleaned.")
+            except Exception as e:
+                print(f"Warning: Error cleaning date column: {str(e)}")
+                # Create a fallback date column with the current timestamp
+                transactions['date'] = pd.Timestamp.now()
+                print("Created fallback date column with current timestamp.")
             
             # Train models and catch specific exceptions
             try:
@@ -677,6 +791,8 @@ async def detect_fraud(run_anomaly_if_needed: bool = True):
                     suggestion = "There might be a mismatch in feature dimensions. Try running the anomaly detection again."
                 elif "Input contains NaN" in error_message:
                     suggestion = "Your data contains missing values. Try running anomaly detection with data cleaning enabled."
+                elif "Unknown datetime string format" in error_message:
+                    suggestion = "The date format in your data couldn't be parsed. Try using /api/fix-fraud-detection to repair the data."
                 
                 return JSONResponse(
                     status_code=400,
@@ -1337,97 +1453,6 @@ class ForecastRequest(BaseModel):
     periods: int = 12
     period_type: str = "month"  # "month" or "year"
 
-@app.post("/api/business/upload-data")
-async def upload_financial_data(financial_data: FinancialDataList):
-    """Upload financial data for forecasting"""
-    try:
-        # Convert to dataframe
-        data_df = pd.DataFrame([item.dict() for item in financial_data.data])
-        
-        # Convert date strings to datetime with robust error handling
-        if 'date' in data_df.columns:
-            try:
-                data_df['date'] = pd.to_datetime(data_df['date'], errors='coerce')
-                # Check if we have any NaT (Not a Time) values after conversion
-                if data_df['date'].isna().any():
-                    bad_dates = [d for i, d in enumerate(financial_data.data) if pd.isna(data_df['date'].iloc[i])]
-                    return JSONResponse(
-                        status_code=400,
-                        content={
-                            "status": "error",
-                            "message": f"Invalid date format found in {len(bad_dates)} rows. Please use YYYY-MM-DD format.",
-                            "examples": [{"row": i, "date": d.date} for i, d in enumerate(bad_dates[:5])] if bad_dates else []
-                        }
-                    )
-            except Exception as e:
-                return JSONResponse(
-                    status_code=400,
-                    content={
-                        "status": "error",
-                        "message": f"Error converting dates: {str(e)}",
-                        "suggestion": "Please ensure all dates are in YYYY-MM-DD format."
-                    }
-                )
-            
-        # Use the business service to handle the upload
-        result = business_forecasting_service.upload_financial_data(data_df)
-        
-        return JSONResponse(content=result)
-    except Exception as e:
-        error_trace = traceback.format_exc()
-        raise HTTPException(
-            status_code=500, 
-            detail=f"Error uploading financial data: {str(e)}\n{error_trace}"
-        )
-
-@app.post("/api/business/generate-sample-data")
-async def generate_sample_financial_data(num_records: int = 36):
-    """Generate sample financial data for forecasting"""
-    try:
-        # Use the business service to generate sample data
-        result = business_forecasting_service.generate_sample_data(num_records)
-        
-        return JSONResponse(content=result)
-    except Exception as e:
-        error_trace = traceback.format_exc()
-        raise HTTPException(
-            status_code=500, 
-            detail=f"Error generating sample data: {str(e)}\n{error_trace}"
-        )
-
-@app.post("/api/business/forecast")
-async def run_business_forecast(request: ForecastRequest = None):
-    """Run business forecasting on the financial data"""
-    try:
-        # Use default values if no request body is provided
-        periods = 12
-        period_type = "month"
-        
-        if request:
-            periods = request.periods
-            period_type = request.period_type
-        
-        # Validate inputs
-        if periods <= 0:
-            raise HTTPException(status_code=400, detail="Forecast periods must be greater than 0")
-            
-        if period_type.lower() not in ["month", "year"]:
-            raise HTTPException(status_code=400, detail="Period type must be 'month' or 'year'")
-        
-        # Use the business service to run the forecast
-        result = business_forecasting_service.forecast(
-            forecast_periods=periods,
-            output_type=period_type
-        )
-        
-        return JSONResponse(content=result)
-    except Exception as e:
-        error_trace = traceback.format_exc()
-        raise HTTPException(
-            status_code=500, 
-            detail=f"Error running business forecast: {str(e)}\n{error_trace}"
-        )
-
 @app.get("/api/business/forecast-results")
 async def get_business_forecast_results():
     """Get the results of the last business forecast"""
@@ -1466,41 +1491,6 @@ async def get_business_dashboard():
         raise HTTPException(
             status_code=500, 
             detail=f"Error retrieving business dashboard: {str(e)}\n{error_trace}"
-        )
-
-@app.get("/api/business/report")
-async def get_business_report():
-    """Get the business forecast report"""
-    try:
-        # Use the business service to get the report
-        result = business_forecasting_service.get_report()
-        
-        if result["status"] == "error":
-            raise HTTPException(status_code=404, detail=result["message"])
-        
-        return JSONResponse(content=result)
-    except HTTPException as e:
-        raise e
-    except Exception as e:
-        error_trace = traceback.format_exc()
-        raise HTTPException(
-            status_code=500, 
-            detail=f"Error retrieving business report: {str(e)}\n{error_trace}"
-        )
-
-@app.delete("/api/business/data")
-async def delete_business_forecast_data():
-    """Delete all business forecast data and results"""
-    try:
-        # Use the business service to delete the data
-        result = business_forecasting_service.delete_forecast_data()
-        
-        return JSONResponse(content=result)
-    except Exception as e:
-        error_trace = traceback.format_exc()
-        raise HTTPException(
-            status_code=500, 
-            detail=f"Error deleting business forecast data: {str(e)}\n{error_trace}"
         )
 
 @app.get("/api/business/quick-forecast")
@@ -2077,6 +2067,39 @@ async def get_financial_ratio_dashboard():
                 "message": f"Error generating financial ratio dashboard: {str(e)}",
                 "error_trace": error_trace
             }
+        )
+
+@app.post("/api/business/forecast")
+async def run_business_forecast(request: ForecastRequest = None):
+    """Run business forecasting on the financial data"""
+    try:
+        # Use default values if no request body is provided
+        periods = 12
+        period_type = "month"
+        
+        if request:
+            periods = request.periods
+            period_type = request.period_type
+        
+        # Validate inputs
+        if periods <= 0:
+            raise HTTPException(status_code=400, detail="Forecast periods must be greater than 0")
+            
+        if period_type.lower() not in ["month", "year"]:
+            raise HTTPException(status_code=400, detail="Period type must be 'month' or 'year'")
+        
+        # Use the business service to run the forecast
+        result = business_forecasting_service.forecast(
+            forecast_periods=periods,
+            output_type=period_type
+        )
+        
+        return JSONResponse(content=result)
+    except Exception as e:
+        error_trace = traceback.format_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error running business forecast: {str(e)}\n{error_trace}"
         )
 
 # Run the application

@@ -16,8 +16,8 @@ sns.set_palette("husl")
 
 # Get the script's directory
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Define the correct path to the dataset (in the same directory as the script)
-DATASET_PATH = os.path.join(SCRIPT_DIR, 'financial_metrics.csv')
+# Define the correct path to the dataset (absolute path as specified by user)
+DATASET_PATH = 'C:/Users/pro-tech/Desktop/acc.pro/datacleaning1/financial_metrics.csv'
 
 def analyze_dataset(file_path):
     """
@@ -489,216 +489,6 @@ def create_consolidated_output(forecasts_dict, metrics, insights):
     
     return consolidated_df, output_path
 
-def create_dashboard(data, forecasts, plot_paths, metrics, consolidated_df):
-    """
-    Create an interactive dashboard summary of forecasts
-    """
-    # Create dashboard directory if it doesn't exist
-    if not os.path.exists('dashboard'):
-        os.makedirs('dashboard')
-    
-    # Create an HTML dashboard
-    html_content = """
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Financial Forecasting Dashboard</title>
-        <style>
-            body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
-            .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-            .header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
-            .card { background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
-            .row { display: flex; flex-wrap: wrap; margin: 0 -10px; }
-            .col { flex: 1; padding: 0 10px; min-width: 300px; }
-            h1, h2, h3 { margin-top: 0; }
-            .metric-value { font-size: 24px; font-weight: bold; margin: 10px 0; }
-            .positive { color: green; }
-            .negative { color: red; }
-            table { width: 100%; border-collapse: collapse; }
-            th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; }
-            th { background-color: #f2f2f2; }
-            .chart-container { height: 300px; }
-            img { max-width: 100%; border: 1px solid #ddd; }
-            .footer { font-size: 12px; color: #777; text-align: center; margin-top: 20px; }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <h1>Financial Forecasting Dashboard</h1>
-            <p>Last updated: """ + datetime.now().strftime('%Y-%m-%d') + """</p>
-        </div>
-        <div class="container">
-    """
-    
-    # Add summary cards
-    html_content += """
-        <div class="row">
-    """
-    
-    # Create a summary card for each metric
-    for metric in metrics:
-        if metric in data.columns and metric in forecasts:
-            # Calculate key metrics
-            current_value = data[metric].iloc[-1]
-            forecast_next_month = forecasts[metric]['SARIMA'][0]
-            forecast_6month = forecasts[metric]['SARIMA'][5]
-            forecast_12month = forecasts[metric]['SARIMA'][11] if len(forecasts[metric]['SARIMA']) > 11 else forecasts[metric]['SARIMA'][-1]
-            
-            # Calculate changes
-            mom_change = ((forecast_next_month - current_value) / current_value) * 100
-            sixm_change = ((forecast_6month - current_value) / current_value) * 100
-            twelvem_change = ((forecast_12month - current_value) / current_value) * 100
-            
-            # Create a card for this metric
-            html_content += f"""
-            <div class="col">
-                <div class="card">
-                    <h2>{metric.capitalize()} Summary</h2>
-                    <div class="metric-value">{current_value:,.2f}</div>
-                    <p>Current value (latest month)</p>
-                    
-                    <table>
-                        <tr>
-                            <th>Forecast Period</th>
-                            <th>Value</th>
-                            <th>Change</th>
-                        </tr>
-                        <tr>
-                            <td>Next Month</td>
-                            <td>{forecast_next_month:,.2f}</td>
-                            <td class="{'positive' if mom_change >= 0 else 'negative'}">{mom_change:+.2f}%</td>
-                        </tr>
-                        <tr>
-                            <td>6 Months</td>
-                            <td>{forecast_6month:,.2f}</td>
-                            <td class="{'positive' if sixm_change >= 0 else 'negative'}">{sixm_change:+.2f}%</td>
-                        </tr>
-                        <tr>
-                            <td>12 Months</td>
-                            <td>{forecast_12month:,.2f}</td>
-                            <td class="{'positive' if twelvem_change >= 0 else 'negative'}">{twelvem_change:+.2f}%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            """
-    
-    html_content += """
-        </div> <!-- end row -->
-    """
-    
-    # Add forecast charts
-    html_content += """
-        <div class="card">
-            <h2>Forecast Visualizations</h2>
-            <div class="row">
-    """
-    
-    # Add each metric chart
-    for metric in metrics:
-        if metric in plot_paths:
-            html_content += f"""
-            <div class="col">
-                <h3>{metric.capitalize()} Forecast</h3>
-                <div class="chart-container">
-                    <img src="../{plot_paths[metric]}" alt="{metric} forecast">
-                </div>
-            </div>
-            """
-    
-    html_content += """
-            </div> <!-- end row -->
-        </div> <!-- end card -->
-    """
-    
-    # Add forecast table
-    html_content += """
-        <div class="card">
-            <h2>Detailed Forecast</h2>
-            <table>
-                <tr>
-                    <th>Month</th>
-    """
-    
-    # Add header columns for each metric
-    for metric in metrics:
-        if metric in forecasts:
-            html_content += f"""
-                    <th>{metric.capitalize()}</th>
-            """
-    
-    html_content += """
-                </tr>
-    """
-    
-    # Add rows of data
-    months = consolidated_df['month'].tolist()
-    for i, month in enumerate(months):
-        html_content += f"""
-                <tr>
-                    <td>{month}</td>
-        """
-        
-        # Add values for each metric
-        for metric in metrics:
-            if metric in forecasts:
-                col_name = f'predicted_{metric}'
-                if col_name in consolidated_df.columns:
-                    value = consolidated_df[col_name].iloc[i]
-                    html_content += f"""
-                    <td>{value:,.2f}</td>
-                    """
-        
-        html_content += """
-                </tr>
-        """
-    
-    html_content += """
-            </table>
-        </div> <!-- end card -->
-    """
-    
-    # Add insights
-    html_content += """
-        <div class="card">
-            <h2>Business Insights</h2>
-            <ul>
-    """
-    
-    # Read insights from file
-    with open('forecast_insights.txt', 'r') as f:
-        insights = f.read().splitlines()
-    
-    for insight in insights:
-        if insight.strip():
-            html_content += f"""
-                <li>{insight}</li>
-            """
-    
-    html_content += """
-            </ul>
-        </div> <!-- end card -->
-    """
-    
-    # Close HTML document
-    html_content += """
-        <div class="footer">
-            <p>Generated using SARIMA time series forecasting model</p>
-            <p>Data range: """ + data.index[0].strftime('%Y-%m-%d') + """ to """ + data.index[-1].strftime('%Y-%m-%d') + """</p>
-        </div>
-    </div> <!-- end container -->
-    </body>
-    </html>
-    """
-    
-    # Write HTML to file
-    dashboard_path = 'dashboard/index.html'
-    with open(dashboard_path, 'w') as f:
-        f.write(html_content)
-    
-    print(f"\nInteractive dashboard created: {dashboard_path}")
-    return dashboard_path
-
 def generate_forecast_report(data, forecasts, metrics, model_metrics, output_path='forecast_report.html'):
     """
     Generate a comprehensive HTML report explaining the forecasting results
@@ -881,6 +671,307 @@ def generate_forecast_report(data, forecasts, metrics, model_metrics, output_pat
     print(f"\nComprehensive forecast report created: {output_path}")
     return output_path
 
+def create_dashboard(data, forecasts, metrics, plot_paths, output_path='dashboard/index.html'):
+    """
+    Create an HTML dashboard with the forecasting results
+    
+    Parameters:
+    - data: Original dataset
+    - forecasts: Dictionary of forecasts for each metric
+    - metrics: List of metrics that were forecasted
+    - plot_paths: Paths to the forecast visualizations
+    - output_path: Path to save the dashboard HTML
+    
+    Returns:
+    - output_path: Path to the saved dashboard
+    """
+    # Create directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    # Generate HTML content
+    html_content = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Financial Forecasting Dashboard</title>
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                color: #333;
+                background-color: #f8f9fa;
+            }}
+            .container {{
+                max-width: 1200px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }}
+            h1, h2, h3 {{
+                color: #2c3e50;
+            }}
+            .header {{
+                background-color: #2c3e50;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }}
+            .row {{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -15px;
+            }}
+            .col {{
+                flex: 1;
+                padding: 0 15px;
+                margin-bottom: 20px;
+            }}
+            .card {{
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(0,0,0,0.1);
+                padding: 15px;
+                height: 100%;
+            }}
+            table {{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 15px;
+            }}
+            table, th, td {{
+                border: 1px solid #ddd;
+            }}
+            th, td {{
+                padding: 8px;
+                text-align: left;
+            }}
+            th {{
+                background-color: #f2f2f2;
+            }}
+            .img-fluid {{
+                max-width: 100%;
+                height: auto;
+            }}
+            .metric-title {{
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 5px;
+            }}
+            .footer {{
+                text-align: center;
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 12px;
+                color: #777;
+            }}
+            .insights {{
+                background-color: #f8f9fa;
+                padding: 15px;
+                border-left: 4px solid #3498db;
+                margin-bottom: 20px;
+            }}
+            .kpi {{
+                text-align: center;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                background-color: #ecf0f1;
+            }}
+            .kpi h3 {{
+                margin: 0;
+                font-size: 14px;
+                color: #7f8c8d;
+            }}
+            .kpi p {{
+                margin: 5px 0 0;
+                font-size: 24px;
+                font-weight: bold;
+            }}
+            .kpi.revenue {{
+                background-color: #d5f5e3;
+            }}
+            .kpi.expenses {{
+                background-color: #fadbd8;
+            }}
+            .kpi.cash-flow {{
+                background-color: #d6eaf8;
+            }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Financial Forecasting Dashboard</h1>
+                <p>Generated on {datetime.now().strftime('%Y-%m-%d')}</p>
+            </div>
+            
+            <div class="row">
+    """
+    
+    # Add KPI values
+    html_content += """
+                <div class="col">
+                    <div class="card">
+                        <h2>Key Performance Indicators</h2>
+                        <div class="row">
+    """
+    
+    for metric in metrics:
+        if metric in data.columns and metric in forecasts:
+            last_value = data[metric].iloc[-1]
+            forecast_values = forecasts[metric]['SARIMA']
+            next_month = forecast_values[0]
+            change = ((next_month - last_value) / last_value) * 100
+            change_symbol = "+" if change >= 0 else ""
+            
+            kpi_class = metric.lower().replace('_', '-')
+            
+            html_content += f"""
+                            <div class="col">
+                                <div class="kpi {kpi_class}">
+                                    <h3>{metric.replace('_', ' ').title()}</h3>
+                                    <p>{last_value:,.2f}</p>
+                                    <small>Next Month: {next_month:,.2f} ({change_symbol}{change:.1f}%)</small>
+                                </div>
+                            </div>
+            """
+    
+    html_content += """
+                        </div>
+                    </div>
+                </div>
+            </div>
+    """
+    
+    # Add forecast visualizations
+    html_content += """
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Forecast Visualizations</h2>
+    """
+    
+    for metric in metrics:
+        if metric in plot_paths:
+            # Use relative path for the image
+            img_path = os.path.relpath(plot_paths[metric], os.path.dirname(output_path))
+            html_content += f"""
+                        <div class="metric-title">{metric.replace('_', ' ').title()} Forecast</div>
+                        <img src="{img_path}" class="img-fluid" alt="{metric} forecast">
+                        <br><br>
+            """
+    
+    html_content += """
+                    </div>
+                </div>
+            </div>
+    """
+    
+    # Add insights
+    # Get insights from forecast_insights.txt if it exists
+    insights = []
+    if os.path.exists('forecast_insights.txt'):
+        with open('forecast_insights.txt', 'r') as f:
+            insights = f.readlines()
+    
+    html_content += """
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Business Insights</h2>
+                        <div class="insights">
+    """
+    
+    for insight in insights:
+        html_content += f"                            <p>{insight.strip()}</p>\n"
+    
+    html_content += """
+                        </div>
+                    </div>
+                </div>
+            </div>
+    """
+    
+    # Add forecast tables
+    html_content += """
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Forecast Tables</h2>
+    """
+    
+    # Load consolidated results if available
+    if os.path.exists('consolidated_results.csv'):
+        try:
+            forecast_df = pd.read_csv('consolidated_results.csv')
+            
+            # Display first 6 rows of the forecast
+            html_content += """
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+            """
+            
+            # Add headers
+            for col in forecast_df.columns:
+                html_content += f"                                        <th>{col}</th>\n"
+            
+            html_content += """
+                                    </tr>
+                                </thead>
+                                <tbody>
+            """
+            
+            # Add rows (first 6 rows)
+            for i, row in forecast_df.head(6).iterrows():
+                html_content += "                                    <tr>\n"
+                for col in forecast_df.columns:
+                    cell_value = row[col]
+                    # Format numeric values
+                    if pd.api.types.is_numeric_dtype(forecast_df[col]):
+                        html_content += f"                                        <td>{cell_value:,.2f}</td>\n"
+                    else:
+                        html_content += f"                                        <td>{cell_value}</td>\n"
+                html_content += "                                    </tr>\n"
+            
+            html_content += """
+                                </tbody>
+                            </table>
+                        </div>
+            """
+        except Exception as e:
+            html_content += f"<p>Error loading forecast data: {str(e)}</p>"
+    else:
+        html_content += "<p>No forecast data available. Run the forecast first.</p>"
+    
+    html_content += """
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Financial Forecasting System | Generated using SARIMA Forecasting</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
+    
+    # Write HTML to file
+    with open(output_path, 'w') as f:
+        f.write(html_content)
+    
+    print(f"\nDashboard created successfully at: {output_path}")
+    return output_path
+
 def forecast_financials(dataset_path=DATASET_PATH, forecast_periods=12, output_type='month'):
     """
     Flexible forecasting function that allows custom forecast periods
@@ -955,9 +1046,6 @@ def forecast_financials(dataset_path=DATASET_PATH, forecast_periods=12, output_t
     
     # Create consolidated output
     consolidated_df, output_path = create_consolidated_output(crm_forecasts, metrics, insights)
-    
-    # Create dashboard summary
-    create_dashboard(df, forecasts, plot_paths, metrics, consolidated_df)
     
     # Generate comprehensive HTML report
     report_path = generate_forecast_report(df, forecasts, metrics, model_performance)

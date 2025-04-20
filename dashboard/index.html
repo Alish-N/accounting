@@ -1,362 +1,303 @@
 
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Financial Forecasting Dashboard</title>
         <style>
-            body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
-            .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-            .header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
-            .card { background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
-            .row { display: flex; flex-wrap: wrap; margin: 0 -10px; }
-            .col { flex: 1; padding: 0 10px; min-width: 300px; }
-            h1, h2, h3 { margin-top: 0; }
-            .metric-value { font-size: 24px; font-weight: bold; margin: 10px 0; }
-            .positive { color: green; }
-            .negative { color: red; }
-            table { width: 100%; border-collapse: collapse; }
-            th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; }
-            th { background-color: #f2f2f2; }
-            .chart-container { height: 300px; }
-            img { max-width: 100%; border: 1px solid #ddd; }
-            .footer { font-size: 12px; color: #777; text-align: center; margin-top: 20px; }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                color: #333;
+                background-color: #f8f9fa;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            h1, h2, h3 {
+                color: #2c3e50;
+            }
+            .header {
+                background-color: #2c3e50;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -15px;
+            }
+            .col {
+                flex: 1;
+                padding: 0 15px;
+                margin-bottom: 20px;
+            }
+            .card {
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(0,0,0,0.1);
+                padding: 15px;
+                height: 100%;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 15px;
+            }
+            table, th, td {
+                border: 1px solid #ddd;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .img-fluid {
+                max-width: 100%;
+                height: auto;
+            }
+            .metric-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 5px;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 12px;
+                color: #777;
+            }
+            .insights {
+                background-color: #f8f9fa;
+                padding: 15px;
+                border-left: 4px solid #3498db;
+                margin-bottom: 20px;
+            }
+            .kpi {
+                text-align: center;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                background-color: #ecf0f1;
+            }
+            .kpi h3 {
+                margin: 0;
+                font-size: 14px;
+                color: #7f8c8d;
+            }
+            .kpi p {
+                margin: 5px 0 0;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .kpi.revenue {
+                background-color: #d5f5e3;
+            }
+            .kpi.expenses {
+                background-color: #fadbd8;
+            }
+            .kpi.cash-flow {
+                background-color: #d6eaf8;
+            }
         </style>
     </head>
     <body>
-        <div class="header">
-            <h1>Financial Forecasting Dashboard</h1>
-            <p>Last updated: 2025-04-19</p>
-        </div>
         <div class="container">
-    
-        <div class="row">
-    
-            <div class="col">
-                <div class="card">
-                    <h2>Revenue Summary</h2>
-                    <div class="metric-value">46,024,261.93</div>
-                    <p>Current value (latest month)</p>
-                    
-                    <table>
-                        <tr>
-                            <th>Forecast Period</th>
-                            <th>Value</th>
-                            <th>Change</th>
-                        </tr>
-                        <tr>
-                            <td>Next Month</td>
-                            <td>44,870,615.95</td>
-                            <td class="negative">-2.51%</td>
-                        </tr>
-                        <tr>
-                            <td>6 Months</td>
-                            <td>50,333,155.06</td>
-                            <td class="positive">+9.36%</td>
-                        </tr>
-                        <tr>
-                            <td>12 Months</td>
-                            <td>49,212,980.52</td>
-                            <td class="positive">+6.93%</td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="header">
+                <h1>Financial Forecasting Dashboard</h1>
+                <p>Generated on 2025-04-20</p>
             </div>
             
-            <div class="col">
-                <div class="card">
-                    <h2>Expenses Summary</h2>
-                    <div class="metric-value">36,923,467.97</div>
-                    <p>Current value (latest month)</p>
-                    
-                    <table>
-                        <tr>
-                            <th>Forecast Period</th>
-                            <th>Value</th>
-                            <th>Change</th>
-                        </tr>
-                        <tr>
-                            <td>Next Month</td>
-                            <td>37,018,583.37</td>
-                            <td class="positive">+0.26%</td>
-                        </tr>
-                        <tr>
-                            <td>6 Months</td>
-                            <td>39,477,795.52</td>
-                            <td class="positive">+6.92%</td>
-                        </tr>
-                        <tr>
-                            <td>12 Months</td>
-                            <td>39,134,968.77</td>
-                            <td class="positive">+5.99%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="col">
-                <div class="card">
-                    <h2>Cash_flow Summary</h2>
-                    <div class="metric-value">4,555,851.69</div>
-                    <p>Current value (latest month)</p>
-                    
-                    <table>
-                        <tr>
-                            <th>Forecast Period</th>
-                            <th>Value</th>
-                            <th>Change</th>
-                        </tr>
-                        <tr>
-                            <td>Next Month</td>
-                            <td>4,224,451.79</td>
-                            <td class="negative">-7.27%</td>
-                        </tr>
-                        <tr>
-                            <td>6 Months</td>
-                            <td>5,204,994.25</td>
-                            <td class="positive">+14.25%</td>
-                        </tr>
-                        <tr>
-                            <td>12 Months</td>
-                            <td>5,068,092.96</td>
-                            <td class="positive">+11.24%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            
-        </div> <!-- end row -->
-    
-        <div class="card">
-            <h2>Forecast Visualizations</h2>
             <div class="row">
     
-            <div class="col">
-                <h3>Revenue Forecast</h3>
-                <div class="chart-container">
-                    <img src="../plots/revenue_short_term_forecast.png" alt="revenue forecast">
+                <div class="col">
+                    <div class="card">
+                        <h2>Key Performance Indicators</h2>
+                        <div class="row">
+    
+                            <div class="col">
+                                <div class="kpi revenue">
+                                    <h3>Revenue</h3>
+                                    <p>46,024,261.93</p>
+                                    <small>Next Month: 44,870,615.95 (-2.5%)</small>
+                                </div>
+                            </div>
+            
+                            <div class="col">
+                                <div class="kpi expenses">
+                                    <h3>Expenses</h3>
+                                    <p>36,923,467.97</p>
+                                    <small>Next Month: 37,018,583.37 (+0.3%)</small>
+                                </div>
+                            </div>
+            
+                            <div class="col">
+                                <div class="kpi cash-flow">
+                                    <h3>Cash Flow</h3>
+                                    <p>4,555,851.69</p>
+                                    <small>Next Month: 4,224,451.79 (-7.3%)</small>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Forecast Visualizations</h2>
+    
+                        <div class="metric-title">Revenue Forecast</div>
+                        <img src="..\plots\revenue_short_term_forecast.png" class="img-fluid" alt="revenue forecast">
+                        <br><br>
+            
+                        <div class="metric-title">Expenses Forecast</div>
+                        <img src="..\plots\expenses_short_term_forecast.png" class="img-fluid" alt="expenses forecast">
+                        <br><br>
+            
+                        <div class="metric-title">Cash Flow Forecast</div>
+                        <img src="..\plots\cash_flow_short_term_forecast.png" class="img-fluid" alt="cash_flow forecast">
+                        <br><br>
+            
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Business Insights</h2>
+                        <div class="insights">
+                                <p>Revenue Analysis:</p>
+                            <p>- Historical growth (last 12 months): 3.95%</p>
+                            <p>- Expected growth over next 12 months: 9.68%</p>
+                            <p>- Avg monthly revenue (last 12m): 47909909.62</p>
+                            <p>- Min monthly revenue (last 12m): 45079484.40</p>
+                            <p>- Max monthly revenue (last 12m): 51379933.54</p>
+                            <p>Expenses Analysis:</p>
+                            <p>- Historical growth (last 12 months): 5.18%</p>
+                            <p>- Expected growth over next 12 months: 5.72%</p>
+                            <p>- Avg monthly expenses (last 12m): 38143128.75</p>
+                            <p>- Min monthly expenses (last 12m): 34632550.53</p>
+                            <p>- Max monthly expenses (last 12m): 40956225.69</p>
+                            <p>Cash_flow Analysis:</p>
+                            <p>- Historical growth (last 12 months): 3.68%</p>
+                            <p>- Expected growth over next 12 months: 19.97%</p>
+                            <p>- Avg monthly cash_flow (last 12m): 4814098.58</p>
+                            <p>- Min monthly cash_flow (last 12m): 4191838.55</p>
+                            <p>- Max monthly cash_flow (last 12m): 5686460.71</p>
+                            <p></p>
+                            <p>Seasonal Insights:</p>
+                            <p>- Peak revenue typically occurs in August</p>
+                            <p>- Last month-over-month change: -6.54%</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Forecast Tables</h2>
+    
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                                    <th>month</th>
+                                        <th>predicted_revenue_sarima</th>
+                                        <th>predicted_revenue</th>
+                                        <th>predicted_expenses_sarima</th>
+                                        <th>predicted_expenses</th>
+                                        <th>predicted_cash_flow_sarima</th>
+                                        <th>predicted_cash_flow</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                                <tr>
+                                        <td>2024-03</td>
+                                        <td>44,870,615.95</td>
+                                        <td>44,870,615.95</td>
+                                        <td>37,018,583.37</td>
+                                        <td>37,018,583.37</td>
+                                        <td>4,224,451.79</td>
+                                        <td>4,224,451.79</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-04</td>
+                                        <td>48,798,542.29</td>
+                                        <td>48,798,542.29</td>
+                                        <td>39,535,053.21</td>
+                                        <td>39,535,053.21</td>
+                                        <td>4,991,542.40</td>
+                                        <td>4,991,542.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-05</td>
+                                        <td>47,876,498.36</td>
+                                        <td>47,876,498.36</td>
+                                        <td>37,453,554.37</td>
+                                        <td>37,453,554.37</td>
+                                        <td>5,063,097.23</td>
+                                        <td>5,063,097.23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-06</td>
+                                        <td>48,281,107.02</td>
+                                        <td>48,281,107.02</td>
+                                        <td>36,235,402.21</td>
+                                        <td>36,235,402.21</td>
+                                        <td>4,537,142.98</td>
+                                        <td>4,537,142.98</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-07</td>
+                                        <td>46,393,681.58</td>
+                                        <td>46,393,681.58</td>
+                                        <td>38,186,236.73</td>
+                                        <td>38,186,236.73</td>
+                                        <td>4,786,887.90</td>
+                                        <td>4,786,887.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-08</td>
+                                        <td>50,333,155.06</td>
+                                        <td>50,333,155.06</td>
+                                        <td>39,477,795.52</td>
+                                        <td>39,477,795.52</td>
+                                        <td>5,204,994.25</td>
+                                        <td>5,204,994.25</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+            
+                    </div>
                 </div>
             </div>
             
-            <div class="col">
-                <h3>Expenses Forecast</h3>
-                <div class="chart-container">
-                    <img src="../plots/expenses_short_term_forecast.png" alt="expenses forecast">
-                </div>
+            <div class="footer">
+                <p>Financial Forecasting System | Generated using SARIMA Forecasting</p>
             </div>
-            
-            <div class="col">
-                <h3>Cash_flow Forecast</h3>
-                <div class="chart-container">
-                    <img src="../plots/cash_flow_short_term_forecast.png" alt="cash_flow forecast">
-                </div>
-            </div>
-            
-            </div> <!-- end row -->
-        </div> <!-- end card -->
-    
-        <div class="card">
-            <h2>Detailed Forecast</h2>
-            <table>
-                <tr>
-                    <th>Month</th>
-    
-                    <th>Revenue</th>
-            
-                    <th>Expenses</th>
-            
-                    <th>Cash_flow</th>
-            
-                </tr>
-    
-                <tr>
-                    <td>2024-03</td>
-        
-                    <td>44,870,615.95</td>
-                    
-                    <td>37,018,583.37</td>
-                    
-                    <td>4,224,451.79</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-04</td>
-        
-                    <td>48,798,542.29</td>
-                    
-                    <td>39,535,053.21</td>
-                    
-                    <td>4,991,542.40</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-05</td>
-        
-                    <td>47,876,498.36</td>
-                    
-                    <td>37,453,554.37</td>
-                    
-                    <td>5,063,097.23</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-06</td>
-        
-                    <td>48,281,107.02</td>
-                    
-                    <td>36,235,402.21</td>
-                    
-                    <td>4,537,142.98</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-07</td>
-        
-                    <td>46,393,681.58</td>
-                    
-                    <td>38,186,236.73</td>
-                    
-                    <td>4,786,887.90</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-08</td>
-        
-                    <td>50,333,155.06</td>
-                    
-                    <td>39,477,795.52</td>
-                    
-                    <td>5,204,994.25</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-09</td>
-        
-                    <td>50,175,169.77</td>
-                    
-                    <td>39,039,285.18</td>
-                    
-                    <td>5,082,614.95</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-10</td>
-        
-                    <td>49,187,710.94</td>
-                    
-                    <td>39,295,118.02</td>
-                    
-                    <td>4,716,269.39</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-11</td>
-        
-                    <td>48,392,199.90</td>
-                    
-                    <td>38,233,824.36</td>
-                    
-                    <td>4,834,485.06</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2024-12</td>
-        
-                    <td>47,378,600.93</td>
-                    
-                    <td>38,243,842.21</td>
-                    
-                    <td>4,629,772.05</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2025-01</td>
-        
-                    <td>49,857,587.85</td>
-                    
-                    <td>38,250,689.84</td>
-                    
-                    <td>5,120,248.17</td>
-                    
-                </tr>
-        
-                <tr>
-                    <td>2025-02</td>
-        
-                    <td>49,212,980.52</td>
-                    
-                    <td>39,134,968.77</td>
-                    
-                    <td>5,068,092.96</td>
-                    
-                </tr>
-        
-            </table>
-        </div> <!-- end card -->
-    
-        <div class="card">
-            <h2>Business Insights</h2>
-            <ul>
-    
-                <li>Revenue Analysis:</li>
-            
-                <li>- Historical growth (last 12 months): 3.95%</li>
-            
-                <li>- Expected growth over next 12 months: 9.68%</li>
-            
-                <li>- Avg monthly revenue (last 12m): 47909909.62</li>
-            
-                <li>- Min monthly revenue (last 12m): 45079484.40</li>
-            
-                <li>- Max monthly revenue (last 12m): 51379933.54</li>
-            
-                <li>Expenses Analysis:</li>
-            
-                <li>- Historical growth (last 12 months): 5.18%</li>
-            
-                <li>- Expected growth over next 12 months: 5.72%</li>
-            
-                <li>- Avg monthly expenses (last 12m): 38143128.75</li>
-            
-                <li>- Min monthly expenses (last 12m): 34632550.53</li>
-            
-                <li>- Max monthly expenses (last 12m): 40956225.69</li>
-            
-                <li>Cash_flow Analysis:</li>
-            
-                <li>- Historical growth (last 12 months): 3.68%</li>
-            
-                <li>- Expected growth over next 12 months: 19.97%</li>
-            
-                <li>- Avg monthly cash_flow (last 12m): 4814098.58</li>
-            
-                <li>- Min monthly cash_flow (last 12m): 4191838.55</li>
-            
-                <li>- Max monthly cash_flow (last 12m): 5686460.71</li>
-            
-                <li>Seasonal Insights:</li>
-            
-                <li>- Peak revenue typically occurs in August</li>
-            
-                <li>- Last month-over-month change: -6.54%</li>
-            
-            </ul>
-        </div> <!-- end card -->
-    
-        <div class="footer">
-            <p>Generated using SARIMA time series forecasting model</p>
-            <p>Data range: 2019-01-31 to 2024-02-29</p>
         </div>
-    </div> <!-- end container -->
     </body>
     </html>
     

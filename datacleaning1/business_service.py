@@ -465,7 +465,7 @@ class BusinessForecastingService:
                 consolidated_df, output_path = create_consolidated_output(crm_forecasts, self.metrics, insights)
                 
                 # Create dashboard summary
-                dashboard_path = create_dashboard(df, forecasts, plot_paths, self.metrics, consolidated_df)
+                dashboard_path = create_dashboard(df, forecasts, self.metrics, plot_paths, 'dashboard/index.html')
                 
                 # Generate comprehensive HTML report
                 report_path = generate_forecast_report(df, forecasts, self.metrics, model_performance)

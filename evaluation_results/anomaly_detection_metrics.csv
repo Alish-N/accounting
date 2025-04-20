@@ -1,2 +1,2 @@
-total_transactions,anomaly_count,anomaly_percentage,threshold_used,isolationforest_precision,isolationforest_recall,isolationforest_f1,isolationforest_verified_amount_anomalies,ellipticenvelope_precision,ellipticenvelope_recall,ellipticenvelope_f1,ellipticenvelope_verified_tax_anomalies,localoutlierfactor_precision,localoutlierfactor_recall,localoutlierfactor_f1,localoutlierfactor_verified_temporal_anomalies,oneclasssvm_precision,oneclasssvm_recall,oneclasssvm_f1
-100,20,20.0,0.47822751591700474,1.0,0.4,0.5714285714285715,1,1.0,0.4,0.5714285714285715,0,1.0,0.4,0.5714285714285715,0,1.0,0.55,0.7096774193548387
+total_transactions,anomaly_count,anomaly_percentage,threshold_used
+1,0,0.0,

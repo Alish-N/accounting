@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from tabulate import tabulate
 import warnings
 import os
+import matplotlib.pyplot as plt
+import seaborn as sns
 warnings.filterwarnings('ignore')
 
 class FinancialRatioAnalyzer:
@@ -133,107 +132,62 @@ class FinancialRatioAnalyzer:
             return False
     
     def plot_key_ratios(self):
-        """Create clear, professional, and user-friendly visualizations"""
-        if self.ratios_df is None or self.ratios_df.empty:
-            print("No ratios available to plot")
-            return
-        
+        """Create visualizations for key financial ratios"""
         try:
-            # Set style for better visualization
-            plt.style.use('seaborn-whitegrid')
+            # Create a directory for plots if it doesn't exist
+            if not os.path.exists('financial_ratio_results'):
+                os.makedirs('financial_ratio_results')
             
-            # Create figure with better spacing
-            fig, axes = plt.subplots(3, 1, figsize=(15, 20))
-            fig.suptitle('Financial Health Analysis Dashboard', 
-                        fontsize=20, fontweight='bold', y=0.95)
+            # Set plot style
+            plt.style.use('seaborn-v0_8')
+            sns.set_palette("Set2")
             
-            # Color scheme for professional look
-            colors = ['#2E86C1', '#28B463', '#E74C3C', '#F39C12']
+            # Plot 1: Combined Liquidity Ratios
+            fig, axes = plt.subplots(3, 1, figsize=(12, 15), sharex=True)
             
-            # 1. Liquidity Ratios
+            # Liquidity Ratios
             ax1 = axes[0]
-            self.ratios_df[['Current Ratio', 'Quick Ratio']].plot(
-                ax=ax1,
-                linewidth=3,
-                marker='o',
-                markersize=8,
-                color=[colors[0], colors[1]]
-            )
-            ax1.set_title('Liquidity Analysis\n(Company\'s Ability to Pay Short-term Obligations)', 
-                         fontsize=14, pad=20, fontweight='bold')
-            ax1.set_ylabel('Ratio Value', fontsize=12)
-            ax1.axhline(y=1, color='r', linestyle='--', alpha=0.3)  # Reference line at 1
-            ax1.fill_between(self.ratios_df.index, 1, 2, alpha=0.1, color='green', label='Healthy Zone')
-            ax1.legend(fontsize=12, title='Metrics', title_fontsize=12)
+            self.ratios_df[['Current Ratio', 'Quick Ratio']].plot(ax=ax1)
+            ax1.set_title('Liquidity Ratios Over Time', fontsize=16)
+            ax1.set_ylabel('Ratio Value', fontsize=14)
+            ax1.axhline(y=1, color='r', linestyle='--', label='Minimum Healthy Level')
             ax1.grid(True, alpha=0.3)
+            ax1.legend(fontsize=12)
             
-            # Add annotation for interpretation
-            ax1.text(0.02, 0.95, 'Healthy Range: 1.0 - 2.0\nHigher ratio indicates better liquidity',
-                     transform=ax1.transAxes, fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
-            
-            # 2. Profitability Ratios
+            # Profitability Ratios
             ax2 = axes[1]
-            self.ratios_df[['Profit Margin', 'ROI']].plot(
-                ax=ax2,
-                linewidth=3,
-                marker='o',
-                markersize=8,
-                color=[colors[2], colors[3]]
-            )
-            ax2.set_title('Profitability Analysis\n(Company\'s Ability to Generate Profits)', 
-                         fontsize=14, pad=20, fontweight='bold')
-            ax2.set_ylabel('Percentage (%)', fontsize=12)
-            # Convert to percentage
-            ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: '{:.1%}'.format(y)))
-            ax2.legend(fontsize=12, title='Metrics', title_fontsize=12)
+            self.ratios_df[['Profit Margin', 'ROI']].plot(ax=ax2)
+            ax2.set_title('Profitability Ratios Over Time', fontsize=16)
+            ax2.set_ylabel('Ratio Value', fontsize=14)
             ax2.grid(True, alpha=0.3)
+            ax2.legend(fontsize=12)
             
-            # Add annotation for interpretation
-            ax2.text(0.02, 0.95, 'Higher percentages indicate better profitability\nIndustry average: 10-20%',
-                     transform=ax2.transAxes, fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
+            # Format y-axis as percentage for profitability ratios
+            ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'{x:.1%}'))
             
-            # 3. Leverage Ratio
+            # Leverage Ratio
             ax3 = axes[2]
-            self.ratios_df['Debt to Equity'].plot(
-                ax=ax3,
-                linewidth=3,
-                marker='o',
-                markersize=8,
-                color=colors[0]
-            )
-            ax3.set_title('Leverage Analysis\n(Company\'s Use of Borrowed Money)', 
-                         fontsize=14, pad=20, fontweight='bold')
-            ax3.set_ylabel('Ratio Value', fontsize=12)
-            ax3.axhline(y=2, color='r', linestyle='--', alpha=0.3)  # Risk threshold line
-            ax3.fill_between(self.ratios_df.index, 0, 2, alpha=0.1, color='green', label='Safe Zone')
-            ax3.legend(fontsize=12, title='Metric', title_fontsize=12)
+            self.ratios_df['Debt to Equity'].plot(ax=ax3)
+            ax3.set_title('Debt to Equity Ratio Over Time', fontsize=16)
+            ax3.set_xlabel('Date', fontsize=14)
+            ax3.set_ylabel('Ratio Value', fontsize=14)
+            ax3.axhline(y=1, color='r', linestyle='--', label='Reference Level')
             ax3.grid(True, alpha=0.3)
+            ax3.legend(fontsize=12)
             
-            # Add annotation for interpretation
-            ax3.text(0.02, 0.95, 'Safe Range: 0 - 2.0\nHigher ratio indicates higher financial risk',
-                     transform=ax3.transAxes, fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
-            
-            # Improve x-axis readability for all plots
-            for ax in axes:
-                ax.tick_params(axis='both', labelsize=12)
-                plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
-                
-                # Add subtle background grid
-                ax.grid(True, linestyle='--', alpha=0.7)
-                
-                # Add border to the plot
-                for spine in ax.spines.values():
-                    spine.set_edgecolor('#666666')
-                    spine.set_linewidth(0.5)
-            
-            # Adjust layout and save
             plt.tight_layout()
-            plt.savefig('key_financial_ratios.png', dpi=300, bbox_inches='tight', 
-                        facecolor='white', edgecolor='none')
-            print("\nProfessional visualization saved as 'key_financial_ratios.png'")
+            plt.savefig('key_financial_ratios.png')
+            plt.savefig(os.path.join('financial_ratio_results', 'key_financial_ratios.png'))
+            plt.close()
+            
+            print("\nKey ratio visualizations created successfully")
+            print(f"Plots saved to 'key_financial_ratios.png'")
+            
+            return True
             
         except Exception as e:
             print(f"Error plotting ratios: {str(e)}")
+            return False
     
     def generate_business_insights(self):
         """Generate business insights from the ratios"""
@@ -502,57 +456,65 @@ class FinancialRatioAnalyzer:
             print(f"Error generating combined insights: {str(e)}")
     
     def plot_combined_ratios(self):
-        """Create visualizations comparing current and forecasted ratios"""
+        """Visualize both current and forecasted financial ratios on the same plots"""
         if self.ratios_df is None or self.forecast_ratios_df is None:
+            print("Cannot plot: Either current or forecasted data is missing")
             return
             
         try:
-            plt.style.use('seaborn-whitegrid')
+            import matplotlib.pyplot as plt
+            import matplotlib.dates as mdates
+            from matplotlib.ticker import FuncFormatter
             
-            # Create figure with better spacing
-            fig, axes = plt.subplots(3, 1, figsize=(15, 20))
-            fig.suptitle('Financial Health Analysis Dashboard (Current & Forecasted)', 
-                        fontsize=20, fontweight='bold', y=0.95)
+            # Create a combined dataframe for visualization
+            # Get last 6 months of actual data if available
+            actual_data = self.ratios_df.iloc[-6:] if len(self.ratios_df) > 6 else self.ratios_df
             
-            # Color scheme
-            colors = ['#2E86C1', '#28B463', '#E74C3C', '#F39C12']
+            # Setup the plots
+            plt.style.use('seaborn-darkgrid')
+            fig, axes = plt.subplots(2, 2, figsize=(15, 10))
+            fig.suptitle('Financial Ratios: Historical vs Forecasted', fontsize=16)
             
-            # Plot each ratio type with both current and forecasted values
-            metrics = [
-                (['Current Ratio', 'Quick Ratio'], 'Liquidity Analysis', 'Ratio Value'),
-                (['Profit Margin', 'ROI'], 'Profitability Analysis', 'Percentage'),
-                (['Debt to Equity'], 'Leverage Analysis', 'Ratio Value')
-            ]
+            # Define metrics to plot
+            metrics = ['Current Ratio', 'Profit Margin', 'ROI', 'Debt to Equity']
+            titles = ['Liquidity: Current Ratio', 'Profitability: Profit Margin', 
+                     'Profitability: ROI', 'Leverage: Debt to Equity']
+            positions = [(0, 0), (0, 1), (1, 0), (1, 1)]
             
-            for idx, (ratios, title, ylabel) in enumerate(metrics):
-                ax = axes[idx]
-                
-                # Plot historical data
-                for i, ratio in enumerate(ratios):
-                    ax.plot(self.ratios_df.index[-12:], self.ratios_df[ratio].iloc[-12:],
-                           label=f'Historical {ratio}', color=colors[i], linewidth=2)
-                    
-                    # Plot forecasted data with dashed lines
-                    ax.plot(self.forecast_ratios_df.index[:6], self.forecast_ratios_df[ratio].iloc[:6],
-                           label=f'Forecasted {ratio}', color=colors[i], linestyle='--', linewidth=2)
-                
-                ax.set_title(f'{title}\n(Historical & Forecasted)', fontsize=14, pad=20)
-                ax.set_ylabel(ylabel, fontsize=12)
-                
-                if ylabel == 'Percentage':
-                    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: '{:.1%}'.format(y)))
-                
-                ax.legend(fontsize=10)
-                ax.grid(True, alpha=0.3)
-                
-                # Add vertical line to separate historical and forecasted data
-                ax.axvline(x=self.ratios_df.index[-1], color='gray', linestyle=':')
-                ax.text(self.ratios_df.index[-1], ax.get_ylim()[1], 'Forecast Start',
-                       rotation=90, va='top', ha='right')
+            # Format percentage
+            def percentage_formatter(x, pos):
+                return f'{x:.1%}'
             
-            plt.tight_layout()
-            plt.savefig('combined_ratio_analysis.png', dpi=300, bbox_inches='tight')
-            print("\nCombined ratio analysis visualization saved as 'combined_ratio_analysis.png'")
+            for metric, title, pos in zip(metrics, titles, positions):
+                ax = axes[pos[0], pos[1]]
+                
+                # Plot actual data
+                ax.plot(actual_data.index, actual_data[metric], 'b-', linewidth=2, label='Actual')
+                
+                # Plot forecasted data
+                ax.plot(self.forecast_ratios_df.index, self.forecast_ratios_df[metric], 'r--', linewidth=2, label='Forecasted')
+                
+                # Add vertical line to separate actual from forecast
+                last_actual_date = actual_data.index[-1]
+                ax.axvline(x=last_actual_date, color='green', linestyle='-', linewidth=1)
+                
+                # Format the axis
+                ax.set_title(title)
+                ax.legend(loc='best')
+                ax.grid(True, linestyle='--', alpha=0.7)
+                
+                # Format x-axis dates
+                ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+                plt.setp(ax.get_xticklabels(), rotation=45)
+                
+                # Format y-axis as percentage for profit margin and ROI
+                if metric in ['Profit Margin', 'ROI']:
+                    ax.yaxis.set_major_formatter(FuncFormatter(percentage_formatter))
+            
+            plt.tight_layout(rect=[0, 0, 1, 0.95])
+            plt.savefig('combined_financial_ratios.png', dpi=300, bbox_inches='tight')
+            print("\nCombined financial ratios plot saved as 'combined_financial_ratios.png'")
+            plt.close()
             
         except Exception as e:
             print(f"Error plotting combined ratios: {str(e)}")
